@@ -1,0 +1,8 @@
+site_name: My ADS Docs
+
+theme: cinder
+
+nav:
+  - Home: index.md
+  - Ambiente: ambiente.md
+  - Colaboradores: colaboradores.md
