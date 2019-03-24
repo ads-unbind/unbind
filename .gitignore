@@ -141,7 +141,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+*/site
 
 # mypy
 .mypy_cache/
@@ -265,3 +265,4 @@ $RECYCLE.BIN/
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+/docs/site/
