@@ -27,4 +27,4 @@ Não foi definido papeis(Scrum Master) pelo fato da primeira semana ser para o l
 |criar o 5w2h|||
 |Criar diagrama de casos de uso|||
 |Estudo da tecnologia python/django|Todos||
-|Colocar no github pages o design sprint refatorado|Geovanne|||
+|Colocar no github pages o design sprint refatorado|Todos|||
