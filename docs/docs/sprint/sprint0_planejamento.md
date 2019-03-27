@@ -20,7 +20,7 @@ Não foi definido papeis(Scrum Master) pelo fato da primeira semana ser para o l
 |Tarefas|Responsável|Conclusão|
 |-------|-----------|---------|
 |Gerar o richpicture 2.0|Todos||
-|Criar o documento de visão|Geovanne||
+|Criar o documento de visão|Igor Veludo||
 |Criar o documento de elicitação de usuário|Geovanne||
 |Criar o documento de elicitação do site|Geovanne||
 |Terminar o protótipo de alta fidelidade|Igor Aragão||
