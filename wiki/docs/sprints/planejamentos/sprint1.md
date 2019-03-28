@@ -8,35 +8,52 @@
 **Duração:** 7 dias
 
 ## Introdução
-
+O objetivo desta sprint foi fazer ou refatorar artefatos.
 
 ## Papeis
 Não foram definidos.
 
 ## Tarefas Alocadas para a Sprint
-#### [Criar Documento do Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/30)
+### Tarefas obrigatórias
+
+#### [Criar Planos de Gerenciamento de Custo](https://github.com/ads-2019-1/ads-2019-1/issues/10)
 * **Responsável:**  
 
-#### [Criar Documento de Arquitetura](https://github.com/ads-2019-1/ads-2019-1/issues/21)
-* **Responsável:** Vinícius  
-
-#### [Criar o Diagrama de Casos de Uso](https://github.com/ads-2019-1/ads-2019-1/issues/14)
+#### [Criar Planos de Gerenciamento de Risco](https://github.com/ads-2019-1/ads-2019-1/issues/31)
 * **Responsável:**  
 
 #### [Criar o Documento 5W2H](https://github.com/ads-2019-1/ads-2019-1/issues/13)
-* **Responsável:** Vinícius  
+* **Responsável:**  
 
-#### [Criar Protótipo de Alta Fidelidade](https://github.com/ads-2019-1/ads-2019-1/issues/12)
-* **Responsável:** Igor Aragão  
+#### [Criar Documento de Causa-Efeito](https://github.com/ads-2019-1/ads-2019-1/issues/32)
+* **Responsável:**  
 
-#### [Criar Documento de Elicitação do Site](https://github.com/ads-2019-1/ads-2019-1/issues/11)
-* **Responsável:** Geovanne  
-
-#### [Criar Documento de Elicitação de Usuário](https://github.com/ads-2019-1/ads-2019-1/issues/10)
-* **Responsável:** Geovanne  
-
-#### [Criar Documento de Visão](https://github.com/ads-2019-1/ads-2019-1/issues/9)
-* **Responsável:** Igor Veludo  
+#### [Criar Documento de Mapa Mental](https://github.com/ads-2019-1/ads-2019-1/issues/33)
+* **Responsável:**  
 
 #### [Criar Rich Picture 2.0](https://github.com/ads-2019-1/ads-2019-1/issues/8)
+* **Responsável:**  
+
+#### [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/30)
+* **Responsável:**  
+
+#### [Refatorar Brainstorming](https://github.com/ads-2019-1/ads-2019-1/issues/36)
+* **Responsável:**  
+
+#### [Refatorar Stroryboarding](https://github.com/ads-2019-1/ads-2019-1/issues/34)
+* **Responsável:**  
+
+
+### Tarefas opcionais
+
+#### [Criar Protótipo de Alta Fidelidade](https://github.com/ads-2019-1/ads-2019-1/issues/12)
+* **Responsável:**  
+
+#### [Criar Questionário](https://github.com/ads-2019-1/ads-2019-1/issues/35)
+* **Responsável:**  
+
+#### [Criar Documento de Elicitação de Requisitos](https://github.com/ads-2019-1/ads-2019-1/issues/11)
+* **Responsável:**  
+
+#### [Criar Léxicos](https://github.com/ads-2019-1/ads-2019-1/issues/37)
 * **Responsável:**  
