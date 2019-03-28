@@ -23,20 +23,20 @@ As informações necessárias para coleta de requisitos e para a construção de
 Não há uma técnica padrão de elicitação de requisitos, por isso é necessário conhecer diversas técnicas e avaliar qual/quais serão mais adequadas ao projeto, facilitando o processo de elicitação. No desenvolvimento deste projeto serão utilizadas as técnicas a seguir:
 
 <h3>History Telling</h3>
-
+![Design]()
 
 <h3>Introspecção</h3>
 Consiste em entender quais propriedades o sistema deve possuir para ser um sucesso, deve-se imaginar o que o usuário gostaria, se lhe tivesse dado uma respectiva tarefa, neste caso será analisado o usuário padrão(que procura um site que possa fazer ele começar a ter hábitos que melhore sua saúde mental) <br />
-<h4>Relato de introspecção: comportamento de usuário sem estar logado</h4>
+<h4>Relato de introspecção: comportamento de usuário sem estar logado e após login feito</h4>
 <h5>Relator: Geovanne Santos</h5>
 1. Create, Update, Delete, da conta de usuário. <br />
 2. Escolher atividades de interesse. <br />
 3. Adicionar atividades de interesse. <br />
 4. Trocar pontos de atividade concluída por prêmios(livros, consultas, eventos culturais). <br />
 5. Personalizar o perfil pessoal com os pontos ganhos.<br />
-6. Fazer download de artigos.
-8. Poder ter contato via site com profissionais de psicologia, para uma consulta remota.
-9. Entrar em grupos de auto ajuda, com pessoas dos mesmos problemas(para reuniões remotas).
+6. Fazer download de artigos.<br />
+7. Poder ter contato via site com profissionais de psicologia, para uma consulta remota.<br />
+8. Entrar em grupos de auto ajuda, com pessoas dos mesmos problemas(para reuniões remotas).<br />
 
 <h2> Moscow (priorização de requisitos)</h2>
 Os requisitos listados abaixo foram obtidos a partir das técnicas de elicitação apresentadas anteriormente.
@@ -68,9 +68,8 @@ Entrar em grupos de auto ajuda, com pessoas dos mesmos problemas(para reuniões 
 Sair do site | x | | | |
 Marcar consulta presencial | | | x | |
 
-10 requisitos de usuário foram elicitados neste módulo.
+8 requisitos de usuário foram elicitados neste módulo.
 
 <h2> Bibliografia </h2>
 - Anguera, Metodologia de la observación en las Ciencias Humanas, 1985. <br />
-- https://artists.spotify.com/guide/spotify-for-artists<br />
 - McIntyre, John (October 20, 2016). "Moscow or Kano - how do you prioritize?
