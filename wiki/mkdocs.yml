@@ -7,3 +7,8 @@ nav:
   - Ambiente: ambiente.md
   - Colaboradores: colaboradores.md
   - Sprints: sprints/sprints.md
+  - Dinamica 1:
+      - Design Sprint: documentacao/design_sprint.md
+      - Elicitação de usuário: documentacao/elicitacao_de_usuario.md
+      - Elicitação do site: documentacao/elicitacao_do_site.md
+      - Rich Picture: documentacao/richpicture.md
