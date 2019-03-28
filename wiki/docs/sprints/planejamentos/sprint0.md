@@ -11,7 +11,7 @@
 O objetivo desta sprint foi a definição do tema, levantamento dos requisitos, treinamento do grupo com a tecnologia escolhida e configurações gerais iniciais.
 
 ## Papeis
-Não foram definido.
+Não foram definidos.
 
 ## Tarefas Alocadas para a Sprint
 #### [Criar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/29)
