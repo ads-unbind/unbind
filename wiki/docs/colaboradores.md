@@ -5,6 +5,7 @@ Informações:
 | Nome | Matrícula | GitHub |
 | --- | --- | --- |
 | Bayron Kamal | 15/0007281 | [byronkamal](https://github.com/byronkamal) |
+| Eduardo Martins | 11/0115104 | [EduardoBrasil](https://github.com/EduardoBrasil) |
 | Geovanne Santos | 15/0035756 | [saraivinha97](https://github.com/saraivinha97) |
 | Igor Aragão | 15/0011903 | [roginaldosemog](https://github.com/roginaldosemog) |
 | Igor Guimarãs | 13/0028240 | [IgorVeludo](https://github.com/IgorVeludo) |
