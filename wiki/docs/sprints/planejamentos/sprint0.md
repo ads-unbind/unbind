@@ -18,10 +18,16 @@ Não foram definidos.
 * **Responsáveis:** Bayron, Geovanne, Igor Aragão, Igor Guimarãs, João, José, Ramon, Vinícius, William
 
 #### [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/28)
-* **Responsáveis:** Geovanne, Igor Aragão, Igor Guimarãs, João, William
+* **Responsáveis:** Geovanne
 
 #### [Criar Rich Picture 1.0](https://github.com/ads-2019-1/ads-2019-1/issues/15)
 * **Responsáveis:** Geovanne, Igor Aragão, Igor Guimarãs, João, William
+
+#### [Criar Documento de Elicitação de Requisitos](https://github.com/ads-2019-1/ads-2019-1/issues/11)
+* **Responsável:** Geovanne
+
+#### [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/30)
+* **Responsável:** Geovanne
 
 #### [Criar e Configurar Repositório](https://github.com/ads-2019-1/ads-2019-1/issues/18)
 * **Responsável:** Vinícius

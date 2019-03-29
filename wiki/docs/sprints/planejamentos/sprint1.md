@@ -19,6 +19,9 @@ Não foram definidos.
 #### [Criar Planos de Gerenciamento de Custo](https://github.com/ads-2019-1/ads-2019-1/issues/10)
 * **Responsável:**  
 
+#### [Refatorar Storyboarding](https://github.com/ads-2019-1/ads-2019-1/issues/34)
+* **Responsável:** Geovanne
+
 #### [Criar Planos de Gerenciamento de Risco](https://github.com/ads-2019-1/ads-2019-1/issues/31)
 * **Responsável:**  
 
@@ -34,13 +37,7 @@ Não foram definidos.
 #### [Criar Rich Picture 2.0](https://github.com/ads-2019-1/ads-2019-1/issues/8)
 * **Responsável:**  
 
-#### [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/30)
-* **Responsável:**  
-
 #### [Refatorar Brainstorming](https://github.com/ads-2019-1/ads-2019-1/issues/36)
-* **Responsável:**  
-
-#### [Refatorar Stroryboarding](https://github.com/ads-2019-1/ads-2019-1/issues/34)
 * **Responsável:**  
 
 
@@ -52,8 +49,7 @@ Não foram definidos.
 #### [Criar Questionário](https://github.com/ads-2019-1/ads-2019-1/issues/35)
 * **Responsável:**  
 
-#### [Criar Documento de Elicitação de Requisitos](https://github.com/ads-2019-1/ads-2019-1/issues/11)
-* **Responsável:**  
+
 
 #### [Criar Léxicos](https://github.com/ads-2019-1/ads-2019-1/issues/37)
 * **Responsável:**  
