@@ -5,7 +5,7 @@
 | 28/03/2019 | Byron Kamal e Igor Veludo | Criação do documento, Tópicos 1 e 2     | 0.1    |
 | 28/03/2019 | Byron Kamal e Igor Veludo | Rich Picture Funcionamento da aplicação | 0.2    |
 
-# Sumário
+## Sumário
 
 1. [Introdução](#1introdução)
 2. [Objetivos](#2objetivos)
