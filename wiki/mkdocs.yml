@@ -8,8 +8,8 @@ nav:
   - Colaboradores: colaboradores.md
   - Sprints: sprints/sprints.md
   - Dinamica 1:
-      - Design Sprint: documentacao/design_sprint.md
-      - Elicitação de usuário: documentacao/elicitacao_de_usuario.md
-      - Elicitação do site: documentacao/elicitacao_do_site.md
-      - Rich Picture: documentacao/richpicture.md
+      - Design Sprint: modulo1/design_sprint.md
+      - Elicitação de usuário: modulo1/elicitacao_de_usuario.md
+      - Elicitação do site: modulo1/elicitacao_do_site.md
+      - Rich Picture: modulo1/richpicture.md
       - 5W2H: modulo1/5w2h.md

@@ -24,6 +24,6 @@ A finalidade para o uso do RicPicture é fornecer um modelo que auxilia o entend
 
 ### 3.1 Funcionamento da aplicação
 
-![Imagem](./richPicture/funcionamentoAplicacao.jpg)
+![Imagem](richPicture/funcionamentoAplicacao.jpg)
 
 > Autores: Byron Kamal e Igor Veludo
