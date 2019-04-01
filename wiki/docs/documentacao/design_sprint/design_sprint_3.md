@@ -4,10 +4,15 @@
 Data | Responsável | Versão| Mudança realizada|
 --------- | ------| --------| ------------ |
 24/03/2019     | Todos |   1.0   |  Primeira versão do design sprint   |
-27/03/2019     | Geovanne Saraiva |   1.0   |  refatoração do design sprint  |
+27/03/2019     | Geovanne Saraiva |   2.0   |  refatoração do design sprint  |
+31/03/2019     | Geovanne Saraiva |   2.0   |  adicionando as imagens dos rich pictures individuais  |
 
 <h3> Parte 1 </h3>
 A técnica de coletar ideias para o desenvolvimento do escopo do site, foi o brainstorming, no qual todo o grupo estava presente em sala, primeiro fizemos uma coleta de ideia e escrevemos no papel, houve uma votação e a ideia eleita foi a de um site que permitisse que pessoas oferecessem serviços na casa de clientes, permitindo a economia de tempo e de dinheiro para que buscasse esse serviço, depois de definir o escopo geral, discutimos durante 40 minutos sobre como o modelo de negócio deveria ser, as formas de pagamento, os tipos de usuário, se iríamos focar em um nicho de serviços, ou se faríamos algo mais generalista, pelo feedback da professora Milene, decidimos que inicialmente o site iria somente conectar pessoas que estariam procurando serviços de salão de beleza em geral, tais como: manicure, corte de cabelo, pedicure, entre outros. <br />
+<br />
+![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/brainstorming_1.jpeg?raw=true)
+<br />
+<br />
 
 Após uma segunda reunião, decidimos mudar o escopo do projeto, voltado para a área de saúde mental, no qual o site iria servir de incentivador para o usuário buscar a felicidade, o autoconhecimento, se conectar com pessoas de interesse comum, e se mesmo assim tivesse com muita dificuldade para realizar as atividade semanais, ou se continuasse deprimido o site faria a conexão dele com um profissional. <br />
 Para montarmos a lógica de como nosso site irá funcionar, fizemos uma pesquisa em artigos científicos que abordaram o assunto felicidade. A felicidade é uma emoção básica caracterizada por um estado emocional positivo, com sentimentos de bem-estar e de prazer, associados à percepção de sucesso e à compreensão coerente e lúcida do mundo(por isso a importância do usuário colocar as áreas de interesse para que o site explore as atividades que darão prazer, por meio de feedbacks de incentivo e desafios semanais).  Os métodos psiquiátricos de diagnóstico e tratamento requerem um treinamento prolongado para o profissional e caro para o paciente, o que limita a disponibilidade dessas intervenções a um pequeno número de indivíduos (Cloninger, 2006).<br />
@@ -26,7 +31,41 @@ Csikszentmihalyi (1990) observa que, em relação aos gregos de 2.400 anos atrá
 Os documento do primeiro projetão estão abaixo, são os richpicture e as ideias do brainstorming feitos em sala.
 
 <h3> Parte 2 </h3>
-A versão 1.0 do rich picture podem ser encontradas nesse [Link](https://www.draw.io/?state=%7B%22ids%22:%5B%221PsizdO5HkAOjDdQXXUQGANGht_O6gSsj%22%5D,%22action%22:%22open%22,%22userId%22:%22113464471015935647705%22%7D#G1PsizdO5HkAOjDdQXXUQGANGht_O6gSsj)
+Os richpictures individuais do projeto antigo estão abaixo:<br />
+<br />
+Igor Aragão:
+<br />
+![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/rich_picture_igor_arag.jpeg?raw=true)
+<br />
+
+Aquiles:
+<br />
+![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_aquiles.jpeg?raw=true)
+<br />
+
+Geovanne Santos:
+<br />
+![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_geovanne.jpeg?raw=true)
+<br />
+
+João Pedro:
+<br />
+![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_joao_pedro.jpeg?raw=true)
+<br />
+
+Vinicius:
+<br />
+![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_vinicius.jpeg?raw=true)
+<br />
+
+Willian:
+<br />
+![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_willian.jpeg?raw=true)
+<br />
+<br />
+<br />
+s
+A versão 1.0 do rich picture do projeto atual pode ser encontradas nesse [Link](https://www.draw.io/?state=%7B%22ids%22:%5B%221PsizdO5HkAOjDdQXXUQGANGht_O6gSsj%22%5D,%22action%22:%22open%22,%22userId%22:%22113464471015935647705%22%7D#G1PsizdO5HkAOjDdQXXUQGANGht_O6gSsj)
 
 <h3> Parte 3 </h3>
 Nesta parte, fizemos uma reunião para criarmos o novo richpicture 1.0, a partir da reunião, definimos a ideia do escopo e fizemos os documentos de elicitação, e o protótipo começou a ser pensado, assim como as tecnologias que serão utilizadas, o canvas e o octalysis foram frameworks que utilizamos pra ajudar a criar os requisitos do nosso site, estão abaixo:
