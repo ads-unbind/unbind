@@ -1,9 +1,9 @@
 ## Histórico de Revisão
 
-| Data | Versão | Descrição | Responsáveis |                
-| --- | --- | --- | --- |
-| 28/03/2019 | 0.1 | Criação do documento, Tópicos 1 e 2 | Byron Kamal e Igor Veludo |
-| 28/03/2019 | 0.2 | Rich Picture Funcionamento da aplicação | Byron Kamal e Igor Veludo |
+| Data       | Versão | Descrição                           | Responsáveis              |
+| ---------- | ------ | ----------------------------------- | ------------------------- |
+| 28/03/2019 | 0.1    | Criação do documento, Tópicos 1 e 2 | Byron Kamal e Igor Veludo |
+| 28/03/2019 | 0.2    | Rich Picture 1.0                    | Byron Kamal e Igor Veludo |
 
 ## 1. Introdução
 
@@ -17,5 +17,6 @@ A finalidade para o uso do RicPicture é fornecer um modelo que auxilia o entend
 
 ### 3.1 Funcionamento da aplicação
 
-![Imagem](richPicture/funcionamentoAplicacao.jpg)
+![Imagem](img/richPicture/funcionamentoAplicacao.jpg)
+
 > Autores: Byron Kamal e Igor Veludo
