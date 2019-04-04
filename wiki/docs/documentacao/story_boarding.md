@@ -13,10 +13,10 @@ Acabei de terminar uma longa sessão de planejamento para uma nova iniciativa, m
 Story Board 1.0
 <br />
 
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/storyboarding_1.png?raw=true)
+![storyboarding_1](img/storyboarding_1.png)
 
 <br />
 Story Board 2.0
 <br />
 
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/story_boarding_2.jpeg?raw=true)
+![story_boarding_2](img/story_boarding_2.jpeg)
