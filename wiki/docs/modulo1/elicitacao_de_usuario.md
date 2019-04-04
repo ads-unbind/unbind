@@ -1,10 +1,9 @@
 <h1>Elicitação de requisitos de usuário</h1>
 <h3>Histórico de revisão</h3>
 
-Data | Responsável | Versão| Mudança realizada|
---------- | ------| --------| ------------ |
-27/03/2019     | Geovanne Saraiva |   1.0   |  Primeira versão do plano de elicitação   |
-
+| Data       | Responsável      | Versão | Mudança realizada                      |
+| ---------- | ---------------- | ------ | -------------------------------------- |
+| 27/03/2019 | Geovanne Saraiva | 1.0    | Primeira versão do plano de elicitação |
 
 <h3> Introdução </h3>
 Este documento foi desenvolvido para a disciplina de Desenho e Arquitetura de Software, da Universidade de Brasília, no qual o grupo procura elicitar as funcionalidades do site jim care, que é obter o máximo de informações necessárias para o conhecimento de um objeto. No contexto da engenharia de software, a elicitação de requisitos provê o mais correto e completo entendimento do que é demandado de um determinado software. A análise foi dividida em tópicos, os mesmos são: usuário, site.
@@ -55,18 +54,18 @@ Os requisitos listados abaixo foram obtidos a partir das técnicas de elicitaç�
 - Would: Requisitos rotulados como Would terão que ser acordados pelas partes interessadas como os itens menos críticos e de menor retorno, ou não são apropriados naquele momento. Como resultado, os requisitos não serão planejados no cronograma do próximo timebox de entrega. Os requisitos não serão eliminados ou reconsiderados para inclusão em um timebox posterior..
 </p>
 
-Requisitos|Must(deve ter)|Should(deveria ter)  |Could(poderia ter)  |Would(seria legal ter)|
----------------- |---------------- | ---------------| ------------------| ---------------------- |
-Create, Update, Delete, da conta de usuário | x | | | |
-Escolher atividades de interesse | x | | | |
-Adicionar atividades de interesse | | x | | |
-Trocar pontos de atividade concluída por prêmios | | | x | |
-Personalizar o perfil pessoal com os pontos ganhos | | | x | |
-Fazer download de artigos | | x | | |
-Poder ter contato via site com profissionais de psicologia, para uma consulta remota | | x | | |
-Entrar em grupos de auto ajuda, com pessoas dos mesmos problemas(para reuniões remotas) | | | | x |
-Sair do site | x | | | |
-Marcar consulta presencial | | | x | |
+| Requisitos                                                                              | Must(deve ter) | Should(deveria ter) | Could(poderia ter) | Would(seria legal ter) |
+| --------------------------------------------------------------------------------------- | -------------- | ------------------- | ------------------ | ---------------------- |
+| Create, Update, Delete, da conta de usuário                                             | x              |                     |                    |                        |
+| Escolher atividades de interesse                                                        | x              |                     |                    |                        |
+| Adicionar atividades de interesse                                                       |                | x                   |                    |                        |
+| Trocar pontos de atividade concluída por prêmios                                        |                |                     | x                  |                        |
+| Personalizar o perfil pessoal com os pontos ganhos                                      |                |                     | x                  |                        |
+| Fazer download de artigos                                                               |                | x                   |                    |                        |
+| Poder ter contato via site com profissionais de psicologia, para uma consulta remota    |                | x                   |                    |                        |
+| Entrar em grupos de auto ajuda, com pessoas dos mesmos problemas(para reuniões remotas) |                |                     |                    | x                      |
+| Sair do site                                                                            | x              |                     |                    |                        |
+| Marcar consulta presencial                                                              |                |                     | x                  |                        |
 
 8 requisitos de usuário foram elicitados neste módulo.
 

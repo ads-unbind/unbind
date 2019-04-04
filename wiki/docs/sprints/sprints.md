@@ -5,5 +5,5 @@
 * [Sprint 1](planejamentos/sprint1.md)
 
 ### Resultados
-* Sprint 0
+* [Sprint 0](resultados/sprint0.md)
 * Sprint 1
