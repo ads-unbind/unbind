@@ -26,6 +26,7 @@ O objetivo deste artefato é trazer uma visão mais clara sobre termos específi
 O grupo se reuniu e utilizou termos já levantados em artefatos passados, levantou novos termos que julgamos importantes para compreensão do domínio do Discord e então separamos os termos entre os integrantes e os cadastramos na ferramenta C&L. Cada léxico se mostrou bastante importante uma vez que linkados em suas aparições, revelaram mais uma vez sua ocorrência dentro do domínio.
 
 ## 4.Léxicos
+|         |        |
 | ------- | ------ |
 |**Nome**| **Usuário** |
 |**Classificação**| Sujeito |
