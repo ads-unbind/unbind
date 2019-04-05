@@ -1,21 +1,7 @@
-# Planejamento da Sprint 1
+# Resultado da Sprint 0
 
-## Período
-**Data de Início:** 22/03/2019  
-
-**Data de Término:** 28/03/2019
-
-**Duração:** 7 dias
-
-## Introdução
-O objetivo desta sprint foi fazer ou refatorar artefatos.
-
-## Papeis
-Não foram definidos.
-
-## Tarefas Alocadas para a Sprint
-### Tarefas obrigatórias
-
+## Revisão
+### Tarefas
 #### [Criar Planos de Gerenciamento de Custo](https://github.com/ads-2019-1/ads-2019-1/issues/10)
 * **Responsável:Vinícius**  
 
@@ -50,3 +36,19 @@ Não foram definidos.
 
 #### [Criar Léxicos](https://github.com/ads-2019-1/ads-2019-1/issues/37)
 * **Responsável:Igor Veludo, Byron e João Pedro**  
+
+
+### Tarefas Não Concluidas e Justificativas
+* Criar Plano de Gerenciamento de Custo, pelo fato de focarmos nos documentos de levantamento dos requisitos.
+* Refatorar Brainstorming
+* Criar Protótipo de Alta Fidelidade
+
+## Retrospectiva
+### Pontos Positivos
+* Boa integração da equipe
+* Bom conhecimento de requisitos
+* Semana de aprendizado da tecnologia adotada
+
+### Pontos Negativos
+* Três documento deixados para próxima sprint
+* Gerência tardia
