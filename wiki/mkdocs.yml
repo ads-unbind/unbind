@@ -1,4 +1,4 @@
-site_name: My ADS Docs
+site_name: JimCare
 
 theme: cinder
 
@@ -17,3 +17,4 @@ nav:
       - 5W2H: modulo1/5w2h.md
   - Dinamica 2:
      - Processos: modulo2/processos.md
+     - Processo de Rastreabilidade: modulo2/processo_rastreabilidade.md

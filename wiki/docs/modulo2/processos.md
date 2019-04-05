@@ -43,7 +43,7 @@ Indica o final de um processo.
 #### Paralelo:
 ![Imagem](img/paralelo.JPG)
 
-## 4.Referências
+### 4.Referências
 
 <ul>
 <li>O que é BPMN (Business Process Model and Notation) e como aplicar essa notação na Modelagem de Processos.
