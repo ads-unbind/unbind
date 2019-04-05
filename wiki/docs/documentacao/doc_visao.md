@@ -2,6 +2,7 @@
 | Data       | Responsável      | Versão | Mudança realizada                      |
 | ---------- | ---------------- | ------ | -------------------------------------- |
 | 4/04/2019 | José Aquiles Guedes de Rezende | 0.1    |Abertura do documento|
+| 5/04/2019 | Vinícius | 0.2    | Atualização do nome do produto |
 
 
 ## 1. Introdução
@@ -11,7 +12,7 @@
 
 ### 1.1 Propósito
 
- Esse documento visa especificar todo o escopo de funcionamento do Jim Care, deixando claro seu objetivo, a razão de sua necessidade e a forma como busca solucionar os problemas aos quais se propõe, deixando claro possíveis restrições. Dessa forma, sua principal utilidade objetiva também, ao esclarecer o que é o sistema para os desenvolvedores, clientes e usuários, estabelecer entre os mesmos um eficiente alinhamento de ideias.
+ Esse documento visa especificar todo o escopo de funcionamento do UnBind, deixando claro seu objetivo, a razão de sua necessidade e a forma como busca solucionar os problemas aos quais se propõe, deixando claro possíveis restrições. Dessa forma, sua principal utilidade objetiva também, ao esclarecer o que é o sistema para os desenvolvedores, clientes e usuários, estabelecer entre os mesmos um eficiente alinhamento de ideias.
 
 ### 1.2 Escopo
 
@@ -61,7 +62,7 @@ A literatura aponta que tanto para nações quanto para indivíduos, superado um
 | :--: | :--: |
 | **Público Alvo** | Cidadões que usam internet e tem interesse em psicologia positiva |
 | **Carência** | Necessidade de um melhor acesso e ferramentas de manejo a informações relacionadas ao comércio exterior de bens e serviço no Brasil |
-| **Solução** | Jim Care |
+| **Solução** | UnBind |
 | **Descrição da Solução** | Uma plataforma web que que instiga o usuário a cumprir metas para que ele esteja um passo mais próximo de alcançar a felicidade e talvez ajude outras pessoas a alcaçarem o mesmo objetivo |
 | **Diferenciais** | As metas serão disponibilizadas em cartões para que o usuário tenha o controle do que tem para fazer, e o que ja foi feito. Além de permitir a um chat com profissionais da área de psicologia  |
 
