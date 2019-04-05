@@ -11,7 +11,7 @@ Modelagem de processos utilizada neste documento foi BPMN (Business Process Mode
 A ferramenta utilizada para fazer a representar gráfica do modelo de processo foi o Bizagi Modeler
 
 ### 2.Objetivo
-Este documento tem por objetivo apresentar os processos e subprocessos de gerência e desenvolvimento a serem utilizados na disciplina de Arquitetura e Desenho de Software no projeto JimCare.
+Este documento tem por objetivo apresentar os processos e subprocessos de gerência e desenvolvimento a serem utilizados na disciplina de Arquitetura e Desenho de Software no projeto UNBIND.
 ### 3.Processo Geral
 
 ![Imagem](img/modeloProcesso.jpg)
