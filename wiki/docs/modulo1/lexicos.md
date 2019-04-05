@@ -1,8 +1,9 @@
-## Histórico de Revisão
+# Léxicos
 
+## Histórico de Revisão
 | Data       | Responsável                                            | Versão | Mudança realizada |
 | ---------- | ------------------------------------------------------ | ------ | ----------------- |
-| 31/03/2019 | Byron Kamal, Igor Veludo, João Pedro e William Almeida |        | 0.1               | Adicionando topicos 1, 2 e 3 |
+| 31/03/2019 | Byron Kamal, Igor Veludo, João Pedro e William Almeida |  0.1   | Adicionando tópicos 1, 2 e 3 |
 
 ## Sumário
 
@@ -26,4 +27,4 @@ O grupo se reuniu e utilizou termos já levantados em artefatos passados, levant
 
 ## 4.Léxicos
 
-## 5. Resultados
+## 5.Referências

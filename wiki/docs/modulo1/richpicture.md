@@ -1,3 +1,5 @@
+#Rich Picture
+
 ## Histórico de Revisão
 
 | Data       | Versão | Descrição                           | Responsáveis                                           |

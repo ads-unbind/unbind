@@ -1,3 +1,9 @@
+## Histórico da Revisão
+| Data       | Responsável      | Versão | Mudança realizada                      |
+| ---------- | ---------------- | ------ | -------------------------------------- |
+| 4/04/2019 | José Aquiles Guedes de Rezende | 0.1    |Abertura do documento|
+
+
 ## 1. Introdução
 
 
@@ -13,7 +19,7 @@ Suprir a necessidade de um sistema web para acompanhamento de saude mental de in
 
 * Chat com profissionais da área
 * Sugerir eventos
-* Organizar eventos em um calendário 
+* Organizar eventos em um calendário
 
 ### 1.3 Definições, acrônimos e abreviações
 
@@ -36,7 +42,7 @@ A organização do documento é feita de maneira a prover ao leitor a capacidade
 
 ### 2.1 Oportunidade de Negócios
 
-Nos tempos atuais, a felicidade é considerada um valor tão precioso e indiscutível que, como um exemplo emblemático, podemos citar a Declaração de Independência dos EUA, que registra que “todo homem tem o direito inalienável à vida, à liberdade e à busca da felicidade” (Lunt, 2004). 
+Nos tempos atuais, a felicidade é considerada um valor tão precioso e indiscutível que, como um exemplo emblemático, podemos citar a Declaração de Independência dos EUA, que registra que “todo homem tem o direito inalienável à vida, à liberdade e à busca da felicidade” (Lunt, 2004).
 A literatura aponta que tanto para nações quanto para indivíduos, superado um limiar de subsistência com dignidade (incluindo comida, água e saneamento básico), o aumento do poder aquisitivo não se correlaciona com um incremento significativo nos níveis de felicidade (Csikszentmihalyi, 1999; Veenhoven, 1991).
 
 
@@ -153,9 +159,3 @@ O sistema deve ter uma interface que seja de fácil uso para pessoas. Dessa form
 ### 8.4 Requisitos de Confiabilidade
 
  O sistema deve se comprometer respeitar a privacidade de cada usuário no que for de seu interesse em ser preservada.
-
-## Histórico da Revisão
-
-| **Data** | **Versão** | **Descrição** | **Autor** |
-| :------: | :--------: | :-----------: | :-------: |
-|4/04/2019|0.1.0|Abertura do documento|José Aquiles Guedes de Rezende|
