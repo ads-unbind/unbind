@@ -4,7 +4,7 @@
 
 | Data       | Responsável      | Versão | Mudança realizada                      |
 | ---------- | ---------------- | ------ | -------------------------------------- |
-|04/04/2019|Geovanne Santos, Igor Aragão, Igor Veludo| 0.1| Criação do documento de Metodologia de Rastreabilidade|
+|04/04/2019|Geovanne Santos, Igor Aragão, Igor Veludo, Vinícius| 0.1| Criação do documento de Metodologia de Rastreabilidade|
 
 ## 1.Introdução
 Modelagem de processos utilizada neste documento foi BPMN (Business Process Model and Notation). Ela é uma notação para modelagem de processos de negócio. O BPMN estabelece um padrão para representar os processos graficamente, por meio de diagramas. sendo que esse padrão possui um conjunto de símbolos e regras.
