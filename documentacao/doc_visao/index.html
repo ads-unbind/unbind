@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="../../img/favicon.ico">
+
+    
+    <title>Documento de Visão - My ADS Docs</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/highlight.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../..">My ADS Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../ambiente/">Ambiente</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../colaboradores/">Colaboradores</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Documento de Visão</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../sprints/sprints/">Sprints</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dinamica 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../design_sprint/design_sprint_1/">Design Sprint 1.0</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../design_sprint/design_sprint_3/">Design Sprint 2.0</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../modulo1/elicitacao_de_usuario/">Elicitação de usuário</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../modulo1/elicitacao_do_site/">Elicitação do site</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../modulo1/richpicture/">Rich Picture</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../modulo1/5w2h/">5W2H</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dinamica 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../modulo2/processos/">Processos</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../colaboradores/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../sprints/sprints/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#historico-da-revisao">Histórico da Revisão</a></li>
+        <li class="first-level "><a href="#1-introducao">1. Introdução</a></li>
+            <li class="second-level"><a href="#11-proposito">1.1 Propósito</a></li>
+                
+            <li class="second-level"><a href="#12-escopo">1.2 Escopo</a></li>
+                
+            <li class="second-level"><a href="#13-definicoes-acronimos-e-abreviacoes">1.3 Definições, acrônimos e abreviações</a></li>
+                
+            <li class="second-level"><a href="#14-referencias">1.4 Referências</a></li>
+                
+            <li class="second-level"><a href="#15-visao-geral">1.5 Visão Geral</a></li>
+                
+        <li class="first-level "><a href="#2-posicionamento">2. Posicionamento</a></li>
+            <li class="second-level"><a href="#21-oportunidade-de-negocios">2.1 Oportunidade de Negócios</a></li>
+                
+            <li class="second-level"><a href="#22-instrucao-do-problema">2.2 Instrução do Problema</a></li>
+                
+            <li class="second-level"><a href="#23-instrucao-de-posicao-do-produto">2.3 Instrução de Posição do produto</a></li>
+                
+        <li class="first-level "><a href="#3-descricao-dos-envolvidos-e-dos-usuarios">3. Descrição dos Envolvidos e dos Usuários</a></li>
+            <li class="second-level"><a href="#32-descricao-dos-usuarios">3.2. Descrição dos Usuários</a></li>
+                
+            <li class="second-level"><a href="#33-ambiente-do-usuario">3.3. Ambiente do Usuário</a></li>
+                
+            <li class="second-level"><a href="#34-principais-necessidades-dos-usuarios-ou-envolvidos">3.4 Principais necessidades dos usuários ou envolvidos</a></li>
+                
+        <li class="first-level "><a href="#4visao-geral-do-produto">4.Visão Geral do Produto</a></li>
+            <li class="second-level"><a href="#41-perspectiva-do-produto">4.1 Perspectiva do produto</a></li>
+                
+        <li class="first-level "><a href="#5recursos-do-produto">5.Recursos do Produto</a></li>
+        <li class="first-level "><a href="#6-restricoes">6: Restrições</a></li>
+            <li class="second-level"><a href="#61-restricoes-de-implementacao">6.1 Restrições de implementação</a></li>
+                
+            <li class="second-level"><a href="#62-restricoes-externas">6.2 Restrições externas</a></li>
+                
+            <li class="second-level"><a href="#63-restricoes-de-design">6.3 Restrições de design</a></li>
+                
+        <li class="first-level "><a href="#7-faixas-de-qualidade">7:   Faixas de Qualidade</a></li>
+        <li class="first-level "><a href="#8-requisitos-do-produto">8. Requisitos do Produto</a></li>
+            <li class="second-level"><a href="#81-requisitos-do-sistema">8.1 Requisitos do Sistema</a></li>
+                
+            <li class="second-level"><a href="#82-requisitos-de-design">8.2 Requisitos de Design</a></li>
+                
+            <li class="second-level"><a href="#83-requisitos-de-portabilidade">8.3 Requisitos de Portabilidade</a></li>
+                
+            <li class="second-level"><a href="#84-requisitos-de-confiabilidade">8.4 Requisitos de Confiabilidade</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="historico-da-revisao">Histórico da Revisão</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Responsável</th>
+<th>Versão</th>
+<th>Mudança realizada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4/04/2019</td>
+<td>José Aquiles Guedes de Rezende</td>
+<td>0.1</td>
+<td>Abertura do documento</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introducao">1. Introdução</h2>
+<p>Nesta introdução serão abordados tópicos referentes a uma visão geral do produto, definindo seu propósito, escopo, definições, acrônimos, abreviações e referências.</p>
+<h3 id="11-proposito">1.1 Propósito</h3>
+<p>Esse documento visa especificar todo o escopo de funcionamento do Jim Care, deixando claro seu objetivo, a razão de sua necessidade e a forma como busca solucionar os problemas aos quais se propõe, deixando claro possíveis restrições. Dessa forma, sua principal utilidade objetiva também, ao esclarecer o que é o sistema para os desenvolvedores, clientes e usuários, estabelecer entre os mesmos um eficiente alinhamento de ideias.</p>
+<h3 id="12-escopo">1.2 Escopo</h3>
+<p>Suprir a necessidade de um sistema web para acompanhamento de saude mental de individuos ou grupos de usuários cujas capacidades abrangem funcionalidades como:</p>
+<ul>
+<li>Chat com profissionais da área</li>
+<li>Sugerir eventos</li>
+<li>Organizar eventos em um calendário</li>
+</ul>
+<h3 id="13-definicoes-acronimos-e-abreviacoes">1.3 Definições, acrônimos e abreviações</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Abreviação</strong></th>
+<th align="center"><strong>Definição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">FGA</td>
+<td align="center">Faculdade do Gama</td>
+</tr>
+<tr>
+<td align="center">UnB</td>
+<td align="center">Universidade do Brasília</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-referencias">1.4 Referências</h3>
+<p>ACHOR,Shawn. <strong>O jeito havard de ser feliz</strong>.São Paulo:Saraiva,2010.</p>
+<h3 id="15-visao-geral">1.5 Visão Geral</h3>
+<p>A organização do documento é feita de maneira a prover ao leitor a capacidade de através do mesmo entender o produto em seus vários aspectos de forma coesa. Para tal, são apresentados primeiramente os tópicos referentes a função geral do software e as motivações que levaram a sua criação, após isso, é descrito o posicionamento do produto em relação ao mercado e as partes interessadas, incluindo a forma como a criação do sistema afetará os usuários. Por fim, são descritas as principais funcionalidades do software, bem como algumas de suas restrições e requisitos.</p>
+<hr />
+<h2 id="2-posicionamento">2. Posicionamento</h2>
+<hr />
+<h3 id="21-oportunidade-de-negocios">2.1 Oportunidade de Negócios</h3>
+<p>Nos tempos atuais, a felicidade é considerada um valor tão precioso e indiscutível que, como um exemplo emblemático, podemos citar a Declaração de Independência dos EUA, que registra que “todo homem tem o direito inalienável à vida, à liberdade e à busca da felicidade” (Lunt, 2004).
+A literatura aponta que tanto para nações quanto para indivíduos, superado um limiar de subsistência com dignidade (incluindo comida, água e saneamento básico), o aumento do poder aquisitivo não se correlaciona com um incremento significativo nos níveis de felicidade (Csikszentmihalyi, 1999; Veenhoven, 1991).</p>
+<h3 id="22-instrucao-do-problema">2.2 Instrução do Problema</h3>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Problema</strong></td>
+<td align="center">Indices de depressão e comportamento autodestrutivo vem crescendo nos ultimos anos</td>
+</tr>
+<tr>
+<td align="center"><strong>Funções afetadas</strong></td>
+<td align="center">Pessoas acabam por se refugiar em redes sociais</td>
+</tr>
+<tr>
+<td align="center"><strong>Efeito</strong></td>
+<td align="center">Pioram o problema pois redes sociais podem ser um lugar muito tóxico para a saúde mental</td>
+</tr>
+<tr>
+<td align="center"><strong>Solução</strong></td>
+<td align="center">Uma plataforma web que não siga o mesmo exemplo das redes sociais que contribuem para o problema</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-instrucao-de-posicao-do-produto">2.3 Instrução de Posição do produto</h3>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Público Alvo</strong></td>
+<td align="center">Cidadões que usam internet e tem interesse em psicologia positiva</td>
+</tr>
+<tr>
+<td align="center"><strong>Carência</strong></td>
+<td align="center">Necessidade de um melhor acesso e ferramentas de manejo a informações relacionadas ao comércio exterior de bens e serviço no Brasil</td>
+</tr>
+<tr>
+<td align="center"><strong>Solução</strong></td>
+<td align="center">Jim Care</td>
+</tr>
+<tr>
+<td align="center"><strong>Descrição da Solução</strong></td>
+<td align="center">Uma plataforma web que que instiga o usuário a cumprir metas para que ele esteja um passo mais próximo de alcançar a felicidade e talvez ajude outras pessoas a alcaçarem o mesmo objetivo</td>
+</tr>
+<tr>
+<td align="center"><strong>Diferenciais</strong></td>
+<td align="center">As metas serão disponibilizadas em cartões para que o usuário tenha o controle do que tem para fazer, e o que ja foi feito. Além de permitir a um chat com profissionais da área de psicologia</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-descricao-dos-envolvidos-e-dos-usuarios">3. Descrição dos Envolvidos e dos Usuários</h2>
+<hr />
+<h3 id="32-descricao-dos-usuarios">3.2. Descrição dos Usuários</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Representantes</th>
+<th align="center">Pessoas que buscam por ajudam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Descrição</td>
+<td align="center">Indivíduos que passam por algum transtorno social e quer sair daquela situação</td>
+</tr>
+<tr>
+<td align="center">Responsabilidades</td>
+<td align="center">Ser receptiva em receber ajuda e cumprir metas</td>
+</tr>
+<tr>
+<td align="center">Critérios de Sucesso</td>
+<td align="center">Ser direcionado a um evento que possa ajuda-la tais como grupos de autoajuda, terapia de grupo, sessão de meditação etc.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Representantes</th>
+<th align="center">Profissional da área de psicologia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Descrição</td>
+<td align="center">Uma pessoa que é formada na área de psicologia tais como psicológos, psicanalistas etc</td>
+</tr>
+<tr>
+<td align="center">Responsabilidades</td>
+<td align="center">Entrar em um chat com um profissional dá área de psicologia</td>
+</tr>
+<tr>
+<td align="center">Critérios de Sucesso</td>
+<td align="center">Ser direcionado a um evento que possa ajuda-la tais como grupos de autoajuda, terapia de grupo, sessão de meditação etc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-ambiente-do-usuario">3.3. Ambiente do Usuário</h3>
+<p>O acesso aos serviços do software poderá ser feito por navegadores de internet, como:
+<em> Google Chrome;
+</em> Mozila Firefox;</p>
+<h3 id="34-principais-necessidades-dos-usuarios-ou-envolvidos">3.4 Principais necessidades dos usuários ou envolvidos</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Necessidade</strong></th>
+<th align="center"><strong>Prioridade</strong></th>
+<th align="center"><strong>Interesses</strong></th>
+<th align="center"><strong>Solução Atual</strong></th>
+<th align="center"><strong>Solução Proposta</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Chat entre Pessoas que buscam por ajudam e Profissional da área de psicologia</td>
+<td align="center">Alta</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4visao-geral-do-produto">4.Visão Geral do Produto</h2>
+<hr />
+<h3 id="41-perspectiva-do-produto">4.1 Perspectiva do produto</h3>
+<p>Para montarmos a lógica de como nosso site irá funcionar, fizemos uma pesquisa em artigos científicos que abordaram o assunto felicidade. A felicidade é uma emoção básica caracterizada por um estado emocional positivo, com sentimentos de bem-estar e de prazer, associados à percepção de sucesso e à compreensão coerente e lúcida do mundo(por isso a importância do usuário colocar as áreas de interesse para que o site explore as atividades que darão prazer, por meio de feedbacks de incentivo e desafios semanais).</p>
+<hr />
+<h2 id="5recursos-do-produto">5.Recursos do Produto</h2>
+<hr />
+<ul>
+<li>Perfil de usuário contendo seu level e pontos para ele trocar por um avatar, plano de fundo ou similar.</li>
+<li>Cartões com metas a serem cumpridas</li>
+<li>chat com profissionais da área de psicologia</li>
+</ul>
+<hr />
+<h2 id="6-restricoes">6: Restrições</h2>
+<hr />
+<h3 id="61-restricoes-de-implementacao">6.1 Restrições de implementação</h3>
+<p>O sistema deverá ser implementado na linguagem Python, construindo uma aplicação web com o uso do framework Django.</p>
+<h3 id="62-restricoes-externas">6.2 Restrições externas</h3>
+<p>Dentre as restrições externas as que mais irão influenciar são a inexperiência com a linguagem e frameworks, além de possíveis transtornos entre a equipe de desenvolvimento.</p>
+<h3 id="63-restricoes-de-design">6.3 Restrições de design</h3>
+<p>O sistema deve ter uma interface que seja de fácil uso para pessoas. Dessa forma, será necessária uma plataforma intuitiva, com ícones e botões de fácil pesquisa e acesso.O sistema deve evitar possuir expressões negativas na aplicação visto que é um site que trabalha com saúde mental.</p>
+<hr />
+<h2 id="7-faixas-de-qualidade">7:   Faixas de Qualidade</h2>
+<hr />
+<p>Para maior eficiência, a aplicação será web, pois o gerenciamento de dados e informações seria dificultado no caso de uma aplicação exclusiva para aparelhos mobile.</p>
+<hr />
+<h2 id="8-requisitos-do-produto">8. Requisitos do Produto</h2>
+<hr />
+<h3 id="81-requisitos-do-sistema">8.1 Requisitos do Sistema</h3>
+<p>O sistema poderá ser acessado pelo usuário através de um navegador, tendo a necessidade de conexão com a internet.</p>
+<h3 id="82-requisitos-de-design">8.2 Requisitos de Design</h3>
+<p>O sistema deverá ser intuitivo e autoexplicativo, possibilitando uma fácil interação com o usuário.O sistema deve ser gamificado para prender a atenção do usuário.</p>
+<h3 id="83-requisitos-de-portabilidade">8.3 Requisitos de Portabilidade</h3>
+<p>O sistema é utilizável através da maior parte dos navegadores web atuais, sendo compatível com os principais sistemas operacionais como Windows, Mac OS e Linux.</p>
+<h3 id="84-requisitos-de-confiabilidade">8.4 Requisitos de Confiabilidade</h3>
+<p>O sistema deve se comprometer respeitar a privacidade de cada usuário no que for de seu interesse em ser preservada.</p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
