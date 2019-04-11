@@ -32,7 +32,7 @@ Não foram definidos.
 * **Responsável:Igor Aragão**  
 
 #### [Criar Rich Picture 2.0](https://github.com/ads-2019-1/ads-2019-1/issues/8)
-* **Responsável:Byron, Igor Veludo, Willian e João Pedro**  
+* **Responsável:Byron, Igor Veludo, William e João Pedro**  
 
 #### [Refatorar Brainstorming](https://github.com/ads-2019-1/ads-2019-1/issues/36)
 * **Responsável:Igor Aragão**  
@@ -44,7 +44,7 @@ Não foram definidos.
 * **Responsável:Igor Aragão**  
 
 #### [Criar Questionário](https://github.com/ads-2019-1/ads-2019-1/issues/35)
-* **Responsável:Geovanne, Williann e Vinícius**  
+* **Responsável:Geovanne, William e Vinícius**  
 
 
 
