@@ -14,7 +14,7 @@ A ferramenta utilizada para fazer a representar gráfica do modelo de processo f
 Este documento tem por objetivo apresentar os processos e subprocessos de rastreabilidade de produção individual e da documentação.
 ## 3.Processo Geral
 
-![Imagem](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/modulo2/img/ModeloRastreabilidade.png?raw=true)
+![Imagem](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo2/img/ModeloRastreabilidade.png?raw=true)
 
 ## 4.Referências
 

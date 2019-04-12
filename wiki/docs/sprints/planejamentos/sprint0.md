@@ -1,9 +1,9 @@
 # Planejamento da Sprint 0
 
 ## Período
-**Data de Início:** 15/03/2019  
+**Data de Início:** 18/03/2019
 
-**Data de Término:** 21/03/2019
+**Data de Término:** 24/03/2019
 
 **Duração:** 7 dias
 
@@ -14,32 +14,19 @@ O objetivo desta sprint foi a definição do tema, levantamento dos requisitos, 
 Não foram definidos.
 
 ## Tarefas Alocadas para a Sprint
-#### [Criar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/29)
-* **Responsáveis:** Bayron, Geovanne, Igor Aragão, Igor Guimarãs, João, José, Ramon, Vinícius, William
-
-#### [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/28)
-* **Responsáveis:** Geovanne
-
-#### [Criar Rich Picture 1.0](https://github.com/ads-2019-1/ads-2019-1/issues/15)
-* **Responsáveis:** Geovanne, Igor Aragão, Igor Guimarãs, João, William
-
-#### [Criar Documento de Elicitação de Requisitos](https://github.com/ads-2019-1/ads-2019-1/issues/11)
-* **Responsável:** Geovanne
-
-#### [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/30)
-* **Responsável:** Geovanne
-
-#### [Criar e Configurar Repositório](https://github.com/ads-2019-1/ads-2019-1/issues/18)
-* **Responsável:** Vinícius
-
-#### [Configurar Ambiente de Desenvolvimento](https://github.com/ads-2019-1/ads-2019-1/issues/16)
-* **Responsável:** Vinícius
-
-#### [Iniciar Aplicação Django](https://github.com/ads-2019-1/ads-2019-1/issues/20)
-* **Responsável:** Vinícius
-
-#### [Configurar Integração Contínua](https://github.com/ads-2019-1/ads-2019-1/issues/17)
-* **Responsável:** Vinícius
-
-#### [Criar e Configurar Wiki](https://github.com/ads-2019-1/ads-2019-1/issues/19)
-* **Responsável:** Vinícius
+#### [Criar Design Sprint](https://github.com/ads-unbind/unbind/issues/29)
+* **Responsáveis:** Byron Kamal, Geovanne Saraiva, Igor Aragão, Igor Guimarães, João Pedro, José Aquiles, Ramon Sales, Vinícius Cantuária, William Almeida.
+#### [Criar Rich Pictures](https://github.com/ads-unbind/unbind/issues/15)
+* **Responsáveis:** Geovanne Saraiva, Igor Aragão, Igor Guimarães, João Pedro, William Almeida.
+#### [Criar Documento de Elicitação de Requisitos](https://github.com/ads-unbind/unbind/issues/11)
+* **Responsável:** Geovanne Saraiva.
+#### [Criar e Configurar Repositório](https://github.com/ads-unbind/unbind/issues/18)
+* **Responsável:** Vinícius Cantuária.
+#### [Criar e Configurar Wiki](https://github.com/ads-unbind/unbind/issues/19)
+* **Responsável:** Vinícius Cantuária.
+#### [Configurar Ambiente de Desenvolvimento](https://github.com/ads-unbind/unbind/issues/16)
+* **Responsável:** Vinícius Cantuária.
+#### [Iniciar Aplicação Django](https://github.com/ads-unbind/unbind/issues/20)
+* **Responsável:** Vinícius Cantuária.
+#### [Configurar Integração Contínua](https://github.com/ads-unbind/unbind/issues/17)
+* **Responsável:** Vinícius Cantuária.

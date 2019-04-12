@@ -10,7 +10,7 @@ Data | Responsável | Versão| Mudança realizada|
 <h3> Parte 1 </h3>
 A técnica de coletar ideias para o desenvolvimento do escopo do site, foi o brainstorming, no qual todo o grupo estava presente em sala, primeiro fizemos uma coleta de ideia e escrevemos no papel, houve uma votação e a ideia eleita foi a de um site que permitisse que pessoas oferecessem serviços na casa de clientes, permitindo a economia de tempo e de dinheiro para que buscasse esse serviço, depois de definir o escopo geral, discutimos durante 40 minutos sobre como o modelo de negócio deveria ser, as formas de pagamento, os tipos de usuário, se iríamos focar em um nicho de serviços, ou se faríamos algo mais generalista, pelo feedback da professora Milene, decidimos que inicialmente o site iria somente conectar pessoas que estariam procurando serviços de salão de beleza em geral, tais como: manicure, corte de cabelo, pedicure, entre outros. Abaixo está a imagem com as ideias geradas pela reunião:<br />
 
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/brainstorming_1.jpeg?raw=true)
+![BrainStorming_1](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/brainstorming_1.jpeg?raw=true)
 
 
 
@@ -19,32 +19,32 @@ O Rich Picture de cada integrante do grupo, mostrando a visão de negócio que c
 <br />
 Igor Aragão:
 <br />
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/rich_picture_igor_arag.jpeg?raw=true)
+![BrainStorming_1](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/rich_picture_igor_arag.jpeg?raw=true)
 <br />
 
 Aquiles:
 <br />
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_aquiles.jpeg?raw=true)
+![BrainStorming_1](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/richpicture_aquiles.jpeg?raw=true)
 <br />
 
 Geovanne Santos:
 <br />
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_geovanne.jpeg?raw=true)
+![BrainStorming_1](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/richpicture_geovanne.jpeg?raw=true)
 <br />
 
 João Pedro:
 <br />
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_joao_pedro.jpeg?raw=true)
+![BrainStorming_1](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/richpicture_joao_pedro.jpeg?raw=true)
 <br />
 
 Vinicius:
 <br />
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_vinicius.jpeg?raw=true)
+![BrainStorming_1](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/richpicture_vinicius.jpeg?raw=true)
 <br />
 
-Willian:
+William:
 <br />
-![BrainStorming_1](https://github.com/ads-2019-1/ads-2019-1/blob/master/wiki/docs/documentacao/img/richpicture_willian.jpeg?raw=true)
+![BrainStorming_1](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/richpicture_willian.jpeg?raw=true)
 <br />
 
 <h3> Parte 3 </h3>

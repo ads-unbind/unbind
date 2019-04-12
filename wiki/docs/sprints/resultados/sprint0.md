@@ -2,26 +2,24 @@
 
 ## Revisão
 ### Tarefas Concluidas
-* [Criar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/29)
-* [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/28)
-* [Criar Rich Picture 1.0](https://github.com/ads-2019-1/ads-2019-1/issues/15)
-* [Criar Documento de Elicitação de Requisitos](https://github.com/ads-2019-1/ads-2019-1/issues/11)
-* [Refatorar Design Sprint](https://github.com/ads-2019-1/ads-2019-1/issues/30)
-* [Criar e Configurar Repositório](https://github.com/ads-2019-1/ads-2019-1/issues/18)
-* [Configurar Ambiente de Desenvolvimento](https://github.com/ads-2019-1/ads-2019-1/issues/16)
-* [Iniciar Aplicação Django](https://github.com/ads-2019-1/ads-2019-1/issues/20)
-* [Configurar Integração Contínua](https://github.com/ads-2019-1/ads-2019-1/issues/17)
-* [Criar e Configurar Wiki](https://github.com/ads-2019-1/ads-2019-1/issues/19)
+* [Criar Design Sprint](https://github.com/ads-unbind/unbind/issues/29)
+* [Criar Rich Pictures](https://github.com/ads-unbind/unbind/issues/15)
+* [Criar Documento de Elicitação de Requisitos](https://github.com/ads-unbind/unbind/issues/11)
+* [Criar e Configurar Repositório](https://github.com/ads-unbind/unbind/issues/18)
+* [Criar e Configurar Wiki](https://github.com/ads-unbind/unbind/issues/19)
+* [Configurar Ambiente de Desenvolvimento](https://github.com/ads-unbind/unbind/issues/16)
+* [Iniciar Aplicação Django](https://github.com/ads-unbind/unbind/issues/20)
+* [Configurar Integração Contínua](https://github.com/ads-unbind/unbind/issues/17)
 
 ### Tarefas Não Concluidas e Justificativas
-* Nenhuma
+* Nenhuma.
 
 ## Retrospectiva
 ### Pontos Positivos
-* Boa integração da equipe
-* Bom conhecimento de requisitos
-* Conhecimento prévio de DevOps pelo responsável pelo ambiente de desenvolvimento
+* Boa integração da equipe;
+* Bom conhecimento de requisitos;
+* Conhecimento prévio de DevOps pelo responsável pelo ambiente de desenvolvimento.
 
 ### Pontos Negativos
-* Falta de conhecimento de alguns integrantes com a tecnologia escolida
-* Gerência tardia
+* Falta de conhecimento de alguns integrantes com a tecnologia escolhida;
+* Gerência tardia.

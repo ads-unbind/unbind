@@ -3,7 +3,7 @@ h1>Questionário</h1>
 
 Data | Responsável | Versão| Mudança realizada|
 --------- | ------| --------| ------------ |
-01/04/2019     | Geovanne Saraiva, Willian, Vinícius |   1.0   |  criação das perguntas  |
+01/04/2019     | Geovanne Saraiva, William, Vinícius |   1.0   |  criação das perguntas  |
 
 
 <h3> Introdução </h3>
