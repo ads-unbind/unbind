@@ -43,7 +43,7 @@ RF 11 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo
 RF 12 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md) | Acessar Artigo|
 RF 13 |[aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md) | Acessar Tarefas |
 RF 14 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_do_site.md) | Listar tarefas concluídas e não concluídas|
-RF 15 |[aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md) | Acessar tarefas individuais |
+RF 15 |[aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md) | Selecionar tarefas individuais |
 RF 16 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md)| Marcar tarefa como concluída|
 RF 17 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_do_site.md)| pontuar por tarefa concluída|
 RF 18 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md)| Acessar artigos gerais|
@@ -58,6 +58,7 @@ RF 26 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo
 RF 27 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_do_site.md)| Mensagens de feedback por conclusão de tarefa|
 RF 28 |[aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md) | Acessar categorias gerais |
 RF 29 | [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_do_site.md) | Listar artigos gerais de cada categoria|
+RF 30 |[aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/modulo1/elicitacao_de_usuario.md) | Sair do site |
 
 ## Requisitos não funcionais
 

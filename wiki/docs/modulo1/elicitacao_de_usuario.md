@@ -22,20 +22,33 @@ As informações necessárias para coleta de requisitos e para a construção de
 Não há uma técnica padrão de elicitação de requisitos, por isso é necessário conhecer diversas técnicas e avaliar qual/quais serão mais adequadas ao projeto, facilitando o processo de elicitação. No desenvolvimento deste projeto serão utilizadas as técnicas a seguir:
 
 <h3>History Telling</h3>
-![Design]()
+![Design](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/story_boarding_2.jpeg?raw=true)
 
 <h3>Introspecção</h3>
 Consiste em entender quais propriedades o sistema deve possuir para ser um sucesso, deve-se imaginar o que o usuário gostaria, se lhe tivesse dado uma respectiva tarefa, neste caso será analisado o usuário padrão(que procura um site que possa fazer ele começar a ter hábitos que melhore sua saúde mental) <br />
 <h4>Relato de introspecção: comportamento de usuário sem estar logado e após login feito</h4>
 <h5>Relator: Geovanne Santos</h5>
-1. Create, Update, Delete, da conta de usuário. <br />
-2. Escolher atividades de interesse. <br />
-3. Adicionar atividades de interesse. <br />
-4. Trocar pontos de atividade concluída por prêmios(livros, consultas, eventos culturais). <br />
-5. Personalizar o perfil pessoal com os pontos ganhos.<br />
-6. Fazer download de artigos.<br />
-7. Poder ter contato via site com profissionais de psicologia, para uma consulta remota.<br />
-8. Entrar em grupos de auto ajuda, com pessoas dos mesmos problemas(para reuniões remotas).<br />
+1. Cadastrar Usuário <br />
+2. Acessar Perfil <br />
+3. Escolher áreas de interesse <br />
+4. Responder Questionário <br />
+5. Gerenciar Dados de Usuário<br />
+6. Excluir Conta<br />
+7. Acessar Artigos Personalizados<br />
+8. Selecionar Artigo<br />
+9. Acessar Tarefas<br />
+10. Listar tarefas concluídas e não concluídas<br />
+11. Selecionar tarefas individuais<br />
+12. Marcar tarefa como concluída<br />
+13. Selecionar prêmio<br />
+14. Trocar prêmios por pontos<br />
+15. Login de admin do site<br />
+16. Cadastrar admin<br />
+17. Gerenciar Atividades<br />
+18. Acessar categorias gerais<br />
+19. Acessar Artigo<br />
+20. Sair do site<br />
+
 
 <h2> Moscow (priorização de requisitos)</h2>
 Os requisitos listados abaixo foram obtidos a partir das técnicas de elicitação apresentadas anteriormente.
@@ -56,16 +69,27 @@ Os requisitos listados abaixo foram obtidos a partir das técnicas de elicitaç�
 
 | Requisitos                                                                              | Must(deve ter) | Should(deveria ter) | Could(poderia ter) | Would(seria legal ter) |
 | --------------------------------------------------------------------------------------- | -------------- | ------------------- | ------------------ | ---------------------- |
-| Create, Update, Delete, da conta de usuário                                             | x              |                     |                    |                        |
-| Escolher atividades de interesse                                                        | x              |                     |                    |                        |
-| Adicionar atividades de interesse                                                       |                | x                   |                    |                        |
-| Trocar pontos de atividade concluída por prêmios                                        |                |                     | x                  |                        |
-| Personalizar o perfil pessoal com os pontos ganhos                                      |                |                     | x                  |                        |
-| Fazer download de artigos                                                               |                | x                   |                    |                        |
-| Poder ter contato via site com profissionais de psicologia, para uma consulta remota    |                | x                   |                    |                        |
-| Entrar em grupos de auto ajuda, com pessoas dos mesmos problemas(para reuniões remotas) |                |                     |                    | x                      |
-| Sair do site                                                                            | x              |                     |                    |                        |
-| Marcar consulta presencial                                                              |                |                     | x                  |                        |
+| Cadastrar Usuário                                            | x              |                     |                    |                        |
+| Acessar Perfil                                                        | x              |                     |                    |                        |
+| Escolher áreas de interesse                                                       | x               |                    |                    |                        |
+| responder questionário                                       | x               |                     |                   |                        |
+| Gerenciar dados de usuário                                    |   x             |                     |                   |                        |
+| Excluir conta                                                               |  x              |                    |                    |                        |
+| Acessar artigos personalizados    |   x             |                    |                    |                        |
+| Selecionar artigo |  x              |                     |                    |                       |
+| Acessar tarefas                                                                            | x              |                     |                    |                        |
+| Listar tarefas concluídas e não concluídas                                                              |                |    x                 |                   |                        |
+| Selecionar tarefas individuais                                                              |                |   x                  |                   |                        |
+| Marcar tarefa como concluída                                                              |                |     x                |                   |                        |
+| Selecionar prêmio                                                             |                |            x         |                   |                        |
+| Trocar prêmios por pontos                                                             |                |    x                 |                   |                        |
+| Login de admin do site                                                              |  x              |                     |                   |                        |
+| Cadastrar admin                                                              |   x             |                     |                   |                        |
+| Gerenciar Atividades                                                              |                |     x                |                   |                        |
+| Acessar categorias gerais                                                              |                |   x                  |                  |                        |
+| Acessar Artigo                                                              |  x              |                     |                   |                        |
+| Sair do site                                                             |   x             |                     |                   |                        |
+
 
 8 requisitos de usuário foram elicitados neste módulo.
 

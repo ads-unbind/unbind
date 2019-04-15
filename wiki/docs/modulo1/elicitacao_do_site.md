@@ -1,4 +1,4 @@
-<h1>Elicitação de requisitos de usuário</h1>
+<h1>Elicitação de requisitos do site</h1>
 <h3>Histórico de revisão</h3>
 
 Data | Responsável | Versão| Mudança realizada|
@@ -23,7 +23,8 @@ As informações necessárias para coleta de requisitos e para a construção de
 Não há uma técnica padrão de elicitação de requisitos, por isso é necessário conhecer diversas técnicas e avaliar qual/quais serão mais adequadas ao projeto, facilitando o processo de elicitação. No desenvolvimento deste projeto serão utilizadas as técnicas a seguir:
 
 <h3>History Telling</h3>
-![Design]()
+![Design](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/story_boarding_2.jpeg?raw=true)
+![Design](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/storyboarding_1.png?raw=true)
 
 <h3>Introspecção</h3>
 Consiste em entender quais propriedades o sistema deve possuir para ser um sucesso, deve-se imaginar o que o usuário gostaria, se lhe tivesse dado uma respectiva tarefa, neste caso será analisado o usuário padrão(que procura um site que possa fazer ele começar a ter hábitos que melhore sua saúde mental) <br />
@@ -32,12 +33,18 @@ Consiste em entender quais propriedades o sistema deve possuir para ser um suces
 1. Validação dos dados de conta do usuário <br />
 2. Indicar desafios semanais pro user <br />
 3. Dar uma pontuação diferente de acordo com o peso da atividade <br />
-4. Indicar textos <br />
-5. Listar profissionais para o chat de consulta<br />
-6. CRUD dos profissionais.<br />
-7. Avaliar através de questionário o desempenho do user<br />
-8. Criação de grupos de interesse e problemas parecidos.<br />
-9. CRUD da Lista de prêmios <br />
+4. Atualizar Atividades Periódicas <br />
+5. Gerar Avaliação de Desempenho <br />
+6. Atualizar Artigos Personalizados<br />
+7. Classificação de Perfil de Usuário<br />
+8. Dividir Artigos por Categoria<br />
+9. Listar tarefas concluídas e não concluídas <br />
+10. pontuar por tarefa concluída <br />
+11. Listar prêmios <br />
+12. Dividir artigos gerais por categoria <br />
+13. Atualizar categorias individuais <br />
+14. Mensagens de feedback por conclusão de tarefa <br />
+15. Listar artigos gerais de cada categoria <br />
 
 <h2> Moscow (priorização de requisitos)</h2>
 Os requisitos listados abaixo foram obtidos a partir das técnicas de elicitação apresentadas anteriormente.
@@ -59,14 +66,20 @@ Os requisitos listados abaixo foram obtidos a partir das técnicas de elicitaç�
 Requisitos|Must(deve ter)|Should(deveria ter)  |Could(poderia ter)  |Would(seria legal ter)|
 ---------------- |---------------- | ---------------| ------------------| ---------------------- |
 Validação dos dados de conta do usuário | x | | | |
-Indicar desafios semanais pro user | x | | | |
+Indicar desafios semanais pro user |  |x | | |
 Dar uma pontuação diferente de acordo com o peso da atividade | | x | | |
-Indicar textos | | x |  | |
-Listar profissionais para o chat de consulta | | | x | |
-CRUD dos profissionais | | x | | |
-Avaliar através de questionário o desempenho do user| | x | | |
-Criação de grupos de interesse e problemas parecidos.| | | | x |
-CRUD da Lista de prêmios| | x |  | |
+Atualizar Atividades Periódicas | | x |  | |
+Gerar Avaliação de Desempenho | | x |  | |
+Atualizar Artigos Personalizados| | x | | |
+Classificação de Perfil de Usuário| | x | | |
+Dividir Artigos por Categoria| x | | |  |
+Listar tarefas concluídas e não concluídas | | x |  | |
+pontuar por tarefa concluída | x | |  | |
+Listar prêmios| |  | x | |
+Dividir artigos gerais por categoria| | x |  | |
+Atualizar categorias individuais| | x |  | |
+Mensagens de feedback por conclusão de tarefa| | x |  | |
+Listar artigos gerais de cada categoria| x | |  | |
 
 8 requisitos de usuário foram elicitados neste módulo.
 
