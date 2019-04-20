@@ -5,7 +5,7 @@ Data|Versão|Descrição|Autor(es)
 
 |||
 |-----|----|
-|**Reniuão X**||
+|**Reunião X**||
 |**Data**||
 |**Tipo de Reunião**||
 |**Discussão**||
