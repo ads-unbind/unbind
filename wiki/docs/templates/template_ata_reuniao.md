@@ -1,4 +1,7 @@
 # Template de Ata de Reunião
+Data|Versão|Descrição|Autor(es)
+---- |----------------------- |--------------------|-----------
+18/04/2019|0.1|Criação do Template| Igor Guimarães Veludo e Byron Kamal|
 
 |||
 |-----|----|
