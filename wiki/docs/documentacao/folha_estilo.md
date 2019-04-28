@@ -374,4 +374,4 @@ Exemplo errado:
 
 https://github.com/fgaTactics/tecprog2017.1/wiki/Stylesheet - Visualizado em 20/04/2019 às 10:25
 
-http://aprenda-python.blogspot.com.br/2011/10/programe-conforme-o-pep8.html - Visualizado em 20/04/201 às 10:25
+http://aprenda-python.blogspot.com.br/2011/10/programe-conforme-o-pep8.html - Visualizado em 20/04/2019 às 10:25
