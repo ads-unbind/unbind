@@ -29,7 +29,7 @@
             <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
     WebFont.load({
         google: {
@@ -174,12 +174,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../elicitacao_de_usuario/">
+                        <a rel="prev" href="../elicitacao_de_usuario/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../richpicture/">
+                        <a rel="next" href="../richpicture/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -197,7 +197,7 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1>Elicitação de requisitos de usuário</h1>
+<h1>Elicitação de requisitos do site</h1>
 
 <h3>Histórico de revisão</h3>
 
@@ -237,7 +237,8 @@
 <p>Não há uma técnica padrão de elicitação de requisitos, por isso é necessário conhecer diversas técnicas e avaliar qual/quais serão mais adequadas ao projeto, facilitando o processo de elicitação. No desenvolvimento deste projeto serão utilizadas as técnicas a seguir:</p>
 <h3>History Telling</h3>
 
-<p><img alt="Design" src="" /></p>
+<p><img alt="Design" src="https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/story_boarding_2.jpeg?raw=true" />
+<img alt="Design" src="https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/storyboarding_1.png?raw=true" /></p>
 <h3>Introspecção</h3>
 
 <p>Consiste em entender quais propriedades o sistema deve possuir para ser um sucesso, deve-se imaginar o que o usuário gostaria, se lhe tivesse dado uma respectiva tarefa, neste caso será analisado o usuário padrão(que procura um site que possa fazer ele começar a ter hábitos que melhore sua saúde mental) <br />
@@ -246,12 +247,18 @@
 1. Validação dos dados de conta do usuário <br />
 2. Indicar desafios semanais pro user <br />
 3. Dar uma pontuação diferente de acordo com o peso da atividade <br />
-4. Indicar textos <br />
-5. Listar profissionais para o chat de consulta<br />
-6. CRUD dos profissionais.<br />
-7. Avaliar através de questionário o desempenho do user<br />
-8. Criação de grupos de interesse e problemas parecidos.<br />
-9. CRUD da Lista de prêmios <br /></p>
+4. Atualizar Atividades Periódicas <br />
+5. Gerar Avaliação de Desempenho <br />
+6. Atualizar Artigos Personalizados<br />
+7. Classificação de Perfil de Usuário<br />
+8. Dividir Artigos por Categoria<br />
+9. Listar tarefas concluídas e não concluídas <br />
+10. pontuar por tarefa concluída <br />
+11. Listar prêmios <br />
+12. Dividir artigos gerais por categoria <br />
+13. Atualizar categorias individuais <br />
+14. Mensagens de feedback por conclusão de tarefa <br />
+15. Listar artigos gerais de cada categoria <br /></p>
 <h2> Moscow (priorização de requisitos)</h2>
 
 <p>Os requisitos listados abaixo foram obtidos a partir das técnicas de elicitação apresentadas anteriormente.</p>
@@ -293,8 +300,8 @@
 </tr>
 <tr>
 <td>Indicar desafios semanais pro user</td>
-<td>x</td>
 <td></td>
+<td>x</td>
 <td></td>
 <td></td>
 </tr>
@@ -306,44 +313,86 @@
 <td></td>
 </tr>
 <tr>
-<td>Indicar textos</td>
+<td>Atualizar Atividades Periódicas</td>
 <td></td>
 <td>x</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Listar profissionais para o chat de consulta</td>
-<td></td>
-<td></td>
-<td>x</td>
-<td></td>
-</tr>
-<tr>
-<td>CRUD dos profissionais</td>
+<td>Gerar Avaliação de Desempenho</td>
 <td></td>
 <td>x</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Avaliar através de questionário o desempenho do user</td>
+<td>Atualizar Artigos Personalizados</td>
 <td></td>
 <td>x</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Criação de grupos de interesse e problemas parecidos.</td>
-<td></td>
-<td></td>
+<td>Classificação de Perfil de Usuário</td>
 <td></td>
 <td>x</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>CRUD da Lista de prêmios</td>
+<td>Dividir Artigos por Categoria</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Listar tarefas concluídas e não concluídas</td>
 <td></td>
 <td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pontuar por tarefa concluída</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Listar prêmios</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td>Dividir artigos gerais por categoria</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Atualizar categorias individuais</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mensagens de feedback por conclusão de tarefa</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Listar artigos gerais de cada categoria</td>
+<td>x</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -369,44 +418,78 @@
         
         
     </footer>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../../js/bootstrap-3.0.3.min.js"></script>
     <script src="../../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-    var base_url = '../..';
-    </script>
+    <script>var base_url = "../.."</script>
+    
     <script src="../../js/base.js"></script>
     <script src="../../search/main.js"></script>
 
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        From here you can search these documents. Enter your search terms below.
-                    </p>
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                        </div>
-                    </form>
-                    <div id="mkdocs-search-results"></div>
-                </div>
-                <div class="modal-footer">
-                </div>
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
             </div>
         </div>
     </div>
-
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
     </body>
 
 </html>

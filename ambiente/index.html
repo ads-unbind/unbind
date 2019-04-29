@@ -29,7 +29,7 @@
             <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
     WebFont.load({
         google: {
@@ -174,12 +174,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="..">
+                        <a rel="prev" href="..">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../colaboradores/">
+                        <a rel="next" href="../colaboradores/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -194,76 +194,38 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#ambiente-de-desenvolvimento">Ambiente de Desenvolvimento</a></li>
-            <li class="second-level"><a href="#instalacao-do-docker">Instalação do Docker</a></li>
+            <li class="second-level"><a href="#instalacao-do-python-373-e-do-virtualenv">Instalação do Python 3.7.3 e do VirtualEnv</a></li>
                 
             <li class="second-level"><a href="#rodar-a-aplicacao">Rodar a Aplicação</a></li>
                 
-                <li class="third-level"><a href="#clone-o-repositorio-e-entre-nele">Clone o repositório e entre nele</a></li>
-                <li class="third-level"><a href="#levante-seu-ambiente">Levante seu ambiente</a></li>
-                <li class="third-level"><a href="#comandos-uteis">Comandos úteis</a></li>
-                <li class="third-level"><a href="#como-baixar-uma-imagem-do-docker">Como baixar uma imagem do docker</a></li>
-                <li class="third-level"><a href="#listando-imagens-locais">Listando imagens locais</a></li>
-                <li class="third-level"><a href="#deletando-imagens">Deletando imagens</a></li>
-                <li class="third-level"><a href="#listando-conteineres-em-execucao">Listando contêineres em execução</a></li>
-                <li class="third-level"><a href="#removendo-conteineres">Removendo contêineres</a></li>
-                <li class="third-level"><a href="#execucao-de-comandos-de-fora-do-conteiner">Execução de comandos de fora do contêiner</a></li>
+                <li class="third-level"><a href="#clonar-o-projeto">Clonar o Projeto</a></li>
+                <li class="third-level"><a href="#levantar-o-ambiente">Levantar o Ambiente</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
 <h1 id="ambiente-de-desenvolvimento">Ambiente de Desenvolvimento</h1>
-<h2 id="instalacao-do-docker">Instalação do Docker</h2>
-<ul>
-<li>
-<p>Baixe e instale Docker CE em seu sistema operacional:</p>
-<ul>
-<li><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">Linux - Ubuntu</a></li>
-<li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac">macOS</a></li>
-<li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Windows</a></li>
-</ul>
-</li>
-<li>
-<p>Baixe e instale Docker Compose no <a href="https://docs.docker.com/compose/install/">site oficial</a>.</p>
-</li>
-</ul>
+<h2 id="instalacao-do-python-373-e-do-virtualenv">Instalação do Python 3.7.3 e do VirtualEnv</h2>
+<p>Baixe e instale o <a href="https://www.python.org/downloads/">Python</a> em seu sistema operacional.
+No terminal, rode o seguinte comando: <code>pip3 install virtualenv</code></p>
 <h2 id="rodar-a-aplicacao">Rodar a Aplicação</h2>
-<h4 id="clone-o-repositorio-e-entre-nele">Clone o repositório e entre nele</h4>
+<h4 id="clonar-o-projeto">Clonar o Projeto</h4>
 <ul>
-<li>Escolha uma forma de clonar o repositório:<ul>
-<li>HTTP: <code>git clone https://github.com/ads-2019-1/repo-ads-2019-1.git</code></li>
-<li>SSH: <code>git clone git@github.com:ads-2019-1/repo-ads-2019-1.git</code></li>
+<li>Entre no <a href="https://github.com/ads-unbind/unbind">repositório do projeto</a> e escolha uma forma de clonar o repositório:<ul>
+<li>HTTPS: <code>git clone https://github.com/ads-unbind/unbind.git</code></li>
+<li>SSH: <code>git clone git@github.com:ads-unbind/unbind.git</code></li>
 </ul>
 </li>
 </ul>
-<h4 id="levante-seu-ambiente">Levante seu ambiente</h4>
-<pre><code>docker-compose up
-</code></pre>
-
-<hr />
-<h4 id="comandos-uteis">Comandos úteis</h4>
-<h4 id="como-baixar-uma-imagem-do-docker">Como baixar uma imagem do docker</h4>
-<pre><code>docker pull &lt;imagem-desejada&gt;
-</code></pre>
-
-<h4 id="listando-imagens-locais">Listando imagens locais</h4>
-<pre><code>docker images
-</code></pre>
-
-<h4 id="deletando-imagens">Deletando imagens</h4>
-<pre><code>docker rmi -f &lt;id-da-imagem&gt;
-</code></pre>
-
-<h4 id="listando-conteineres-em-execucao">Listando contêineres em execução</h4>
-<pre><code>docker ps
-</code></pre>
-
-<h4 id="removendo-conteineres">Removendo contêineres</h4>
-<pre><code>docker rm [-f] &lt;nome-do-contêiner-ou-id&gt;
-</code></pre>
-
-<h4 id="execucao-de-comandos-de-fora-do-conteiner">Execução de comandos de fora do contêiner</h4>
-<pre><code>docker exec &lt;nome-do-contêiner&gt; &lt;comando-desejado&gt;
-</code></pre></div>
+<h4 id="levantar-o-ambiente">Levantar o Ambiente</h4>
+<ul>
+<li>No terminal, entre na pasta src/ e siga os passos:
+    1) Crie o VirtuelEnv: <code>virtualenv -p python3 venv</code>
+    1) Levante o VirtualEnv: <code>source venv/bin/activate</code>
+    2) Instale as dependências: <code>pip install -r requirements.txt</code> 
+    3) Rode as migrações: <code>./manage.py migrate</code>
+    4) Rode o servidor: <code>./manage.py runserver</code></li>
+</ul></div>
         
         
     </div>
@@ -277,44 +239,78 @@
         
         
     </footer>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
     <script src="../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-    var base_url = '..';
-    </script>
+    <script>var base_url = ".."</script>
+    
     <script src="../js/base.js"></script>
     <script src="../search/main.js"></script>
 
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        From here you can search these documents. Enter your search terms below.
-                    </p>
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                        </div>
-                    </form>
-                    <div id="mkdocs-search-results"></div>
-                </div>
-                <div class="modal-footer">
-                </div>
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
             </div>
         </div>
     </div>
-
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
     </body>
 
 </html>
