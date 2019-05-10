@@ -17,7 +17,7 @@ Desenvolvimento: o desenvolvimento será feito em pares, assim como as documenta
 ## Tarefas Alocadas para a Sprint
 
 #### [nfr-usabilidade]()
-* **Responsáveis:**
+* **Responsáveis:*Byron Kamal e Igor Veludo*
 
 #### [nfr-segurança]()
 * **Responsáveis:** Geovanne e Vinicius
@@ -47,7 +47,7 @@ Desenvolvimento: o desenvolvimento será feito em pares, assim como as documenta
 * **Responsável:**
 
 #### [criar model conquista]()
-* **Responsável:**
+* **Responsável:*Byron Kamal e Igor Veludo*
 
 #### [criar superuser]()
 * **Responsável:**
