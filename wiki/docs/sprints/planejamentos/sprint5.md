@@ -23,7 +23,7 @@ Desenvolvimento: o desenvolvimento será feito em pares, assim como as documenta
 * **Responsáveis:** Geovanne e Vinicius
 
 #### [nfr-disponibilidade]()
-* **Responsável:**
+* **Responsável:*William Almeida e Igor Aragão* 
 
 #### [diagrama de sequência "user-page"]()
 * **Responsável:** Geovanne e Vinicius
@@ -43,14 +43,14 @@ Desenvolvimento: o desenvolvimento será feito em pares, assim como as documenta
 #### [criar model user]()
 * **Responsável:** Geovanne e Vinicius
 
-#### [criar model arquivo]()
-* **Responsável:**
+#### [criar model artigo]()
+* **Responsável:*Igor Aragão e William Almeida*
 
 #### [criar model conquista]()
 * **Responsável:*Byron Kamal e Igor Veludo*
 
 #### [criar superuser]()
-* **Responsável:**
+* **Responsável:*Igor Aragão e William Almeida*
 
 #### [estruturação do código]()
 * **Responsável:** Geovanne e Vinicius
