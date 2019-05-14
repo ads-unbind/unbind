@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'questionario',
     'categoria',
     'artigo',
+    'atividade',
 ]
 
 MIDDLEWARE = [
