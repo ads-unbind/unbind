@@ -1,4 +1,4 @@
-site_name: My ADS Docs
+site_name: UnBind
 
 theme: cinder
 
@@ -6,3 +6,15 @@ nav:
   - Home: index.md
   - Ambiente: ambiente.md
   - Colaboradores: colaboradores.md
+  - Documento de Visão: documentacao/doc_visao.md
+  - Sprints: sprints/sprints.md
+  - Dinamica 1:
+      - Design Sprint 1.0: documentacao/design_sprint/design_sprint_1.md
+      - Design Sprint 2.0: documentacao/design_sprint/design_sprint_3.md
+      - Elicitação de usuário: modulo1/elicitacao_de_usuario.md
+      - Elicitação do site: modulo1/elicitacao_do_site.md
+      - Rich Picture: modulo1/richpicture.md
+      - 5W2H: modulo1/5w2h.md
+  - Dinamica 2:
+     - Processos: modulo2/processos.md
+     - Processo de Rastreabilidade: modulo2/processo_rastreabilidade.md
