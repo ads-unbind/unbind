@@ -12,3 +12,6 @@ class Atividade(models.Model):
                                                      ('DE', 'Desbloqueada'),))
     pontos = models.IntegerField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.titulo
