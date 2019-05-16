@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Unbind{% endblock %}</title>
+    <title>{% block title %}UNBIND{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
+
 <body>
+    <nav class='navbar navbar-default navbar-static-top'>
+        <div class="container">
+            <ul class='nav navbar-nav'>
+                <li><a class='navbar-brand' href="{% url 'index' %}">UNBIND</a></li>
+                <li><a class='navbar-brand' href="{% url 'admin:index' %}">ADMIN</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="container" id="main">
         {% block body %}
         {% endblock %}
     </div>
 </body>
+
 </html>
