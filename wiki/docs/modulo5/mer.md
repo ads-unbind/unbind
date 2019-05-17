@@ -4,6 +4,7 @@
 | ---------- | ---------------- | ------ | -------------------------------------- |
 | 11/05/2019 | Geovanne Saraiva, Igor Aragão e Willian | 0.1 | Adição do ME-R |
 | 12/05/2019 | Geovanne Saraiva e Vinícius | 0.2 | Correção do ME-R e adição do DE-R |
+| 12/05/2019 | Geovanne Saraiva, Igor Aragão, Vinícius e Willian | 1.0 | Correção do DE-R e adição do Diagrama Lógico |
 
 ## Modelo Entidade-Relacionamento (ME-R)
 ### Entidades:
@@ -88,4 +89,7 @@ Uma CATEGORIA pode ser possuído por várias perguntas
 Cardinalidade: 1:n
 
 ## Diagrama Entidade-Relacionamento (DE-R)
-![](modelagem_do_sistema/der_v01.jpg)
+![](modelagem_do_sistema/der_v02.png)
+
+## Diagrama Lógico (DL)
+![](modelagem_do_sistema/dl_v01.png)
