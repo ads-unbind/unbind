@@ -260,9 +260,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-.idea/ads-2019-1.iml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
+.idea/*
+*/.idea/*
 /wiki/site/
