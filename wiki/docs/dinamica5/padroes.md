@@ -1,8 +1,10 @@
-| Data       | Versão | Descrição                                                 | Responsáveis                                                                           |
-| ---------- | ------ | --------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| 26/05/2017 | 0.1    | Adição sobre GOF Facade, Factory method e Template method | Byron Kamal, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles e William Almeida |
+# GOFs
+### Histórico de revisão
+Data | Versão | Descrição | Autor |
+--------- | ------ | ------------ | --------- |
+| 26/05/2019 | 0.1 | Adição dos GOFs Facade, Factory method e Template method | Byron Kamal, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles e William Almeida |
+| 26/05/2019 | 0.2 | Adição do GOF State | Igor Aragão |
 
-# GOF
 
 ## Introdução
 
@@ -63,6 +65,25 @@ Essa estrutura é utilizada nos forms dos apps da aplicação, onde se define os
 #### Implementação
 
 > Utilização deste método pode ser visto no nosso repositório no GitHub, clicando [aqui](https://github.com/ads-unbind/unbind/commit/d7a1ec6bf0fa87e6443e44cfb9baac54dfd0c3df).
+
+## State
+
+É um padrão GOF comportamental que permite um objeto modificar seu comportamento quando necessário.
+
+### Estrutura genérica
+
+![](img/gofs_state_generico.png)
+
+### Utilização no projeto UNBIND
+
+![](img/gofs_state_atividade.png)
+Essa estrutura será utilizada para gerenciar a troca de estados da classe Atividade.
+
+#### Implementação
+
+A classe Atividade envolve 7 estados diferentes, sendo eles: Inicial, Disponível, Indisponível, Em Progresso, Em Espera, Finalizada e Descartada.
+
+> A prévia da utilização deste método pode ser visto através [desse link](https://repl.it/@IgorAragao/StateActivityGOF).
 
 ## Referências
 

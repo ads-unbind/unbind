@@ -46,7 +46,7 @@ nav:
       - Diagrama de Sequência: dinamica4/diagrama-sequencia.md
   - Dinamica 5:
       - NFR: dinamica5/nfr.md
-      - Padroes: dinamica5/padroes.md
+      - Design Patterns: dinamica5/padroes.md
   - Sprints: sprints/sprints.md
   - Atas:
       - 20/04: extras/atas/ata-reuniao-20-04-19.md
