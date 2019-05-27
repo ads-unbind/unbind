@@ -28,7 +28,7 @@ O projeto é desenvolvido utilizando o <i>Framework</i> Django da linguagem Pyth
 
 #### Implementação
 
-O modulo <i>Forms</i> de Produtos é responsável por definir os campos de entrada de dado de um usuário, ou seja os atributo necessários para a instanciação de um determinado objeto
+O modulo <i>Forms</i> de Usuário é responsável por definir os campos de entrada de dado de um usuário, ou seja os atributo necessários para a instanciação de um determinado objeto
 
 A classe meta define qual a model que sera utilizada na construção do formulario, e os fields definem os campos necessários para a construção de um objeto deste tipo.
 
