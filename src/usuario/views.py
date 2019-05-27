@@ -2,6 +2,9 @@ from django.shortcuts import render
 from usuario.forms import UsuarioForm
 from . import forms
 from usuario import models
+from django.contrib.auth import login as django_login, authenticate
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 def register(request):
     #form = forms.UsuarioForm()
@@ -28,3 +31,18 @@ def register(request):
         '''
 
     return render(request,'register.html',{'usuario_form':usuario_form})
+
+
+def login(request):
+    context = {'error': ''}
+    if request.method == 'POST':
+        user = authenticate(
+            username=request.POST['username'],
+            password=request.POST['password'])
+        if user is not None and user.is_active:
+            django_login(request, user)
+            return HttpResponseRedirect(reverse('index'))
+        else:
+            error = 'Login inválido!'
+            context = {'error': error}
+    return render(request, 'login.html', context)
