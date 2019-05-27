@@ -10,10 +10,10 @@ A aplicação tem como propósito ajudar as pessoas a terem uma melhor qualidade
 Documentação do projeto disponível no [site](https://ads-unbind.github.io/unbind/).
 
 ### Ambiente de Desenvolvimento
-Para executar o ambiente de desenvolvimento, acesse o [guia](https://ads-unbind.github.io/unbind/ambiente/).
+Para executar o ambiente de desenvolvimento, acesse o [guia](https://ads-unbind.github.io/unbind/extras/ambiente/).
 
-### Colabordores
-Para informações dos colaboradores, acesse a [página](https://ads-unbind.github.io/unbind/colaboradores/).
+### Colaboradores
+Para informações dos colaboradores, acesse a [página](https://ads-unbind.github.io/unbind/#colaboradores).
 
 ### Contribuir
 Para contribuir com a gente, o colaborador deve ler o [código de conduta](https://github.com/ads-unbind/unbind/blob/master/.github/CODE_OF_CONDUCT.md), dá um _fork_ e enviar um [pull request](https://github.com/ads-unbind/unbind/pulls) com sua contribuição.

@@ -1,9 +1,9 @@
 from django.conf.urls import url
-from usuario import views
+from artigo import views
 
 #templates tagging
 #app_name = 'principal_app'
 
 urlpatterns = [
-    url(r'register/$',views.register,name='register'),
+    url(r'usuario_artigo/$',views.usuario_artigo,name='usuario_artigo'),
 ]
