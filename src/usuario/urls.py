@@ -1,10 +1,10 @@
-from django.conf.urls import url
+from django.urls import path,re_path
 from usuario import views
 
 #templates tagging
 #app_name = 'principal_app'
 
 urlpatterns = [
-    url(r'register/$',views.register,name='register'),
-    url(r'login/$',views.login,name='login'),
+    path('register/',views.register,name='register'),
+    path('login/',views.login,name='login'),
 ]

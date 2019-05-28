@@ -35,11 +35,11 @@ def register(request):
 
 def login(request):
     context = {'error': ''}
-    if request.method == 'POST':
+    if (request.method == 'POST'):
         user = authenticate(
             username=request.POST['username'],
             password=request.POST['password'])
-        if user is not None and user.is_active:
+        if (user is not None and user.is_active):
             django_login(request, user)
             return HttpResponseRedirect(reverse('index'))
         else:

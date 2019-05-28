@@ -2,17 +2,17 @@
 {% block title %}login{% endblock %}
 {% block body %}
 <h1>Login</h1>
-            <form method="POST">
-                {%csrf_token%}
-                <div style="color:red; font-size: 25px"> 
-                  {% if error %}
-                  {{ error }}
-                  <br>
-                  {% endif %}
-                </div>      
-                <label><input type="" name="username" placeholder="Nome de usuário" required maxlength="30" style="text-align:center; " /></label><br>
-                <label><input type="password" name="password" maxlength="30" placeholder="Senha" required style="text-align:center;" /></label><br>
-                <button type="submit" >Entrar</button><br>
-                
+<form method="POST" action="{% url 'usuario:login' %}">
+    {%csrf_token%}
+    <div style="color:red; font-size: 25px"> 
+      {% if error %}
+      {{ error }}
+      <br>
+      {% endif %}
+    </div>      
+    <label> Nome de usuário <input type="" name="username" required maxlength="30" style="text-align:center; " /></label><br>
+    <label> Senha<input type="password" name="password" maxlength="30" required style="text-align:center;" /></label><br>
+    <button type="submit" >Entrar</button><br>
+    
 </form>
 {% endblock %}

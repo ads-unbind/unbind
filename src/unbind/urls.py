@@ -15,17 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
-from django.urls import include, path
+from django.urls import include, path,re_path
 from usuario.views import register
 from principal.views import index
 from artigo.views import usuario_artigo
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    url(r'^admin/', admin.site.urls),
-    url(r'^$',include('principal.urls')),
-    url(r'^usuario/',include('usuario.urls')),
-    url(r'^artigo/',include('artigo.urls')),
+    path('admin/', admin.site.urls),
+    path('',include('principal.urls')),
+    path('usuario/',include('usuario.urls')),
+    path('artigo/',include('artigo.urls')),
 
     #path('', index, name='index'),
     # path('usuario/', include('usuario.urls')),
