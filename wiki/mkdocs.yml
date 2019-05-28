@@ -2,55 +2,55 @@
 site_name: UNBIND
 
 # Repository
-repo_name: 'ads-unbind/unbind'
-repo_url: 'https://github.com/ads-unbind/unbind'
+repo_name: "ads-unbind/unbind"
+repo_url: "https://github.com/ads-unbind/unbind"
 
 # Configuration
 theme:
-  name: 'material'
+  name: "material"
   palette:
-    primary: 'light blue'
-    accent: 'teal'
+    primary: "light blue"
+    accent: "teal"
   logo:
-    icon: 'spa'
+    icon: "spa"
 
 # Navigation
 nav:
   - Home: index.md
   - Dinamica 1:
-    - Proposta do projeto: dinamica1/proposta.md
-    - Mapa Mental: dinamica1/mapa-mental.md
-    - Rich Picture: dinamica1/rich-picture.md
-    - 5W2H: dinamica1/5w2h.md
-    - Diagrama de Causa-Efeito: dinamica1/diagrama-causa-efeito.md
-    - Storytelling: dinamica1/storytelling.md
-    - Introspecção: dinamica1/introspeccao.md
-    - Protótipo: dinamica1/prototipo.md
-    - Questionário: dinamica1/questionario.md
-    - Documento de Visão: dinamica1/documento-de-visao.md
-    - MoSCoW: dinamica1/moscow.md
-    - Product Backlog: dinamica1/product-backlog.md
-    - Especificação Suplementar: dinamica1/especificacao-suplementar.md
-    - Léxicos: dinamica1/lexicos.md
+      - Proposta do projeto: dinamica1/proposta.md
+      - Mapa Mental: dinamica1/mapa-mental.md
+      - Rich Picture: dinamica1/rich-picture.md
+      - 5W2H: dinamica1/5w2h.md
+      - Diagrama de Causa-Efeito: dinamica1/diagrama-causa-efeito.md
+      - Storytelling: dinamica1/storytelling.md
+      - Introspecção: dinamica1/introspeccao.md
+      - Protótipo: dinamica1/prototipo.md
+      - Questionário: dinamica1/questionario.md
+      - Documento de Visão: dinamica1/documento-de-visao.md
+      - MoSCoW: dinamica1/moscow.md
+      - Product Backlog: dinamica1/product-backlog.md
+      - Especificação Suplementar: dinamica1/especificacao-suplementar.md
+      - Léxicos: dinamica1/lexicos.md
   - Dinamica 2:
-    - Modelagem do Processo: dinamica2/modelagem-processo.md
+      - Modelagem do Processo: dinamica2/modelagem-processo.md
   - Dinamica 3:
-    - Diagrama de Classes: dinamica3/diagrama-classes.md
-    - Modelagem do Sistema: dinamica3/modelagem-sistema.md
-    - Diagrama de Caso de Uso: dinamica3/diagrama-caso-de-uso.md
-    - Diagrama de Pacotes: dinamica3/diagrama-pacotes.md
+      - Diagrama de Classes: dinamica3/diagrama-classes.md
+      - Modelagem do Sistema: dinamica3/modelagem-sistema.md
+      - Diagrama de Caso de Uso: dinamica3/diagrama-caso-de-uso.md
+      - Diagrama de Pacotes: dinamica3/diagrama-pacotes.md
   - Dinamica 4:
-    - Diagrama de Atividades: dinamica4/diagrama-atividades.md
-    - Diagrama de Estados: dinamica4/diagrama-estados.md
-    - Diagrama de Colaboração: dinamica4/diagrama-colaboracao.md
-    - Diagrama de Sequência: dinamica4/diagrama-sequencia.md
+      - Diagrama de Atividades: dinamica4/diagrama-atividades.md
+      - Diagrama de Estados: dinamica4/diagrama-estados.md
+      - Diagrama de Colaboração: dinamica4/diagrama-colaboracao.md
+      - Diagrama de Sequência: dinamica4/diagrama-sequencia.md
   - Dinamica 5:
-    - NFR: dinamica5/nfr.md
+      - NFR: dinamica5/nfr.md
+      - Design Patterns: dinamica5/padroes.md
   - Sprints: sprints/sprints.md
   - Atas:
-    - 20/04: extras/atas/ata-reuniao-20-04-19.md
+      - 20/04: extras/atas/ata-reuniao-20-04-19.md
   - Iniciativas Extras:
-    - Ambiente: extras/ambiente.md
+      - Ambiente: extras/ambiente.md
 #    - Identidade Visual: extras/identidade-visual/identidade-visual.md
-
 
