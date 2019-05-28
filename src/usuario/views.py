@@ -5,6 +5,7 @@ from usuario import models
 from django.contrib.auth import login as django_login, authenticate
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.contrib.auth import logout as django_logout
 
 def register(request):
     #form = forms.UsuarioForm()
@@ -46,3 +47,9 @@ def login(request):
             error = 'Login inválido!'
             context = {'error': error}
     return render(request, 'login.html', context)
+
+
+def logout(request):
+    if request.user.is_authenticated:
+        django_logout(request)
+    return HttpResponseRedirect(reverse('index'))
