@@ -3,12 +3,12 @@
 ## Período
 **Data de Início:** 04/05/2019
 
-**Data de Término:** 12/05/2019
+**Data de Término:** 15/05/2019
 
-**Duração:** 8 dias
+**Duração:** 11 dias
 
 ## Introdução
-O objetivo desta sprint foi a definição do tema, levantamento dos requisitos, treinamento do grupo com a tecnologia escolhida e configurações gerais iniciais.
+O objetivo desta sprint foi terminar a documentação que faltava, além de implementar as models e fazer o html base da aplicação.
 
 ## Papeis
 Scrum Master: Geovanne e Vinicius
@@ -17,25 +17,25 @@ Desenvolvimento: o desenvolvimento será feito em pares, assim como as documenta
 ## Tarefas Alocadas para a Sprint
 
 #### [nfr-usabilidade]()
-* **Responsáveis:*Byron Kamal e Igor Veludo*
+* **Responsáveis:* Igor e Willian
 
 #### [nfr-segurança]()
 * **Responsáveis:** Geovanne e Vinicius
 
 #### [nfr-disponibilidade]()
-* **Responsável:*William Almeida e Igor Aragão* 
+* **Responsável:** Byron Kamal e Igor Veludo
 
 #### [diagrama de sequência "user-page"]()
 * **Responsável:** Geovanne e Vinicius
 
 #### [refatorar diagrama de classe]()
-* **Responsável:** 
+* **Responsável:** Todos
 
 #### [i-star]()
-* **Responsável:**
+* **Responsável:** Igor, João Pedro Mota, Aquiles
 
 #### [criar template BASE]()
-* **Responsável:**
+* **Responsável:**Geovanne,Vinicius,Igor e Willian
 
 #### [criar tela index]()
 * **Responsável:** Geovanne e Vinicius
@@ -49,6 +49,12 @@ Desenvolvimento: o desenvolvimento será feito em pares, assim como as documenta
 #### [criar model conquista]()
 * **Responsável:*Byron Kamal e Igor Veludo*
 
+#### [criar model questionário]()
+* **Responsável:** Geovanne,Vinicius,Igor e Willian
+
+#### [criar model atividade]()
+* **Responsável:** Geovanne,Vinicius,Igor e Willian
+
 #### [criar superuser]()
 * **Responsável:*Igor Aragão e William Almeida*
 
@@ -60,3 +66,12 @@ Desenvolvimento: o desenvolvimento será feito em pares, assim como as documenta
 
 #### [protótipo de alta fidelidade]()
 * **Responsável:** Igor Aragão
+
+#### [Criar modelo entidade relacionamento]()
+* **Responsável:** Geovanne,Vinicius,Igor e Willian
+
+#### [Criar diagrama entidade relacionamento]()
+* **Responsável:** Geovanne,Vinicius,Igor e Willian
+
+#### [Criar diagrama lógico]()
+* **Responsável:** Geovanne e Vinicius

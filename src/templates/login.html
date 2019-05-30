@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}login{% endblock %}
+{% block body %}
+<h1>Login</h1>
+<form method="POST" ">
+    {%csrf_token%}
+    <div style="color:red; font-size: 25px"> 
+      {% if error %}
+      {{ error }}
+      <br>
+      {% endif %}
+    </div>      
+    <label> Nome de usuário </label> <br> <input type="" name="username" required maxlength="30" " /></label><br><br>
+    <label> Senha </label> <br> <input type="password" name="password" maxlength="30" required /><br><br>
+    <button type="submit" >Entrar</button><br>
+    
+</form>
+{% endblock %}
