@@ -12,7 +12,15 @@
         <div class="container">
             <ul class='nav navbar-nav'>
                 <li><a class='navbar-brand' href="{% url 'index' %}">UNBIND</a></li>
-                <li><a class='navbar-brand' href="{% url 'admin:index' %}">ADMIN</a></li>
+                {% if request.user and not request.user.is_authenticated %}
+                    <li><a class='navbar-brand' href="{% url 'login' %}">LOGIN</a></li>
+                    <li><a class='navbar-brand' href="{% url 'register' %}">REGISTRO</a></li>
+                {% else %}
+                    <li><a class='navbar-brand' href="{% url 'logout' %}">LOGOUT</a></li>
+                    {% if user.is_superuser %}
+                    <li><a class='navbar-brand' href="{% url 'admin:index' %}">ADMIN</a></li>
+                    {% endif %}                
+                {% endif %}
             </ul>
         </div>
     </nav>
