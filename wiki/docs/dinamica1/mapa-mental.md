@@ -5,6 +5,7 @@ Data | Versão | Descrição | Autor |
 12/04/2019 | 0.1 | Versão 0.1 do mapa mental | Igor Aragão |
 15/04/2019 | 0.2 | Versão 0.2 do mapa mental | Igor Aragão |
 22/05/2019 | 0.2.1 | Elaboração do documento | Igor Aragão |
+01/06/2019 | 0.3 | Refatoração do documento | William Almeida e Igor Veludo |
 
 ## 1. Introdução
 Este documento tem como finalidade apresentar o mapa mental do projeto UNBIND.
@@ -13,7 +14,9 @@ Este documento tem como finalidade apresentar o mapa mental do projeto UNBIND.
 Mapa mental é um diagrama que permite que você organize ideias de forma simples e lógica, representando-as visualmente, facilitando o processo de memorização.
 
 Portanto, para que o grupo alinhasse ideias, e refinasse o escopo, foi elaborado um mapa mental, com os principais focos da aplicação, e como elas poderiam interagir entre si:
-
+### Versão 0.1
+![mapa-mental](img/mapa-mental_v0.1.png)
+### Versão 0.2
 ![mapa-mental](img/mapa-mental_v0.2.png)
 
 ## 3. Referências
