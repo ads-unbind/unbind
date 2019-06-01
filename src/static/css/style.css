@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Adding Inter font types */
+/* Inter font family */
 
 @font-face {
     font-family: 'Inter';
@@ -128,13 +128,91 @@
     src: url("../fonts/Inter/Inter-BlackItalic.woff2") format("woff2"), url("../fonts/Inter/Inter-BlackItalic.woff") format("woff");
 }
 
+
+/* style.css */
+
+:root {
+    --unbind-blue-1: #6595bf;
+    --unbind-blue-2: #a0bdd9;
+    --unbind-green-1: #65bf73;
+    --unbind-green-2: #a0d9a9;
+    --unbind-white: #fbfbfb;
+    --unbind-black: #444444;
+}
+
 body {
     margin: 0;
-    font-family: Inter;
-    font-size: 1rem;
+    font-family: Inter, Roboto;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
     text-align: left;
     background-color: #fff;
+}
+
+a {
+    font-weight: 500;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .25rem 2.25rem;
+    border-bottom: 1px solid rgba(27, 31, 59, 0.08);
+    background-color: var(--unbind-blue-1);
+}
+
+.navbar-brand {
+    color: var(--unbind-white);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+}
+
+.navbar-brand:hover {
+    color: var(--unbind-blue-2);
+    letter-spacing: 0.5rem;
+    transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
+}
+
+.nav-link {
+    color: var(--unbind-white);
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: 0.0625rem;
+}
+
+.nav-link:hover {
+    color: var(--unbind-blue-2);
+}
+
+.btn {
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--unbind-blue-1);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.125rem;
+    letter-spacing: 0.0625rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+}
+
+.btn-outline-white {
+    border: 2px solid var(--unbind-white);
+    background: transparent;
+    color: var(--unbind-white);
+}
+
+.btn-outline-white:hover {
+    background: var(--unbind-white);
+    color: var(--unbind-blue-1);
+    transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
 }
