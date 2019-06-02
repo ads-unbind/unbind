@@ -1,32 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}UNBIND{% endblock %}</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
-    <nav class='navbar navbar-default navbar-static-top'>
-        <div class="container">
-            <ul class='nav navbar-nav'>
-                <li><a class='navbar-brand' href="{% url 'index' %}">UNBIND</a></li>
-                {% if request.user and not request.user.is_authenticated %}
-                    <li><a class='navbar-brand' href="{% url 'login' %}">LOGIN</a></li>
-                    <li><a class='navbar-brand' href="{% url 'register' %}">REGISTRO</a></li>
-                {% else %}
-                    <li><a class='navbar-brand' href="{% url 'logout' %}">LOGOUT</a></li>
-                    {% if user.is_superuser %}
-                    <li><a class='navbar-brand' href="{% url 'admin:index' %}">ADMIN</a></li>
-                    {% endif %}                
-                {% endif %}
+    <nav class="navbar navbar-expand-md fixed-top uppercase">
+        <a class="navbar-brand" href="{% url 'index' %}">UNBIND</a> {% if request.user and not request.user.is_authenticated %}
+        <div class="justify-content-end">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Entrar</a>
+                </li>
+                <a class="btn btn-outline-white ml-lg-3" href="{% url 'register' %}">Crie sua conta</a>
             </ul>
         </div>
+        {% else %} {% if user.is_superuser %}
+        <div class="justify-content-between">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admin:index' %}">Painel do Admin</a>
+                </li>
+            </ul>
+        </div>
+        {% endif %}
+        <div class="justify-content-end">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+                </li>
+            </ul>
+        </div>
+        {% endif %}
     </nav>
-    <div class="container" id="main">
-        {% block body %}
-        {% endblock %}
+    <div class="container" id="main" style="margin-top: 90px;">
+        {% block body %} {% endblock %}
     </div>
 </body>
 
