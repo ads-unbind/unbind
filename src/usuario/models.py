@@ -41,3 +41,11 @@ class Usuario(models.Model):
             pontosDaCategoria += pergunta.pontos
 
         return pontosDaCategoria
+
+    def get_user_xp(self):
+        atividades = self.atividade.all()
+        xp = 0
+        for atividade in atividades:
+            xp += atividade.pontos
+
+        return xp
