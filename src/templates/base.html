@@ -5,13 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}UNBIND{% endblock %}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md fixed-top uppercase">
-        <a class="navbar-brand" href="{% url 'index' %}">UNBIND</a> {% if request.user and not request.user.is_authenticated %}
+    {% block navbar %}
+    <nav class="navbar navbar-expand-md fixed-top text-uppercase">
+        <a class="navbar-brand unbind-brand text-unbind-white" href="{% url 'index' %}">UNBIND</a> 
+        {% if request.user and not request.user.is_authenticated %}
         <div class="justify-content-end">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -20,7 +22,8 @@
                 <a class="btn btn-outline-white ml-lg-3" href="{% url 'register' %}">Crie sua conta</a>
             </ul>
         </div>
-        {% else %} {% if user.is_superuser %}
+        {% else %} 
+        {% if user.is_superuser %}
         <div class="justify-content-between">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -38,9 +41,9 @@
         </div>
         {% endif %}
     </nav>
-    <div class="container" id="main" style="margin-top: 90px;">
-        {% block body %} {% endblock %}
-    </div>
+    {% endblock %}
+
+    {% block body %}{% endblock %}
 </body>
 
 </html>
