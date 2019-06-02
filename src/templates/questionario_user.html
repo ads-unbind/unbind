@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}register{% endblock %}
+{% block body %}
+    <h1>Registro</h1>
+    <form method="POST">
+          {% csrf_token %}
+          {{usuario_form.as_p}}
+
+          <!--este as_p é pra fazer a quebra dos espaços de cada campo do formulário, se n colocarmos isso fica td um na frente do outro-->
+          <!--este crsf é pra garantir segurança, se nao colocar o form n funciona-->
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+{% endblock %}

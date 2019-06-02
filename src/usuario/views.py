@@ -23,14 +23,6 @@ def register(request):
     else:
         usuario_form = UsuarioForm()
 
-        '''
-            print("validation success")
-            print("username:"+form.cleaned_data['username'])
-            print("email:"+form.cleaned_data['email'])
-            print("password:"+form.cleaned_data['password'])
-            print("done")
-        '''
-
     return render(request,'register.html',{'usuario_form':usuario_form})
 
 

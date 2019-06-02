@@ -26,6 +26,7 @@ urlpatterns = [
     path('',include('principal.urls')),
     path('usuario/',include('usuario.urls')),
     path('artigo/',include('artigo.urls')),
+    path('questionario/',include('questionario.urls')),
 
     #path('', index, name='index'),
     # path('usuario/', include('usuario.urls')),
