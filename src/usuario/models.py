@@ -5,7 +5,7 @@ from django.dispatch import receiver
 
 from artigo.models import Artigo
 from atividade.models import Atividade
-from questionario.models import Questionario
+from questionario.models import Questionario, Pergunta
 from conquista.models import Conquista
 
 
@@ -30,5 +30,14 @@ class Usuario(models.Model):
             Usuario.objects.create(user=instance)
 
     @receiver(post_save, sender=User)
-    def save_user_profile(sender, instance, **kwargs):
+    def save_user_usuario(sender, instance, **kwargs):
         instance.usuario.save()
+
+    def get_user_points_last_form_by_category(self, categoriaId):
+        ultimoQuestionario = self.questionario.last().id
+        perguntasDaCategoria = Pergunta.objects.filter(categoria_id = categoriaId, questionario_id = ultimoQuestionario)
+        pontosDaCategoria = 0
+        for pergunta in perguntasDaCategoria:
+            pontosDaCategoria += pergunta.pontos
+
+        return pontosDaCategoria
