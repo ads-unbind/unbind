@@ -7,28 +7,29 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth import logout as django_logout
 
+
 def register(request):
-    #form = forms.UsuarioForm()
-
     if request.method == 'POST':
-        usuario_form = UsuarioForm(data=request.POST)#to pegando info do form
+        register_form = UsuarioForm(data=request.POST)
 
-        if usuario_form.is_valid():
-            user = usuario_form.save()
+        if register_form.is_valid():
+            user = register_form.save()
             user.set_password(user.password)
             user.save()
+
+            return HttpResponseRedirect(reverse('login'))
         else:
-            print(usuario_form.errors)
+            print(register_form.errors)
 
     else:
-        usuario_form = UsuarioForm()
+        register_form = UsuarioForm()
 
-    return render(request,'register.html',{'usuario_form':usuario_form})
+    return render(request, 'register.html', {'register_form': register_form})
 
 
 def login(request):
     context = {'error': ''}
-    if (request.method == 'POST'):
+    if request.method == 'POST':
         user = authenticate(
             username=request.POST['username'],
             password=request.POST['password'])

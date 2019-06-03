@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/* @charset "UTF-8";
 
 /* Inter font family */
 
@@ -141,23 +141,52 @@
 }
 
 body {
-    margin: 0;
-    font-family: Inter, Roboto;
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.5;
+    font-family: Inter;
+    /*font-size: 1.25rem; passar pros elementos da navbar*/
     color: #495057;
-    text-align: left;
-    background-color: #fff;
+}
+
+section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+
+/* Text */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #212529;
 }
 
 a {
     font-weight: 500;
 }
 
-.uppercase {
-    text-transform: uppercase;
+.unbind-brand {
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    color: var(--unbind-blue-1) !important;
 }
+
+.unbind-brand:hover {
+    text-decoration: none;
+    color: var(--unbind-blue-2) !important;
+}
+
+.text-unbind-white {
+    color: var(--unbind-white) !important;
+}
+
+.text-unbind-blue-1 {
+    color: var(--unbind-blue-1) !important;
+}
+
+
+/* Navbar */
 
 .navbar {
     display: flex;
@@ -170,10 +199,7 @@ a {
 }
 
 .navbar-brand {
-    color: var(--unbind-white);
     font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: 0.4rem;
 }
 
 .navbar-brand:hover {
@@ -193,16 +219,21 @@ a {
     color: var(--unbind-blue-2);
 }
 
+
+/* Buttons */
+
 .btn {
     font-weight: 600;
-    background-color: transparent;
-    color: var(--unbind-blue-1);
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1.125rem;
-    letter-spacing: 0.0625rem;
+    padding: 0.4375rem 1.5rem;
+    letter-spacing: 0.05rem;
     border-radius: 0.5rem;
-    border: 2px solid transparent;
+    font-size: 1.125rem;
+}
+
+.btn-primary {
+    color: var(--unbind-white);
+    background-color: var(--unbind-blue-1);
+    border-color: var(--unbind-blue-1);
 }
 
 .btn-outline-white {
@@ -215,4 +246,16 @@ a {
     background: var(--unbind-white);
     color: var(--unbind-blue-1);
     transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+
+/* Login */
+
+.login-brand {
+    font-size: 2rem;
+    margin-bottom: 4.5rem !important;
+}
+
+.login-container {
+    padding-top: 4.5rem !important;
 }

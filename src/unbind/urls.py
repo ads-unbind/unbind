@@ -21,13 +21,9 @@ from principal.views import index
 from artigo.views import usuario_artigo
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
     path('admin/', admin.site.urls),
-    path('',include('principal.urls')),
-    path('usuario/',include('usuario.urls')),
-    path('artigo/',include('artigo.urls')),
+    path('', include('principal.urls')),
+    path('', include('usuario.urls')),
+    path('artigo/', include('artigo.urls')),
     path('questionario/',include('questionario.urls')),
-
-    #path('', index, name='index'),
-    # path('usuario/', include('usuario.urls')),
 ]
