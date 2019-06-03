@@ -5,6 +5,10 @@ import django
 django.setup()
 
 import random
+
+from PIL import Image
+import sys
+
 #importando as models
 from usuario.models import Usuario
 from artigo.models import Artigo
@@ -14,25 +18,8 @@ from faker import Faker
 
 fakegen = Faker()
 '''
-image = f"{os.getcwd()}{static/profile_image/godfather.jpg}"
+#image = f"{os.getcwd()}{static/profile_image/godfather.jpg}"
 
-def add_image():
-    t = Image.objects.get_or_create(image)[0]
-    t.save()
-    return t
-
-def populate(N=5):
-    for entry in range(N):
-        imagem = add_image()
-
-        fake_name = fakegen.name()
-        fake_email = fakegen.email()
-        fake_password=fakegen.text()
-        fake_image = fakegen.ImageField()
-
-        #new entry
-        user = User.objects.get_or_create(nome=fake_name,email=fake_email,password=fake_password,foto=imagem)[0]
-'''
 categories = ['categorie1','categorie2','categorie3','categorie4','categorie5']
 
 def add_categoria():
@@ -43,12 +30,19 @@ def add_categoria():
 def populate(N=5):
 
     for entry in range(N):
-
+        #atributo de categotia
         cat = add_categoria()
+        #atributo de Artigo
+        fake_titulo = fakegen.text(max_nb_chars=15)
+        fake_text =  fakegen.text()
+        fake_imagem = sys.path.append('/static/profile_image/godfather.jpg')
+        fake_autor = fakegen.name()
+        fake_curtidas = 3
 
-        categoria = Categoria.objects.get_or_create(nome=cat)[0]
+        #inicializar os objetos
+        categ = Categoria.objects.get_or_create(nome=cat)[0]
 
-        #acc_rec = AccessRecord.objects.get_or_create(name=webpg,date=fake_date)[0]#ele vai ter o mesmo nome que o webpg
+        artig = Artigo.objects.get_or_create(titulo=fake_titulo,texto=fake_text,imagem=fake_imagem,autor=fake_autor,curtidas=fake_curtidas,categoria=categ)[0]#ele vai ter o mesmo nome que o webpg
 
 if __name__ == '__main__':
     print("populating date")
