@@ -3,34 +3,36 @@ from django.contrib.auth.models import User
 from usuario.models import Usuario
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
-class UsuarioChangeForm(UserCreationForm):
 
+class UsuarioChangeForm(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput())
     password2 = forms.CharField(widget=forms.PasswordInput())
     username = forms.CharField()
     email = forms.CharField(
-        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com a marca do produto.'},
+        error_messages={
+            'required': 'Este campo é obrigatório! Preencha este campo com a marca do produto.'},
         widget=forms.TextInput(
             attrs={
-                'class' : 'form-control',
-                'placeholder' : 'Email',
+                'class': 'form-control',
+                'placeholder': 'Email',
             }
         )
     )
 
     name = forms.CharField(
-        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com a descrição do produto.'},
+        error_messages={
+            'required': 'Este campo é obrigatório! Preencha este campo com a descrição do produto.'},
         widget=forms.TextInput(
             attrs={
-                'class' : 'form-control',
-                'placeholder' : 'Nome',
+                'class': 'form-control',
+                'placeholder': 'Nome',
             }
         )
     )
 
     class Meta():
         model = User
-        fields = ('username','email','name','password', 'password2')
+        fields = ('username', 'email', 'name', 'password', 'password2')
 
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
@@ -44,11 +46,42 @@ class UsuarioChangeForm(UserCreationForm):
             instance.save()
         return instance
 
+
 class UsuarioForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
-    username = forms.CharField()
-    email = forms.EmailField()
+    username = forms.CharField(
+        error_messages={
+            'required': 'Este campo é obrigatório! Preencha este campo com a descrição do produto.'},
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Usuário',
+            }
+        ),
+        label=''
+    )
+    email = forms.EmailField(
+        error_messages={
+            'required': 'Este campo é obrigatório! Preencha este campo com a descrição do produto.'},
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Email',
+            }
+        ),
+        label=''
+    )
+    password = forms.CharField(
+        error_messages={
+            'required': 'Este campo é obrigatório! Preencha este campo com a descrição do produto.'},
+        widget=forms.PasswordInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Senha',
+            }
+        ),
+        label=''
+    )
 
     class Meta():
         model = User
-        fields = ('username','email','password')
+        fields = ('username', 'email', 'password')
