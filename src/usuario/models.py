@@ -49,3 +49,8 @@ class Usuario(models.Model):
             xp += atividade.pontos
 
         return xp
+
+    def get_user_activities(self):
+        atividades = self.atividade.filter(estado = "DI")
+
+        return atividades
