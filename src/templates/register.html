@@ -14,13 +14,13 @@
                     <span>Insira suas informações abaixo</span>
                 </div>
                 <form method="POST">
-                    {% csrf_token %} 
+                    {% csrf_token %}
                     {{register_form.as_p}}
 
                     <!--este as_p é pra fazer a quebra dos espaços de cada campo do formulário, se n colocarmos isso fica td um na frente do outro-->
                     <!--este crsf é pra garantir segurança, se nao colocar o form n funciona-->
                     <div class="form-group">
-                        <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+                        <button class="btn btn-primary btn-block" href="/questionario/questionario_user" %}">Próximo passo</button>
                     </div>
                     <hr>
                     <div class="text-center text-small text-muted">

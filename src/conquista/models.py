@@ -3,7 +3,7 @@ from django.db import models
 class Conquista(models.Model):
 
     nomeConquista = models.CharField(max_length=50)
-    valor = models.IntegerField()
+    valor = models.IntegerField(default = 0)
     disponivel = models.BooleanField(default = False)
     conteudo = models.FileField(upload_to='conquista/')
 
