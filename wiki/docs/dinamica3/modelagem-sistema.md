@@ -6,6 +6,7 @@ Data | Versão | Descrição | Autor |
 12/05/2019 | 0.2 | Correção do ME-R e adição do DE-R | Geovanne Saraiva e Vinícius Cantuária |
 12/05/2019 | 0.3 | Correção do DE-R e adição do Diagrama Lógico | Geovanne Saraiva, Igor Aragão, Vinícius Cantuária e William Almeida |
 18/05/2019 | 0.4 | Correção da Modelagem (ME-R, DE-R e DL) | Igor Aragão, Igor Veludo e João Pedro Mota |
+01/06/2019 | 0.5 | Refatoração do documento | William Almeida |
 
 ## 1. Introdução
 
@@ -59,7 +60,15 @@ Uma CATEGORIA possui vários ARTIGOs, mas um ARTIGO só pode ser de uma CATEGORI
 Cardinalidade: 1:n
 
 ### 2.2 Diagrama Entidade-Relacionamento (DE-R)
+#### 2.2.1 Versão 0.1
+![](img/modelagem-sistema_der_v0.1.jpg)
+#### 2.2.2 Versão 0.2
+![](img/modelagem-sistema_der_v0.2.png)
+#### 2.2.3 Versão 0.3
 ![](img/modelagem-sistema_der_v0.3.png)
 
 ### 2.3 Diagrama Lógico (DL)
+#### 2.3.1 Versão 0.1
+![](img/modelagem-sistema_dl_v0.1.png)
+#### 2.3.2 Versão 0.2
 ![](img/modelagem-sistema_dl_v0.3.png)
