@@ -12,7 +12,7 @@
 <body>
     {% block navbar %}
     <nav class="navbar navbar-expand-md fixed-top text-uppercase">
-        <a class="navbar-brand unbind-brand text-unbind-white" href="{% url 'index' %}">UNBIND</a> 
+        <a class="navbar-brand unbind-brand text-light" href="{% url 'index' %}">UNBIND</a> 
         {% if request.user and not request.user.is_authenticated %}
         <div class="justify-content-end">
             <ul class="navbar-nav mr-auto">
