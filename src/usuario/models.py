@@ -54,3 +54,8 @@ class Usuario(models.Model):
         atividades = self.atividade.filter(estado = "DI")
 
         return atividades
+
+    def get_user_rewards(self):
+        conquistas = self.conquista.filter(disponivel = True)
+
+        return conquistas
