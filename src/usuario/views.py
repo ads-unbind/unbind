@@ -17,7 +17,7 @@ def register(request):
             user.set_password(user.password)
             user.save()
 
-            return HttpResponseRedirect(reverse('login'))
+            return HttpResponseRedirect(reverse('questionario'))
         else:
             print(register_form.errors)
 
@@ -46,3 +46,7 @@ def logout(request):
     if request.user.is_authenticated:
         django_logout(request)
     return HttpResponseRedirect(reverse('index'))
+
+def questionario(request):
+    context = {'error': ''}
+    return render(request,'questionario_user.html',context)

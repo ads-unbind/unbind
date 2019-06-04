@@ -14,17 +14,17 @@
                     <span>Insira suas informações abaixo</span>
                 </div>
                 <form method="POST">
-                    {% csrf_token %} 
+                    {% csrf_token %}
                     {{register_form.as_p}}
 
                     <!--este as_p é pra fazer a quebra dos espaços de cada campo do formulário, se n colocarmos isso fica td um na frente do outro-->
                     <!--este crsf é pra garantir segurança, se nao colocar o form n funciona-->
                     <div class="form-group">
-                        <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+                        <button class="btn btn-primary btn-block" href="/questionario/questionario_user" %}">Próximo passo</button>
                     </div>
                     <div class="text-center text-small text-muted">
                         <span>
-                          Já tem cadastro? 
+                          Já tem cadastro?
                           <a class="text-unbind-blue-1" href="{% url 'login' %}">Fazer login</a>
                       </span>
                     </div>

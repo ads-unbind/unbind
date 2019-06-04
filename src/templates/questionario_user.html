@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-{% block title %}register{% endblock %}
+{% block title %}Quesionário{% endblock %}
 {% block body %}
-    <h1>Registro</h1>
-    <form method="POST">
-          {% csrf_token %}
-          {{usuario_form.as_p}}
 
-          <!--este as_p é pra fazer a quebra dos espaços de cada campo do formulário, se n colocarmos isso fica td um na frente do outro-->
-          <!--este crsf é pra garantir segurança, se nao colocar o form n funciona-->
-        <input type="submit" class="btn btn-primary" value="Submit">
-      </form>
+<div class="jumbotron">
+
+<h1>thank you for your registration</h1>
+
+<h1>register here</h1>
+<h3>fill out the form</h3>
+
+</div>
 {% endblock %}
