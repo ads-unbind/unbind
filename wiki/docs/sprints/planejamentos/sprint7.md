@@ -28,19 +28,19 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [Criar rota de atividade personalizada](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:
+- Responsável: William
 
 #### [proteger as rotas](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:
+- Responsável: William
 
 #### [linkar o registro com o questionário](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:Geovanne e Willian
+- Responsável:Geovanne e William
 
 #### [criar formulário de questionário](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável: Geovanne e Willian
+- Responsável: Geovanne e William
 
 #### [criar file de popular banco](https://github.com/ads-unbind/unbind/issues/89)
 
@@ -52,7 +52,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [criar método de indicar atividade](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:
+- Responsável: William
 
 #### [criar crud de usuário na parte de configuração de conta](https://github.com/ads-unbind/unbind/issues/89)
 
@@ -76,8 +76,8 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [conectar a model user com a de usuario](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável: Willian
+- Responsável: William
 
 #### [arrumar model conquista](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável: Willian
+- Responsável: Willianm
