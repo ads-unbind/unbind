@@ -16,7 +16,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [Criar html da index depois do log in](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:
+- Responsável: Igor Aragão
 
 #### [Criar rota de configuração de conta](https://github.com/ads-unbind/unbind/issues/89)
 
@@ -48,7 +48,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [criar método de indicar artigo](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:
+- Responsável: 
 
 #### [criar método de indicar atividade](https://github.com/ads-unbind/unbind/issues/89)
 
@@ -64,7 +64,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [criar rotas de artigos gerais](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:
+- Responsável: Igor Veludo
 
 #### [criar documento de arquitetura](https://github.com/ads-unbind/unbind/issues/89)
 
@@ -72,7 +72,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [fazer funcionar o fluxo de artigos gerais, de acordo com o diagrama de casos de uso](https://github.com/ads-unbind/unbind/issues/89)
 
-- Responsável:
+- Responsável: Igor Veludo
 
 #### [conectar a model user com a de usuario](https://github.com/ads-unbind/unbind/issues/89)
 
