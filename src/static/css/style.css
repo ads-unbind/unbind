@@ -1,0 +1,261 @@
+/* @charset "UTF-8";
+
+/* Inter font family */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/Inter/Inter-Thin-BETA.woff2") format("woff2"), url("../fonts/Inter/Inter-Thin-BETA.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 100;
+    src: url("../fonts/Inter/Inter-ThinItalic-BETA.woff2") format("woff2"), url("../fonts/Inter/Inter-ThinItalic-BETA.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/Inter/Inter-ExtraLight-BETA.woff2") format("woff2"), url("../fonts/Inter/Inter-ExtraLight-BETA.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/Inter/Inter-ExtraLightItalic-BETA.woff2") format("woff2"), url("../fonts/Inter/Inter-ExtraLightItalic-BETA.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Inter/Inter-Light-BETA.woff2") format("woff2"), url("../fonts/Inter/Inter-Light-BETA.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/Inter/Inter-LightItalic-BETA.woff2") format("woff2"), url("../fonts/Inter/Inter-LightItalic-BETA.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Inter/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/Inter/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter/Inter-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Inter/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter/Inter-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/Inter/Inter-MediumItalic.woff2") format("woff2"), url("../fonts/Inter/Inter-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Inter/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/Inter/Inter-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Inter/Inter-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Inter/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/Inter/Inter-BoldItalic.woff2") format("woff2"), url("../fonts/Inter/Inter-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/Inter/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter/Inter-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/Inter/Inter-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Inter/Inter-ExtraBoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/Inter/Inter-Black.woff2") format("woff2"), url("../fonts/Inter/Inter-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 900;
+    src: url("../fonts/Inter/Inter-BlackItalic.woff2") format("woff2"), url("../fonts/Inter/Inter-BlackItalic.woff") format("woff");
+}
+
+
+/* style.css */
+
+:root {
+    --unbind-blue-1: #6595bf;
+    --unbind-blue-2: #a0bdd9;
+    --unbind-green-1: #65bf73;
+    --unbind-green-2: #a0d9a9;
+    --unbind-white: #fbfbfb;
+    --unbind-black: #444444;
+}
+
+body {
+    font-family: Inter;
+    /*font-size: 1.25rem; passar pros elementos da navbar*/
+    color: #495057;
+}
+
+section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+
+/* Text */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #212529;
+}
+
+a {
+    font-weight: 500;
+}
+
+.unbind-brand {
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    color: var(--unbind-blue-1) !important;
+}
+
+.unbind-brand:hover {
+    text-decoration: none;
+    color: var(--unbind-blue-2) !important;
+}
+
+.text-unbind-white {
+    color: var(--unbind-white) !important;
+}
+
+.text-unbind-blue-1 {
+    color: var(--unbind-blue-1) !important;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .25rem 2.25rem;
+    border-bottom: 1px solid rgba(27, 31, 59, 0.08);
+    background-color: var(--unbind-blue-1);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+}
+
+.navbar-brand:hover {
+    color: var(--unbind-blue-2);
+    letter-spacing: 0.5rem;
+    transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
+}
+
+.nav-link {
+    color: var(--unbind-white);
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: 0.0625rem;
+}
+
+.nav-link:hover {
+    color: var(--unbind-blue-2);
+}
+
+
+/* Buttons */
+
+.btn {
+    font-weight: 600;
+    padding: 0.4375rem 1.5rem;
+    letter-spacing: 0.05rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.btn-primary {
+    color: var(--unbind-white);
+    background-color: var(--unbind-blue-1);
+    border-color: var(--unbind-blue-1);
+}
+
+.btn-outline-white {
+    border: 2px solid var(--unbind-white);
+    background: transparent;
+    color: var(--unbind-white);
+}
+
+.btn-outline-white:hover {
+    background: var(--unbind-white);
+    color: var(--unbind-blue-1);
+    transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+
+/* Login */
+
+.login-brand {
+    font-size: 2rem;
+    margin-bottom: 4.5rem !important;
+}
+
+.login-container {
+    padding-top: 4.5rem !important;
+}

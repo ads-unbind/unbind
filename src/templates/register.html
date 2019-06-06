@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Cadastro | UNBIND{% endblock %}
+{% block navbar %}{% endblock %}
+{% block body %}
+<section class="min-vh-100 py-5">
+    <div class="container">
+        <div class="row justify-content-center login-brand">
+            <a class="unbind-brand" href="{% url 'index' %}">UNBIND</a>
+        </div>
+        <div class="row justify-content-center login-container">
+            <div class="col-xl-4 col-lg-5 col-md-6">
+                <div class="text-center mb-4">
+                    <h1 class="mb-1">Seja bem-vindo</h1>
+                    <span>Insira suas informações abaixo</span>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{register_form.as_p}}
+
+                    <!--este as_p é pra fazer a quebra dos espaços de cada campo do formulário, se n colocarmos isso fica td um na frente do outro-->
+                    <!--este crsf é pra garantir segurança, se nao colocar o form n funciona-->
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" href="/questionario/questionario_user" %}">Próximo passo</button>
+                    </div>
+                    <div class="text-center text-small text-muted">
+                        <span>
+                          Já tem cadastro?
+                          <a class="text-unbind-blue-1" href="{% url 'login' %}">Fazer login</a>
+                      </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

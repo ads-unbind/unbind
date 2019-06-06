@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Entrar | UNBIND{% endblock %}
+{% block navbar %}{% endblock %}
+{% block body %}
+<section class="min-vh-100 py-5">
+    <div class="container">
+        <div class="row justify-content-center login-brand">
+            <a class="unbind-brand" href="{% url 'index' %}">UNBIND</a>
+        </div>
+        <div class="row justify-content-center login-container">
+            <div class="col-xl-4 col-lg-5 col-md-6">
+                <div class="text-center mb-4">
+                    <h1 class="mb-1">Sinta-se em casa</h1>
+                    <span>Insira os detalhes da sua conta abaixo</span>
+                </div>
+                <form method="POST">
+                    {%csrf_token%}
+                    {% if error %}
+                    <div class="text-center text-danger mb-4">
+                        <span>{{ error }}</span>
+                    </div>
+                    {% endif %}
+                    <div class="form-group">
+                        <input type="text" name="username" placeholder="Usuário" class="form-control" required maxlength="30">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Senha" class="form-control" required maxlength="30">
+                        <!-- <small><a href="#">Esqueceu sua senha?</a></small> -->
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Login</button>
+                    </div>
+                    <div class="text-center text-small text-muted">
+                        <span>
+                          Ainda não criou sua conta? 
+                          <a class="text-unbind-blue-1" href="{% url 'register' %}">Criar conta</a>
+                      </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
