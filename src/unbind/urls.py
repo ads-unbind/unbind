@@ -20,6 +20,9 @@ from usuario.views import register
 from principal.views import index
 from artigo.views import usuario_artigo
 
+from principal.views import index
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('principal.urls')),
