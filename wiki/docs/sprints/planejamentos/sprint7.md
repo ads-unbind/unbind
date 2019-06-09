@@ -50,7 +50,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [Criar método de indicar artigo](https://github.com/ads-unbind/unbind/issues/106)
 
-- Responsável:
+- Responsável: Aquiles
 
 #### [Criar método de indicar atividade](https://github.com/ads-unbind/unbind/issues/107)
 
