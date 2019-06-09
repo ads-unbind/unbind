@@ -43,7 +43,7 @@ class Usuario(models.Model):
         return pontosDaCategoria
 
     def get_user_xp(self):
-        atividades = self.atividade.all()
+        atividades = self.atividade.filter(estado = "C") 
         xp = 0
         for atividade in atividades:
             xp += atividade.pontos
