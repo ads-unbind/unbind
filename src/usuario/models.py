@@ -16,10 +16,10 @@ class Usuario(models.Model):
     nome = models.CharField(max_length=50, blank=True, null=True)
     foto = models.ImageField(upload_to='foto_usuario', blank=True, null=True)
     scoreTotal = models.IntegerField(blank=True, null=True)
-    atividade = models.ManyToManyField(Atividade)
-    artigo = models.ManyToManyField(Artigo)
+    atividade = models.ManyToManyField(Atividade, blank = True)
+    artigo = models.ManyToManyField(Artigo, blank = True)
     questionario = models.ManyToManyField(Questionario)
-    conquista = models.ManyToManyField(Conquista)
+    conquista = models.ManyToManyField(Conquista, blank = True)
 
     def __str__(self):
         return self.user.username

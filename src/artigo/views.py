@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Artigo
 
 from artigo.models import Artigo
 
@@ -6,6 +7,13 @@ from categoria.models import Categoria
 
 
 def usuario_artigo(request):
+    user_atual = request.user
+    arr = []
+    for i in Artigo.objects.filter(usuario=user_atual.id):
+        arr.append(i.titulo)
+    context = {'artigos': arr}
+    return render(request, 'usuario_artigo.html',context)
+
     return render(request, 'usuario_artigo.html')
 
 
@@ -47,3 +55,4 @@ def listar_artigos(request):
     context = {"artigos": artigos}
 
     return render(request, 'artigos.html', context)
+    
