@@ -66,7 +66,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [Criar rotas de artigos gerais](https://github.com/ads-unbind/unbind/issues/110)
 
-- Responsável: Igor Veludo
+- Responsável: Igor Veludo e João Mota
 
 #### [Criar Documento de Arquitetura](https://github.com/ads-unbind/unbind/issues/21)
 
@@ -74,7 +74,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [Corrigir o fluxo de artigos gerais, de acordo com o diagrama de casos de uso](https://github.com/ads-unbind/unbind/issues/111)
 
-- Responsável: Igor Veludo
+- Responsável: Igor Veludo e João Mota
 
 #### [Conectar a model user com a de usuário](https://github.com/ads-unbind/unbind/issues/112)
 
