@@ -70,7 +70,7 @@ O objetivo desta sprint é desenvolver novas funcionalidades no software.
 
 #### [Criar Documento de Arquitetura](https://github.com/ads-unbind/unbind/issues/21)
 
-- Responsável:
+- Responsável: Todos
 
 #### [Corrigir o fluxo de artigos gerais, de acordo com o diagrama de casos de uso](https://github.com/ads-unbind/unbind/issues/111)
 
