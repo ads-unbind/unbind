@@ -2,3 +2,4 @@ django==2.2
 Pillow
 mkdocs
 mkdocs-cinder
+fake_gen
