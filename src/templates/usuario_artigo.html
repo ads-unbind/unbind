@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-{% block title %}fheihfoehef{% endblock %}
+{% block title %} artigos {% endblock %}
 {% block body %}
-    <h1>artigo da massa</h1>
+<div class="container" id="main" style="margin-top: 90px;">
+    <h1>Artigos</h1>
+    {% for i in artigos %}
+        <p> {{i}} </p>
+    {% endfor %}
+</div>
 {% endblock %}
