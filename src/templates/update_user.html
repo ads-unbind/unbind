@@ -25,6 +25,10 @@
 
                 </form>
 
+                {% if usuario %}
+                  <a href="{% url 'delete_user' %}">Deletar Conta</a>
+                {% endif %}
+
             </div>
         </div>
     </div>

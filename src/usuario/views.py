@@ -90,3 +90,13 @@ def update_user(request):
 
     return render(request, 'update_user.html', {'update_form': update_form})
 '''
+
+def delete_user(request):
+    user_atual = request.user
+    usuario = User.objects.get(id=user_atual.id)
+
+    if request.method == 'POST':
+        usuario.delete()
+        return HttpResponseRedirect(reverse('index'))
+
+    return render(request, 'delete_user.html', {'usuario': usuario})
