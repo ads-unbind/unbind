@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.conf.urls import include, url
 from django.urls import include, path,re_path
 from usuario.views import register
+from usuario.views import update_user
 from principal.views import index
 from artigo.views import usuario_artigo
 from unbind import settings

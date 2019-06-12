@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from usuario import models
 
 
 def index(request):
