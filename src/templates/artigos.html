@@ -1,15 +1,14 @@
-{% extends "base.html" %} 
-{% block title %}UNBIND{% endblock %} 
+{% extends "base.html" %}
+{% block title %}UNBIND{% endblock %}
 {% block body %}
 {% load staticfiles %}
 
 <div class="container ">
     <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
     	<div class="row">
-			<div class="col-md-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">Categorias</h3>
+						<h3 class="panel-title">Artigos da categoria "{{nome_categoria}}"</h3>
 						<div class="pull-right">
 							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
 								<i class="glyphicon glyphicon-filter"></i>
@@ -17,28 +16,33 @@
 						</div>
 					</div>
 					<div class="panel-body">
-						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Categoria" />
+						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Artigos" />
 					</div>
 					<table class="table table-hover" id="dev-table">
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Nome Categoria</th>
+								<th>Título</th>
+                                <th>Autor</th>
+                                <th>Curtidas</th>
+                                <th>Data de Publicação</th>
                                 <th>Ações</th>
 							</tr>
 						</thead>
 						<tbody>
-                        {% for categoria in categorias %}
+                        {% for artigo in artigos %}
 							<tr>
-								<td>{{ categoria.id }}</td>
-								<td>{{categoria.nome}}</td>
-                                <td><a href="{% url 'artigo:listar_por_categoria' categoria.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Artigos</a></td>
+								<td>{{ artigo.id }}</td>
+								<td>{{ artigo.titulo }}</td>
+                                <td>{{ artigo.autor }}</td>
+                                <td>{{ artigo.curtidas }}</td>
+                                <td>{{ artigo.dataPublicacao }}</td>
+                                <td><a href="" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Ler</a></td>
 							</tr>
                         {% endfor %}
 						</tbody>
 					</table>
 				</div>
-			</div>
 		</div>
 	</div>
 
