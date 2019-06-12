@@ -37,7 +37,7 @@
                                 <td>{{ artigo.autor }}</td>
                                 <td>{{ artigo.curtidas }}</td>
                                 <td>{{ artigo.dataPublicacao }}</td>
-                                <td><a href="" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Ler</a></td>
+                                <td><a href="{% url 'artigo:visualizar_artigo' artigo.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Ler</a></td>
 							</tr>
                         {% endfor %}
 						</tbody>

@@ -15,3 +15,10 @@ def listar_por_categoria(request, id):
     context = {"artigos": artigos, "nome_categoria": categoria.nome}
 
     return render(request, 'artigos.html', context)
+
+
+def visualizar(request, id):
+    artigo = Artigo.objects.get(id=id)
+    context = {"artigo": artigo}
+
+    return render(request, 'artigo.html', context)
