@@ -71,32 +71,17 @@ def update_user(request):
     else:
         return HttpResponseRedirect(reverse('index'))
 
-    '''
-
-    if request.method == 'POST':
-        update_form = UsuarioUpdateForm(data=request.POST, instance=request.user)
-
-        if update_form.is_valid():
-            user = update_form.save()
-            user.set_password(user.password)
-            user.save()
-
-            return HttpResponseRedirect(reverse('index'))
-        else:
-            print(update_form.errors)
-
-    else:
-        update_form = UsuarioUpdateForm()
-
-    return render(request, 'update_user.html', {'update_form': update_form})
-'''
 
 def delete_user(request):
     user_atual = request.user
-    usuario = User.objects.get(id=user_atual.id)
 
-    if request.method == 'POST':
-        usuario.delete()
+    if user_atual.is_authenticated:
+        usuario = User.objects.get(id=user_atual.id)
+
+        if request.method == 'POST':
+            usuario.delete()
+            return HttpResponseRedirect(reverse('index'))
+
+        return render(request, 'delete_user.html', {'usuario': usuario})
+    else:
         return HttpResponseRedirect(reverse('index'))
-
-    return render(request, 'delete_user.html', {'usuario': usuario})
