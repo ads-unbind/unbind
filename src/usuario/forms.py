@@ -120,6 +120,7 @@ class UsuarioUpdateForm(forms.ModelForm):
         model = User
         fields = ('username', 'email', 'foto')
 
+    '''
     def clean(self):
         all_clean_data = super().clean()
         password = all_clean_data['password']
@@ -130,3 +131,4 @@ class UsuarioUpdateForm(forms.ModelForm):
 
         if len(password) < 6:
             raise forms.ValidationError("a senha tem que ter mais de 6 caracteres ")
+    '''
