@@ -26,6 +26,10 @@
                 </form>
 
                 {% if usuario %}
+                  <a href="{% url 'change_password' %}">mudar senha</a>
+                {% endif %}
+
+                {% if usuario %}
                   <a href="{% url 'delete_user' %}">Deletar Conta</a>
                 {% endif %}
 

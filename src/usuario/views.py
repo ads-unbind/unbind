@@ -9,6 +9,10 @@ from django.contrib.auth import logout as django_logout
 
 from usuario.models import User
 
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+
+
 
 def register(request):
     if request.method == 'POST':
@@ -85,3 +89,24 @@ def delete_user(request):
         return render(request, 'delete_user.html', {'usuario': usuario})
     else:
         return HttpResponseRedirect(reverse('index'))
+
+def change_password(request):
+    user_atual = request.user
+
+    if request.method == 'POST':
+        form = PasswordChangeForm(data=request.POST, user=user_atual)
+
+        if form.is_valid():
+
+            form.save()
+            update_session_auth_hash(request, form.user)
+
+            return HttpResponseRedirect(reverse('index'))
+        else:
+            return HttpResponseRedirect(reverse('change_password'))
+
+    else:
+        form = PasswordChangeForm(user=request.user)
+
+        args = {'form': form}
+        return render(request, 'change_password.html', args)

@@ -89,6 +89,7 @@ class UsuarioUpdateForm(forms.ModelForm):
         ),
         label=''
     )
+    '''
     password = forms.CharField(
         error_messages={
             'required': 'Este campo é obrigatório!'},
@@ -112,12 +113,12 @@ class UsuarioUpdateForm(forms.ModelForm):
         ),
         label='confirme sua nova senha'
     )
-
+    '''
     foto = forms.ImageField(required=False)
 
     class Meta():
         model = User
-        fields = ('username', 'email', 'password', 'verify_password', 'foto')
+        fields = ('username', 'email', 'foto')
 
     def clean(self):
         all_clean_data = super().clean()
