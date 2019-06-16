@@ -1,4 +1,4 @@
-![](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/documentacao/img/unbind-logo-v2.jpg)
+![](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/extras/identidade-visual/brand-logo/logo-unbind.jpg)
 # Arquitetura e Desenho de Software
 
 [![Build Status](https://travis-ci.com/ads-unbind/unbind.svg?branch=master)](https://travis-ci.com/ads-unbind/unbind.svg?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/05195c234dc6124cf641/maintainability)](https://codeclimate.com/github/ads-unbind/unbind/maintainability)  [![Test Coverage](https://api.codeclimate.com/v1/badges/05195c234dc6124cf641/test_coverage)](https://codeclimate.com/github/ads-unbind/unbind/test_coverage)    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
