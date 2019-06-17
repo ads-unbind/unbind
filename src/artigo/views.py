@@ -34,3 +34,16 @@ def visualizar(request, id):
     context = {"artigo": artigo}
 
     return render(request, 'artigo.html', context)
+
+
+def listar_artigos(request):
+    """
+    Método responsável pela listagem de artigos
+    :param request: Requisição do usuário
+    :return: Lista de artigos
+    """
+
+    artigos = Artigo.objects.all()
+    context = {"artigos": artigos}
+
+    return render(request, 'artigos.html', context)
