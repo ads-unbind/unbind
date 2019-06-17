@@ -1,6 +1,6 @@
-Data       | Versão | Descrição            | Responsáveis
----------- | ------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------
-15/06/2019 | 0.1    | Criação do documento | Byron Kamal, Geovanne Saraiva, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles, Vinícius Cantuária e William Almeida
+| Data       | Versão | Descrição            | Responsáveis                                                                                                                 |
+| ---------- | ------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| 15/06/2019 | 0.1    | Criação do documento | Byron Kamal, Geovanne Saraiva, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles, Vinícius Cantuária e William Almeida |
 
 # Introdução
 
@@ -65,7 +65,7 @@ As metas e restrições do projeto que possuem influência significativa na arqu
 
 O diagrama abaixo descreve os casos de uso no sistema: ![](https://lh5.googleusercontent.com/Un0ilv1HnT1ovPZlZj882cZOBuhAdijGvS9ZSPjZZddAXhyzFxy1gcKG2FVLusd9YBPBbabdxsXyhhU-if6mfay7ItDaL_d5clWBda3pfyzEVxqSfvoKaraqNQ2z2rvEcd849VjM) _Figura 2\. Diagrama de Casos de Uso._
 
-# Visão Lógica ARAGONES E WILLIAM
+## Visão Lógica ARAGONES E WILLIAM
 
 Esta seção detalha a visualização lógica da arquitetura, descrevendo as classes e pacotes mais significativos.
 
@@ -83,14 +83,18 @@ A visualização lógica do sistema EconomizAqui é composta de 3 pacotes princi
 
 [![](https://lh4.googleusercontent.com/44vcEzxm1hpR6C8zJxLWDUmUdM_5U1IO9aGqGSQUsyB16S_KB5b32I-QfgM1ZokPX4cB682skiQnG7V1P9bzILjm5cP53WfSMHvonC6HsWZMuzTMcsddEn92FuGBxXcPp5Cmxxwz)](https://lh4.googleusercontent.com/44vcEzxm1hpR6C8zJxLWDUmUdM_5U1IO9aGqGSQUsyB16S_KB5b32I-QfgM1ZokPX4cB682skiQnG7V1P9bzILjm5cP53WfSMHvonC6HsWZMuzTMcsddEn92FuGBxXcPp5Cmxxwz) _Figura 3\. Diagrama UML das Models utilizadas no projeto._
 
-# Visão de dados
+## Visão de dados
 
-# Visão de Implementação (Byron e Igor Veludo)
+## Visão de Implementação
 
-# Visão de Processo
+#### Diagrama de Componentes
 
-# (Navegabilidade, Identificação de Pontos Flexíveis)
+![](./img/diagrama_componente.jpg)
 
-# Identificação de Pontos Fixos
+## Visão de Processo
 
-# Referências
+## (Navegabilidade, Identificação de Pontos Flexíveis)
+
+## Identificação de Pontos Fixos
+
+## Referências
