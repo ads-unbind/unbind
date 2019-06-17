@@ -49,29 +49,19 @@ As metas e restrições do projeto que possuem influência significativa na arqu
 
 ## Visão de Casos de Uso
 
-- Os casos de uso do sistema são listados abaixo:
-- Cadastrar usuário
-- Cadastrar produto
-- Cadastrar comércio
-- Cadastrar preço
-- Ver detalhes do produto
-- Pesquisar produtos
-- Gerenciar lista de compras
-- Denunciar item
-- Gerenciar denúncias
-- Deletar itens
-- Realizar login
-- Realizar logout
 
-O diagrama abaixo descreve os casos de uso no sistema: ![](https://lh5.googleusercontent.com/Un0ilv1HnT1ovPZlZj882cZOBuhAdijGvS9ZSPjZZddAXhyzFxy1gcKG2FVLusd9YBPBbabdxsXyhhU-if6mfay7ItDaL_d5clWBda3pfyzEVxqSfvoKaraqNQ2z2rvEcd849VjM) _Figura 2\. Diagrama de Casos de Uso._
 
-## Visão Lógica ARAGONES E WILLIAM
+O diagrama abaixo descreve os casos de uso no sistema: 
+![diagrama-caso-uso](../dinamica3/img/diagrama-caso-uso_v0.2.jpg) 
+_Figura 2\. Diagrama de Casos de Uso._
+
+## Visão Lógica
 
 Esta seção detalha a visualização lógica da arquitetura, descrevendo as classes e pacotes mais significativos.
 
 ## Visão Geral
 
-A visualização lógica do sistema EconomizAqui é composta de 3 pacotes principais, sendo eles:
+A visualização lógica do sistema UnBind é composta de 3 pacotes principais, sendo eles:
 
 - **Usuários**: contém as classes de models, forms e services, bem como os templates e regras de negócios relacionados às funcionalidades de usuários.
 
@@ -81,15 +71,11 @@ A visualização lógica do sistema EconomizAqui é composta de 3 pacotes princi
 
 # Visão de Modelos
 
-[![](https://lh4.googleusercontent.com/44vcEzxm1hpR6C8zJxLWDUmUdM_5U1IO9aGqGSQUsyB16S_KB5b32I-QfgM1ZokPX4cB682skiQnG7V1P9bzILjm5cP53WfSMHvonC6HsWZMuzTMcsddEn92FuGBxXcPp5Cmxxwz)](https://lh4.googleusercontent.com/44vcEzxm1hpR6C8zJxLWDUmUdM_5U1IO9aGqGSQUsyB16S_KB5b32I-QfgM1ZokPX4cB682skiQnG7V1P9bzILjm5cP53WfSMHvonC6HsWZMuzTMcsddEn92FuGBxXcPp5Cmxxwz) _Figura 3\. Diagrama UML das Models utilizadas no projeto._
 
 ## Visão de dados
 
 ## Visão de Implementação
 
-#### Diagrama de Componentes
-
-![](./img/diagrama_componente.jpg)
 
 ## Visão de Processo
 
