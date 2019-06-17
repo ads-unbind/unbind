@@ -6,10 +6,10 @@
 <div class="container ">
     <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
     	<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">Categorias</h3>
+						<h1 style="text-align:center; color: #6595bf;" class="panel-title">Categorias</h1>
 						<div class="pull-right">
 							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
 								<i class="glyphicon glyphicon-filter"></i>
@@ -19,7 +19,7 @@
 					<div class="panel-body">
 						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Categoria" />
 					</div>
-					<table class="table table-hover" id="dev-table">
+					<table class="table table-hover" width="100%" id="dev-table">
 						<thead>
 							<tr>
 								<th>#</th>
@@ -30,9 +30,9 @@
 						<tbody>
                         {% for categoria in categorias %}
 							<tr>
-								<td>{{ categoria.id }}</td>
-								<td>{{categoria.nome}}</td>
-                                <td><a href="{% url 'artigo:listar_por_categoria' categoria.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Artigos</a></td>
+								<td width="10%">{{ categoria.id }}</td>
+								<td width="75%">{{categoria.nome}}</td>
+                                <td width="45%"><a href="{% url 'artigo:listar_por_categoria' categoria.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Artigos</a></td>
 							</tr>
                         {% endfor %}
 						</tbody>

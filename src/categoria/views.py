@@ -6,8 +6,8 @@ from categoria.models import Categoria
 def list(request):
     """
     Listagem de Categorias
-    :param request: requisição http
-    :return: lista de categorias
+    :param request: Requisição http
+    :return: Lista de categorias
     """
     categorias = Categoria.objects.all()
     context = {
