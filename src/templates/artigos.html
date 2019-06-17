@@ -14,7 +14,6 @@
 						{% else %}
 						<h1 style="text-align:center; color: #6595bf;" class="panel-title">Lista de Artigos</h1>
 						{% endif %}
-<!--						<h3 class="panel-title">Artigos da categoria "{{nome_categoria}}"</h3>-->
 						<div class="pull-right">
 							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
 								<i class="glyphicon glyphicon-filter"></i>
@@ -33,9 +32,9 @@
                                 <th style="text-align: center;">Curtidas</th>
                                 <th style="text-align: center;">Data de Publicação</th>
 								{% if not nome_categoria %}
-								<th style="text-align: center;">Categoria</th>
+									<th style="text-align: center;">Categoria</th>
 								{% endif %}
-                                <th style="text-align: center;">Ações</th>
+								<th style="text-align: center;">Ações</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -47,7 +46,7 @@
                                 <td style="text-align: center;">{{ artigo.curtidas }}</td>
                                 <td style="text-align: center;">{{ artigo.dataPublicacao }}</td>
 								{% if not nome_categoria %}
-								<td style="text-align: center;">{{ artigo.categoria.nome }}</td>
+									<td style="text-align: center;">{{ artigo.categoria.nome }}</td>
 								{% endif %}
                                 <td style="text-align: center;"><a href="{% url 'artigo:visualizar_artigo' artigo.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Ler</a></td>
 							</tr>
@@ -64,8 +63,6 @@
 {% block scripts %}
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="{% static 'js/table_filter.js' %}"></script>
 {% endblock %}

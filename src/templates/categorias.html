@@ -22,17 +22,19 @@
 					<table class="table table-hover" width="100%" id="dev-table">
 						<thead>
 							<tr>
-								<th>#</th>
-								<th>Nome Categoria</th>
-                                <th>Ações</th>
+								<th style="text-align: center;">#</th>
+								<th style="text-align: center;">Nome Categoria</th>
+								<th style="text-align: center;">Artigos Relacionados</th>
+                                <th style="text-align: center;">Ações</th>
 							</tr>
 						</thead>
 						<tbody>
                         {% for categoria in categorias %}
 							<tr>
-								<td width="10%">{{ categoria.id }}</td>
-								<td width="75%">{{categoria.nome}}</td>
-                                <td width="45%"><a href="{% url 'artigo:listar_por_categoria' categoria.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Artigos</a></td>
+								<td style="text-align: center;" width="10%">{{ categoria.id }}</td>
+								<td style="text-align: center;" width="50%">{{categoria.nome}}</td>
+								<td style="text-align: center;"> {{categoria.artigos.all|length}} </td>
+                                <td style="text-align: center;" width="15%"><a href="{% url 'artigo:listar_por_categoria' categoria.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Artigos</a></td>
 							</tr>
                         {% endfor %}
 						</tbody>
@@ -47,8 +49,6 @@
 {% block scripts %}
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="{% static 'js/table_filter.js' %}"></script>
 {% endblock %}
