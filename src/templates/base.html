@@ -7,12 +7,18 @@
     <title>{% block title %}UNBIND{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block scripts %}{% endblock %}
 </head>
 
 <body>
     {% block navbar %}
     <nav class="navbar navbar-expand-md fixed-top text-uppercase">
-        <a class="navbar-brand unbind-brand text-unbind-white" href="{% url 'index' %}">UNBIND</a> 
+        <a class="navbar-brand unbind-brand text-unbind-white" href="{% url 'index' %}">UNBIND</a>
+        <div class="navbar-collapse order-1 order-md-0 dual-collapse2">
+            <a class="btn btn-outline-white pull-left ml-lg-3" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
+            <a class="btn btn-outline-white pull-left ml-lg-3" href="{% url 'categoria:listar_categorias' %}">Categorias</a>
+        </div>
         {% if request.user and not request.user.is_authenticated %}
         <div class="justify-content-end">
             <ul class="navbar-nav mr-auto">
@@ -44,6 +50,7 @@
     {% endblock %}
 
     {% block body %}{% endblock %}
+
 </body>
 
 </html>

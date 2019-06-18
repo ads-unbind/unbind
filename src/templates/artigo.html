@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}UNBIND{% endblock %}
+{% block body %}
+
+<div class="container-fluid no-padding">
+    <div class="row">
+        <div style="text-align:center" class="col-md-12">
+            <figure>
+            {% if artigo.imagem %}
+            <img src="{{ artigo.imagem.url }}" alt="placeholder 960" />
+                <figcaption>Tema: {{artigo.titulo}} - Autor: {{artigo.autor}}</figcaption>
+            {% else %}
+            <img src="https://github.com/ads-unbind/unbind/blob/master/wiki/docs/extras/identidade-visual/brand-logo/logo-unbind.jpg?raw=true" alt="placeholder 960" class="img-responsive" />
+                <figcaption>Artigo sem imagem.</figcaption>
+            {% endif %}
+            </figure>
+        </div>
+    </div>
+</div>
+<div class="container" id="main" style="margin-top: 90px;">
+    <h1>{{artigo.titulo}}</h1>
+
+    <h3>Autor: {{artigo.autor}}</h3>
+    <h3>Data: {{artigo.dataPublicacao}}</h3>
+    <h3>Categoria: {{artigo.categoria.nome}}</h3>
+    <div class="row">
+        <div class="panel panel-primary" style="word-break: break-word;">
+            <p>{{artigo.texto}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
