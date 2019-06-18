@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Atividades{% endblock %}
+{% block body %}
+
+<div class="jumbotron">
+
+<h1>Atividades</h1>
+
+{{"Recomendado"}}<br>
+{% for atividade in atividades_recomendadas %}
+{{ atividade.titulo }}<br>
+{% endfor %}
+<br>
+
+{% for categoria in categorias %}
+{{ categoria.nome }}<br>
+
+{% for item in usuario_atividades %}
+{% if item.categoria == categoria %}
+{{ item.titulo }}<br>
+{% endif %}
+
+{% endfor %}
+<br>
+
+<!--
+{% csrf_token %}
+<form method="POST">
+    {% csrf_token %}
+    {{questionario_form.as_p}}
+
+</form>
+-->
+{% endfor %}
+</div>
+{% endblock %}

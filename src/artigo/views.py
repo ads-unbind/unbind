@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import Artigo
-
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from usuario.models import Usuario
 from artigo.models import Artigo
 
 from categoria.models import Categoria
@@ -8,13 +9,13 @@ from categoria.models import Categoria
 
 def usuario_artigo(request):
     user_atual = request.user
-    arr = []
-    for i in Artigo.objects.filter(usuario=user_atual.id):
-        arr.append(i.titulo)
-    context = {'artigos': arr}
-    return render(request, 'usuario_artigo.html',context)
-
-    return render(request, 'usuario_artigo.html')
+    if (user_atual.is_authenticated):
+        us = Usuario.objects.filter(user = user_atual.id)
+        artigo = Artigo.objects.filter(usuario=us[0].id)
+        context = {'artigos': artigo}
+        return render(request, 'usuario_artigo.html',context)
+    else:
+        HttpResponseRedirect(reverse('index'))
 
 
 def listar_por_categoria(request, id):
@@ -55,4 +56,3 @@ def listar_artigos(request):
     context = {"artigos": artigos}
 
     return render(request, 'artigos.html', context)
-    

@@ -7,12 +7,15 @@ from questionario.models import Pergunta
 
 # Create your views here.
 def questionario(request):
+    user = request.user
+    if user.is_authenticated:
+        perguntas = []
+        for pergunta in Pergunta.objects.all():
+            perguntas.append(pergunta)
 
-    perguntas = []
-    for pergunta in Pergunta.objects.all():
-        perguntas.append(pergunta)
-
-    return render(request, 'questionario_user.html', {'perguntas': perguntas})
+        return render(request, 'questionario_user.html', {'perguntas': perguntas})
+    else:
+        return HttpResponseRedirect(reverse('index'))
 '''
 def chama_form(request):
     if request.method == 'POST':

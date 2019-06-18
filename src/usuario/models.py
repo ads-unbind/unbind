@@ -2,12 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from operator import itemgetter
 from artigo.models import Artigo
 from atividade.models import Atividade
 from questionario.models import Questionario, Pergunta
 from conquista.models import Conquista
-
+from categoria.models import Categoria
 
 class Usuario(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -43,7 +43,7 @@ class Usuario(models.Model):
         return pontosDaCategoria
 
     def get_user_xp(self):
-        atividades = self.atividade.all()
+        atividades = self.atividade.filter(estado = "C")
         xp = 0
         for atividade in atividades:
             xp += atividade.pontos
@@ -59,3 +59,25 @@ class Usuario(models.Model):
         conquistas = self.conquista.filter(disponivel = True)
 
         return conquistas
+
+    def get_recommended_activities(self):
+        categorias = Categoria.objects.all()
+        #categoriasDict = {}
+        menorPontuacao = 100
+        for categoria in categorias:
+            pontos = self.get_user_points_last_form_by_category(categoria.id)
+            if pontos < menorPontuacao:
+                menorPontuacao = pontos
+                categoriaRecomendada = categoria
+
+            #categoriasDict[categoria] = pontos
+        atividadesRecomendadas = self.atividade.filter(estado = "DI", categoria = categoriaRecomendada)
+        #categoriaRecomendada = min(categoriasDict.items(), key=itemgetter(1))
+        #sorted_dict = sorted(categoriasDict.items(), key=lambda kv: kv[1])
+        #atividades = self.atividade.filter(categoria_id = sorted_dict.value())
+        return atividadesRecomendadas
+
+    def get_user_activities_by_category(self, category):
+        atividades = self.atividade.filter(estado = "DI", categoria_id = category)
+
+        return atividades
