@@ -76,3 +76,8 @@ class Usuario(models.Model):
         #sorted_dict = sorted(categoriasDict.items(), key=lambda kv: kv[1])
         #atividades = self.atividade.filter(categoria_id = sorted_dict.value())
         return atividadesRecomendadas
+
+    def get_user_activities_by_category(self, category):
+        atividades = self.atividade.filter(estado = "DI", categoria_id = category)
+
+        return atividades
