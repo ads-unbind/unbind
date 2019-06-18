@@ -11,6 +11,10 @@ class Questionario(models.Model):
     def __str__(self):
         return self.nome
 
+    def get_questions(self):
+        questions = self.pergunta.all()
+        return questions
+
 
 class Pergunta(models.Model):
     enunciado = models.CharField(max_length=50)
