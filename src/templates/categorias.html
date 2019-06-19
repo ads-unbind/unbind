@@ -1,0 +1,54 @@
+{% extends "base.html" %} 
+{% block title %}UNBIND{% endblock %} 
+{% block body %}
+{% load staticfiles %}
+
+<div class="container ">
+    <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
+    	<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h1 style="text-align:center; color: #6595bf;" class="panel-title">Categorias</h1>
+						<div class="pull-right">
+							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+								<i class="glyphicon glyphicon-filter"></i>
+							</span>
+						</div>
+					</div>
+					<div class="panel-body">
+						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Categoria" />
+					</div>
+					<table class="table table-hover" width="100%" id="dev-table">
+						<thead>
+							<tr>
+								<th style="text-align: center;">#</th>
+								<th style="text-align: center;">Nome Categoria</th>
+								<th style="text-align: center;">Artigos Relacionados</th>
+                                <th style="text-align: center;">Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+                        {% for categoria in categorias %}
+							<tr>
+								<td style="text-align: center;" width="10%">{{ categoria.id }}</td>
+								<td style="text-align: center;" width="50%">{{categoria.nome}}</td>
+								<td style="text-align: center;"> {{categoria.artigos.all|length}} </td>
+                                <td style="text-align: center;" width="15%"><a href="{% url 'artigo:listar_por_categoria' categoria.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Artigos</a></td>
+							</tr>
+                        {% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/table_filter.js' %}"></script>
+{% endblock %}

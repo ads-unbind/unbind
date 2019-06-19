@@ -10,7 +10,7 @@ class Artigo(models.Model):
     autor = models.CharField(max_length=50)
     curtidas = models.IntegerField()
     dataPublicacao = models.DateTimeField(auto_now_add=True)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name='artigos')
 
     def __str__(self):
         return self.titulo
