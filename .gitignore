@@ -263,3 +263,4 @@ $RECYCLE.BIN/
 .idea/*
 */.idea/*
 /wiki/site/
+.vscode/settings.json

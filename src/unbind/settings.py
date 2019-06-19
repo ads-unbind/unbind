@@ -91,7 +91,10 @@ DATABASES = {
 
 
 # Password validation
+# Antigo
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
+# novo pois tava dando problema para criar superusuario
+# https://docs.djangoproject.com/en/2.2/ref/settings/#password-hashers
 
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.Argon2PasswordHasher',

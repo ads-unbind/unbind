@@ -34,7 +34,7 @@ class UsuarioForm(forms.ModelForm):
                 'placeholder': 'Senha',
             }
         ),
-        label='enter your password'
+        label='digite sua senha'
     )
 
     verify_password = forms.CharField(
@@ -46,7 +46,7 @@ class UsuarioForm(forms.ModelForm):
                 'placeholder': 'Senha',
             }
         ),
-        label='enter your password again'
+        label='digite sua senha novamente'
     )
 
     foto = forms.ImageField(required=False)
