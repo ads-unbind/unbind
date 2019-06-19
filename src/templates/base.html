@@ -14,11 +14,7 @@
 <body>
     {% block navbar %}
     <nav class="navbar navbar-expand-md fixed-top text-uppercase">
-        <a class="navbar-brand unbind-brand text-light" href="{% url 'index' %}">UNBIND</a> 
-        <div class="navbar-collapse order-1 order-md-0 dual-collapse2">
-            <a class="btn btn-outline-white pull-left ml-lg-3" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
-            <a class="btn btn-outline-white pull-left ml-lg-3" href="{% url 'categoria:listar_categorias' %}">Categorias</a>
-        </div>
+        <a class="navbar-brand unbind-brand text-light" href="{% url 'index' %}">UNBIND</a>
         {% if request.user and not request.user.is_authenticated %}
         <div class="justify-content-end">
             <ul class="navbar-nav mr-auto">
@@ -29,15 +25,23 @@
             </ul>
         </div>
         {% else %} 
-        {% if user.is_superuser %}
+        
         <div class="justify-content-between">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'categoria:listar_categorias' %}">Categorias</a>
+                </li>
+                {% if user.is_superuser %}
+                <li class="nav-item">
                     <a class="nav-link" href="{% url 'admin:index' %}">Painel do Admin</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
-        {% endif %}
+        
         <div class="justify-content-end">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
