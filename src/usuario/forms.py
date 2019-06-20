@@ -1,8 +1,16 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from usuario.models import Usuario
 
-class UsuarioForm(forms.ModelForm):
+
+class UsuarioCreationFormAdmin(UserCreationForm):
+    class Meta(UserCreationForm):
+        model = Usuario
+        fields = '__all__'
+
+
+class UsuarioCreationForm(UserCreationForm):
     username = forms.CharField(
         error_messages={
             'required': 'este campo é obrigatório'},
@@ -25,7 +33,7 @@ class UsuarioForm(forms.ModelForm):
         ),
         label=''
     )
-    password = forms.CharField(
+    password1 = forms.CharField(
         error_messages={
             'required': 'Este campo é obrigatório!'},
         widget=forms.PasswordInput(
@@ -37,7 +45,7 @@ class UsuarioForm(forms.ModelForm):
         label='digite sua senha'
     )
 
-    verify_password = forms.CharField(
+    password2 = forms.CharField(
         error_messages={
             'required': 'Este campo é obrigatório!'},
         widget=forms.PasswordInput(
@@ -46,22 +54,32 @@ class UsuarioForm(forms.ModelForm):
                 'placeholder': 'Senha',
             }
         ),
-        label='digite sua senha novamente'
+        label='Digite sua senha novamente'
     )
 
     foto = forms.ImageField(required=False)
 
-    class Meta():
-        model = User
-        fields = ('username', 'email', 'password', 'verify_password', 'foto')
+    class Meta:
+        model = Usuario
+        fields = ('username', 'email', 'password1', 'password2', 'foto')
 
-    def clean(self):
-        all_clean_data = super().clean()
-        password = all_clean_data['password']
-        vpasw = all_clean_data['verify_password']
+    def clean_password2(self):
+        # Check that the two password entries match
+        password1 = self.cleaned_data.get("password1")
+        password2 = self.cleaned_data.get("password2")
+        if password1 and password2 and password1 != password2:
+            raise forms.ValidationError("Verifique se as senhas são iguais.")
+        return password2
 
-        if password != vpasw:
-            raise forms.ValidationError("verifique se as senhas são iguais")
+    def save(self, commit=True):
+        user = super(UsuarioCreationForm, self).save(commit=False)
+        user.set_password(user.password)  # set password properly before commit
+        if commit:
+            user.save()
+        return user
 
-        if len(password) < 6:
-            raise forms.ValidationError("a senha tem que ter mais de 6 caracteres ")
+
+class UsuarioChangeForm(UserChangeForm):
+    class Meta:
+        model = Usuario
+        fields = ('username', 'email', 'foto')

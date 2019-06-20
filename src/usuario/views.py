@@ -1,5 +1,10 @@
 from django.shortcuts import render
-from usuario.forms import UsuarioForm
+
+from usuario.forms import UsuarioCreationForm
+
+from usuario.forms import UsuarioChangeForm
+
+from usuario.models import Usuario
 from . import forms
 from usuario import models
 from django.contrib.auth import login as django_login, authenticate
@@ -10,11 +15,10 @@ from django.contrib.auth import logout as django_logout
 
 def register(request):
     if request.method == 'POST':
-        register_form = UsuarioForm(data=request.POST)
-
+        register_form = UsuarioCreationForm(data=request.POST)
         if register_form.is_valid():
-            user = register_form.save()
-            user.set_password(user.password)
+            user = register_form.save(commit=False)
+            user.set_password(request.POST['password1'])
             user.save()
 
             return HttpResponseRedirect(reverse('questionario'))
@@ -22,7 +26,7 @@ def register(request):
             print(register_form.errors)
 
     else:
-        register_form = UsuarioForm()
+        register_form = UsuarioCreationForm()
 
     return render(request, 'register.html', {'register_form': register_form})
 
@@ -30,11 +34,11 @@ def register(request):
 def login(request):
     context = {'error': ''}
     if request.method == 'POST':
-        user = authenticate(
-            username=request.POST['username'],
-            password=request.POST['password'])
-        if (user is not None and user.is_active):
-            django_login(request, user)
+        name = request.POST['username']
+        password = request.POST['password']
+        usuario = Usuario.objects.get(username=name)
+        if usuario.check_password(password) and usuario.is_active:
+            django_login(request, usuario)
             return HttpResponseRedirect(reverse('index'))
         else:
             error = 'Login inválido!'
