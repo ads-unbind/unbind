@@ -81,3 +81,30 @@ class Usuario(AbstractUser):
         atividades = self.atividade.filter(estado = "DI", categoria_id = category)
 
         return atividades
+
+    def suggest_articles(self):
+        """
+        Calcula a pontuação do usuário em todos os questionários realizados e identifica a categoria ideal do usuário.
+        A partir desta categoria, são indicados artigos relacionados.
+        :return: lista de artigos relacionados.
+        """
+        categorias = Categoria.objects.all()
+        pontuacao_categorias = {}
+
+        # Cria um dicionário com todas as categorias como chave e iniciadas com valor 0
+        for categoria in categorias:
+            pontuacao_categorias[categoria.nome] = 0
+
+        # Itera sobre todos os questionários, sobre todas as perguntas, somando a pontuação de cada uma na categoria correta
+        for questionario in self.questionario.all():
+            for pergunta in questionario.perguntas.all():
+                pontuacao_categorias[pergunta.categoria.nome] += pergunta.pontos  # Somando na categoria correta
+
+        pontuacao_max_categoria = max(pontuacao_categorias, key=pontuacao_categorias.get)
+        print(pontuacao_max_categoria)  # categoria com a maior pontuação deste usuário
+
+        categoria_ideal = Categoria.objects.get(nome=pontuacao_max_categoria)  # Busca a categoria ideal a partir do nome
+        artigos = Artigo.objects.filter(categoria=categoria_ideal).all()  # Busca todos os artigos relacionados a categoria ideal
+
+        return artigos
+
