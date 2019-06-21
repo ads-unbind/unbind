@@ -1,6 +1,8 @@
 | Data       | Versão | Descrição            | Responsáveis                                                                                                                 |
 | ---------- | ------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | 15/06/2019 | 0.1    | Criação do documento | Byron Kamal, Geovanne Saraiva, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles, Vinícius Cantuária e William Almeida |
+| 21/06/2019| 0.2 | Adicionando versões 1.0 e 2.0 do diagrama de componentes | Byron Kamal e Igor Veludo |
+
 
 # Introdução
 
@@ -75,6 +77,12 @@ A visualização lógica do sistema UnBind é composta de 3 pacotes principais, 
 ## Visão de dados
 
 ## Visão de Implementação
+#### Versão 1.0
+![](./img/diagrama_componente_v1.jpg)
+>Autores: Byron Kamal e Igor Veludo
+#### Versão 2.0
+![](./img/diagrama_componente_v2.jpg)
+>Autores: Byron Kamal e Igor Veludo
 
 
 ## Visão de Processo
