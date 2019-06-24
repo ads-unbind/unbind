@@ -2,18 +2,18 @@
 
 ## Histórico de versão
 
-Data       | Versão | Descrição                                                           | Responsáveis
----------- | ------ | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------
-15/06/2019 | 0.1    | Criação do documento                                                | Byron Kamal, Geovanne Saraiva, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles, Vinícius Cantuária e William Almeida
-16/06/2019 | 0.1.2  | Reestruturando documento                                            | Igor Aragão
-21/06/2019 | 0.2    | Adicionando versões 1.0 e 2.0 do diagrama de componentes - Tópico 7 | Byron Kamal e Igor Veludo
-21/06/2019 | 0.3    | Modificando o tópico 2 e o 4 do documento                           | William Almeida
-23/06/2019 | 0.4    | Adicionando tópico 3                                                | Byron Kamal, Igor Veludo e João Pedro Mota
-23/06/2019 | 0.5    | Adicionando a seção 5.2.1 e refatorando a seção 5.2.3               | William Almeida
-24/06/2019 | 0.5.1  | Adicionando a seção 5.2.2                                           | Byron Kamal e Igor Veludo
-24/06/2019 | 0.6    | Adicionando o diagrama de implantação na seção 7                    | Igor Aragão e William Almeida
-24/06/2019 | 0.7    | Adicionando DE-R e modelo lógico                                    | José Aquiles
-24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius
+| Data       | Versão | Descrição                                                           | Responsáveis                                                                                                                 |
+| ---------- | ------ | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| 15/06/2019 | 0.1    | Criação do documento                                                | Byron Kamal, Geovanne Saraiva, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles, Vinícius Cantuária e William Almeida |
+| 16/06/2019 | 0.1.2  | Reestruturando documento                                            | Igor Aragão                                                                                                                  |
+| 21/06/2019 | 0.2    | Adicionando versões 1.0 e 2.0 do diagrama de componentes - Tópico 7 | Byron Kamal e Igor Veludo                                                                                                    |
+| 21/06/2019 | 0.3    | Modificando o tópico 2 e o 4 do documento                           | William Almeida                                                                                                              |
+| 23/06/2019 | 0.4    | Adicionando tópico 3                                                | Byron Kamal, Igor Veludo e João Pedro Mota                                                                                   |
+| 23/06/2019 | 0.5    | Adicionando a seção 5.2.1 e refatorando a seção 5.2.3               | William Almeida                                                                                                              |
+| 24/06/2019 | 0.5.1  | Adicionando a seção 5.2.2                                           | Byron Kamal e Igor Veludo                                                                                                    |
+| 24/06/2019 | 0.6    | Adicionando o diagrama de implantação na seção 7                    | Igor Aragão e William Almeida                                                                                                |
+| 24/06/2019 | 0.7    | Adicionando DE-R e modelo lógico                                    | José Aquiles                                                                                                                 |
+| 24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius                                                                                                   |
 
 # 1\. Introdução
 
@@ -39,7 +39,7 @@ Este documento apresenta as características arquiteturais do projeto **UNBIND**
 
 ## 2\. Representação da Arquitetura
 
-O sistema faz uso do Framework Django, que faz uso do padrão MVC. No entanto, tal plataforma possui uma interpretação singular em relação à organização de camadas. O indicado é considerar que a própria plataforma faz o papel da camada de controle, enquanto a camada de Modelo e de Visão devem ser adaptadas e reinterpretadas conforme o necessário. Por este motivo, ainda que o Django implemente o MVC, considera-se que o padrão de camadas externalizado pela plataforma é o MTV (Model-Template-View).
+O sistema faz uso do Framework Django (versão 2.2.2), que faz uso do padrão MVC. No entanto, tal plataforma possui uma interpretação singular em relação à organização de camadas. O indicado é considerar que a própria plataforma faz o papel da camada de controle, enquanto a camada de Modelo e de Visão devem ser adaptadas e reinterpretadas conforme o necessário. Por este motivo, ainda que o Django implemente o MVC, considera-se que o padrão de camadas externalizado pela plataforma é o MTV (Model-Template-View).
 
 A utilização de uma arquitetura em camadas é interessante por proporcionar uma clara separação de responsabilidades no código, proporcionando reusabilidade, e reduzindo o esforço de manutenção. Os conceitos de MVC e MTV serão apresentados nas seções seguintes.
 
@@ -67,16 +67,16 @@ Figura 2\. Padrão arquitetural MTV.
 
 ## 3\. Metas e Restrições de Arquitetura
 
-Restrição     | Descrição
-------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Linguagem     | O sistema será inteiramente desenvolvido utilizando a linguagem Python.
-Plataforma    | Será utilizado o framework Django tanto para o front quanto para o back-end.
-Segurança     | Para a segurança do usuário, todas as senhas de login são criptografadas.
-Persistência  | Para a persistência dos dados será utilizado o banco de dados relacional SQLite3.
-Arquitetura   | Será feita uma arquitetura monolítica, nela o deploy torna-se mais fácil, já que é necessário subir somente um projeto e o banco de dados facilmente evolui junto para todas as funcionalidades juntamente com a aplicação. Também não há duplicidade de código e classes necessárias entre os diferentes módulos, já que todas elas fazem parte da mesma unidade.
-Portabilidade | Por se tratar de uma aplicação web, possui grande portabilidade entre sistemas, sendo acessada através do navegador, porém não possui portabilidade para mobile.
-Distribuição  | Por se tratar de uma aplicação web, a distribuição ocorre assim que a nova versão do software é enviada para produção. O usuário sempre acesa a última versão disponível.
-Reuso         | A utilização do framework Django demonstra um grau de reuso devido a padronização da criação de componentes do código.
+| Restrição     | Descrição                                                                                                                                                                                                                                                                                                                                                          |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Linguagem     | O sistema será inteiramente desenvolvido utilizando a linguagem Python.                                                                                                                                                                                                                                                                                            |
+| Plataforma    | Será utilizado o framework Django tanto para o front quanto para o back-end.                                                                                                                                                                                                                                                                                       |
+| Segurança     | Para a segurança do usuário, todas as senhas de login são criptografadas.                                                                                                                                                                                                                                                                                          |
+| Persistência  | Para a persistência dos dados será utilizado o banco de dados relacional SQLite3.                                                                                                                                                                                                                                                                                  |
+| Arquitetura   | Será feita uma arquitetura monolítica, nela o deploy torna-se mais fácil, já que é necessário subir somente um projeto e o banco de dados facilmente evolui junto para todas as funcionalidades juntamente com a aplicação. Também não há duplicidade de código e classes necessárias entre os diferentes módulos, já que todas elas fazem parte da mesma unidade. |
+| Portabilidade | Por se tratar de uma aplicação web, possui grande portabilidade entre sistemas, sendo acessada através do navegador, porém não possui portabilidade para mobile.                                                                                                                                                                                                   |
+| Distribuição  | Por se tratar de uma aplicação web, a distribuição ocorre assim que a nova versão do software é enviada para produção. O usuário sempre acesa a última versão disponível.                                                                                                                                                                                          |
+| Reuso         | A utilização do framework Django demonstra um grau de reuso devido a padronização da criação de componentes do código.                                                                                                                                                                                                                                             |
 
 ## 4\. Visão de Casos de Uso
 
@@ -191,21 +191,21 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 
 ### 9.2 Requisitos não funcionais
 
-Identificador | Descrição
-------------- | -------------------------------------------------------
-RNF 01        | Sistema de autenticação de usuário (Segurança)
-RNF 02        | Serviço de busca (Base de Dados)
-RNF 03        | Interface simples e interativa ao usuário (Usabilidade)
+| Identificador | Descrição                                               |
+| ------------- | ------------------------------------------------------- |
+| RNF 01        | Sistema de autenticação de usuário (Segurança)          |
+| RNF 02        | Serviço de busca (Base de Dados)                        |
+| RNF 03        | Interface simples e interativa ao usuário (Usabilidade) |
 
 ### 9.3 Requisitos para plataformas específicas
 
-Identificador | Navegador Web     | Modelo               | Versão
-------------- | ----------------- | -------------------- | ---------------------------------------------
-RNF 01        | Internet Explorer | Qualquer dispositivo | Versão 10 ou superior.
-RNF 02        | Google Chrome     | Qualquer dispositivo | Última versão
-RNF 03        | Mozilla Firefox   | Qualquer dispositivo | versão mais recente ou imediatamente anterior
-RNF 04        | Opera             | Qualquer dispositivo | 12 ou superior.
-RNF 05        | Safari            | Qualquer dispositivo | Versão 6 ou superior.
+| Identificador | Navegador Web     | Modelo               | Versão                                        |
+| ------------- | ----------------- | -------------------- | --------------------------------------------- |
+| RNF 01        | Internet Explorer | Qualquer dispositivo | Versão 10 ou superior.                        |
+| RNF 02        | Google Chrome     | Qualquer dispositivo | Última versão                                 |
+| RNF 03        | Mozilla Firefox   | Qualquer dispositivo | versão mais recente ou imediatamente anterior |
+| RNF 04        | Opera             | Qualquer dispositivo | 12 ou superior.                               |
+| RNF 05        | Safari            | Qualquer dispositivo | Versão 6 ou superior.                         |
 
 ### 9.4 Usabilidade
 
