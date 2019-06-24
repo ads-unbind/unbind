@@ -27,8 +27,6 @@ Este documento apresenta as características arquiteturais do projeto **UNBIND**
 
 ## 1.3 Definições, Acrônimos, e Abreviações
 
-![](./img/mvc.png)
-
 **MVC** - Model View Controller
 
 **MTV** - Model Template View
@@ -44,6 +42,8 @@ O sistema faz uso do Framework Django (versão 2.2.2), que faz uso do padrão MV
 A utilização de uma arquitetura em camadas é interessante por proporcionar uma clara separação de responsabilidades no código, proporcionando reusabilidade, e reduzindo o esforço de manutenção. Os conceitos de MVC e MTV serão apresentados nas seções seguintes.
 
 ### 2.1 Model View Controller (MVC)
+
+![](./img/mvc.png)
 
 Figura 1\. Padrão arquitetural MVC.
 
@@ -147,15 +147,19 @@ O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os p
 
 ![](./img/diagrama_pacotes.png)
 
-### 6\. Visão de Implementação
+### 6\. Visão de Implantação
 
-#### 6.1 Finalidade
+#### 6.1 Diagrama de Implantação
+
+![](./img/visao_implementacao.png)
+
+### 7 Visão de Implementação
+
+#### 7.1 Finalidade
 
 Proporcionam um método alternativo para implementar views como objetos ao invés de funções. As Class-Based Views (CBV) são classes que implementam métodos e atributos que são comumente utilizados na programação das views. Dessa maneira, o programador pode utilizar métodos já implementados ou sobrescrevê-los e implementá-los da sua maneira. Para atender os mais variados casos de uso das views, as CBV oferecem diversos temas para implementação.
 
 Podemos então agregar as funções básicas das views dentro de classes, como métodos. Os recursos das Class Based Views estão em algumas classes "pré-prontas", as quais outras classes podem herdar. A partir daí as alterações que precisam ser feitas são mínimas.
-
-![](./img/visao_implementacao.png)
 
 ### 7.2 Diagramas Significativos
 
