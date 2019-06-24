@@ -1,6 +1,6 @@
 # Documento de Arquitetura
 
-### Histórico de versão
+## Histórico de versão
 
 Data       | Versão | Descrição                                                           | Responsáveis
 ---------- | ------ | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------
@@ -13,19 +13,21 @@ Data       | Versão | Descrição                                              
 24/06/2019 | 0.5.1  | Adicionando a seção 5.2.2                                           | Byron Kamal e Igor Veludo
 24/06/2019 | 0.6    | Adicionando o diagrama de implantação na seção 7                    | Igor Aragão e William Almeida
 24/06/2019 | 0.7    | Adicionando DE-R e modelo lógico                                    | José Aquiles
-24/06/2019 | 0.8    | Adicionando tópico 9                                               | Geovanne Santos e Vinícius
+24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius
 
 # 1\. Introdução
 
-### 1.1 Finalidade
+## 1.1 Finalidade
 
 Este documento tem como finalidade apresentar a arquitetura do projeto **UNBIND** através de visões diversas para registrar as decisões arquiteturais relacionadas ao projeto. O documento é dividido da seguinte maneira: inicialmente é apresentada a representação da arquitetura da solução, em seguida as metas e restrições desta arquitetura e por fim são apresentadas visões sobre elementos da arquitetura.
 
-### 1.2 Escopo
+## 1.2 Escopo
 
 Este documento apresenta as características arquiteturais do projeto **UNBIND**, descrevendo em detalhes a soluções arquiteturais determinadas para o projeto, de forma a servir como base para o desenvolvimento do projeto pelos desenvolvedores de software alocados para o projeto.
 
-### 1.3 Definições, Acrônimos, e Abreviações
+## 1.3 Definições, Acrônimos, e Abreviações
+
+![](./img/mvc.png)
 
 **MVC** - Model View Controller
 
@@ -37,7 +39,7 @@ Este documento apresenta as características arquiteturais do projeto **UNBIND**
 
 ## 2\. Representação da Arquitetura
 
-O sistema faz uso do Framework Django, que faz uso do padrão MVC. No entanto, tal plataforma possui uma interpretação singular em relação à organização de camadas. O indicado é considerar que a própria plataforma faz o papel da camada de controle, enquanto a camada de Modelo e de Visão devem ser adaptadas e reinterpretadas conforme o necessário. Por este motivo, ainda que o Django implemente o MVC, considera-se que o padrão de camadas externalizado pela plataforma é o MTV (Model-Template-View). 
+O sistema faz uso do Framework Django, que faz uso do padrão MVC. No entanto, tal plataforma possui uma interpretação singular em relação à organização de camadas. O indicado é considerar que a própria plataforma faz o papel da camada de controle, enquanto a camada de Modelo e de Visão devem ser adaptadas e reinterpretadas conforme o necessário. Por este motivo, ainda que o Django implemente o MVC, considera-se que o padrão de camadas externalizado pela plataforma é o MTV (Model-Template-View).
 
 A utilização de uma arquitetura em camadas é interessante por proporcionar uma clara separação de responsabilidades no código, proporcionando reusabilidade, e reduzindo o esforço de manutenção. Os conceitos de MVC e MTV serão apresentados nas seções seguintes.
 
@@ -53,6 +55,8 @@ Figura 1\. Padrão arquitetural MVC.
 
 ### 2.2 Model Template View (MTV)
 
+![](./img/mvt.png)
+
 Figura 2\. Padrão arquitetural MTV.
 
 - **Model**: segue a mesma definição da model no MVC;
@@ -63,8 +67,8 @@ Figura 2\. Padrão arquitetural MTV.
 
 ## 3\. Metas e Restrições de Arquitetura
 
-Restrição | Descrição
---- | ---
+Restrição     | Descrição
+------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Linguagem     | O sistema será inteiramente desenvolvido utilizando a linguagem Python.
 Plataforma    | Será utilizado o framework Django tanto para o front quanto para o back-end.
 Segurança     | Para a segurança do usuário, todas as senhas de login são criptografadas.
@@ -84,6 +88,8 @@ Segue abaixo a lista com os principais casos de uso do projeto UNBIND:
 - Visualizar tarefa específica
 - Pontuar usuário
 
+![](./img/visoes_casos_uso.jpg)
+
 Figura 3\. Diagrama de Casos de Uso.
 
 ## 5\. Visão Lógica
@@ -95,6 +101,8 @@ Foram feitos modelos seguindo o padrão UML relacionados aos aspectos arquitetur
 #### 5.1.1 Diagrama de Classes
 
 O diagrama de classes tem como principal propósito relacionar os tipos modelados no sistema. Geralmente, inclui classe, interface, tipo de dado, restrição de acesso e dependências. Dessa forma, consiste em um importante artefato da UML (Unified Modeling Language) para documentação das classes codificadas ou que serão codificadas em uma aplicação.
+
+![](./img/diagrama_classes.png)
 
 As principais classes da aplicação são:
 
@@ -108,7 +116,9 @@ As principais classes da aplicação são:
 
 #### 5.1.2 Diagrama de Colaboração
 
-O diagrama de colaboração
+O diagrama de colaboração permite a identificação de aspectos importantes na cooperação entre uma série de instâncias, identificando as funções que serão executadas pelas instâncias.
+
+![](./img/diagrama_colaboracao.jpg)
 
 #### 5.1.3 Diagrama de Pacotes
 
@@ -135,6 +145,7 @@ O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os p
 
 ##### Src: pasta com todos arquivos referentes ao desenvolvimento da aplicação.
 
+![](./img/diagrama_pacotes.png)
 
 ### 6\. Visão de Implementação
 
@@ -144,15 +155,31 @@ Proporcionam um método alternativo para implementar views como objetos ao invé
 
 Podemos então agregar as funções básicas das views dentro de classes, como métodos. Os recursos das Class Based Views estão em algumas classes "pré-prontas", as quais outras classes podem herdar. A partir daí as alterações que precisam ser feitas são mínimas.
 
+![](./img/visao_implementacao.png)
+
 ### 7.2 Diagramas Significativos
 
 #### 7.2.1 Diagrama de Componentes
+
+##### Versão 1
+
+![](./img/diagrama_componente_v1.jpg)
+
+##### Versão 2
+
+![](./img/diagrama_componente_v2.jpg)
 
 ### 8\. Visão de Dados
 
 #### 8.1 Diagrama Entidade Relacionamento
 
+![](./img/der.png)
+
 #### 8.2 Modelo Lógico de dados
+
+![](./img/dl.png)
+
+![](./img/logico_unbind.png)
 
 ## 9\. Qualidade
 
@@ -246,9 +273,9 @@ O software oferece suporte aos dispositivos apresentados abaixo.
 
 - UML 2.5 Diagrams Overview. Disponível em: <<https://www.uml-diagrams.org/uml-25-diagrams.html>>.
 
-- Software Architecture: MVC Design Pattern, Medium. Disponível em: <<https://medium.com/@dennisvera.z/software-architecture-mvc-design-pattern-ceae5d5083d7>>.
+- Software Architecture: MVC Design Pattern, Medium. Disponível em: [//medium.com/@dennisvera.z/software-architecture-mvc-design-pattern-ceae5d5083d7)](mailto://medium.com/@dennisvera.z/software-architecture-mvc-design-pattern-ceae5d5083d7)).
 
-- Django’s Structure – A Heretic’s Eye View, The django book. Disponível em: <<https://djangobook.com/mdj2-django-structure/>>.
+- Django's Structure – A Heretic's Eye View, The django book. Disponível em: <<https://djangobook.com/mdj2-django-structure/>>.
 
 - Working Structure of Django MTV Architecture, Towards Data Science. Disponível em: <<https://towardsdatascience.com/working-structure-of-django-mtv-architecture-a741c8c64082>>.
 
