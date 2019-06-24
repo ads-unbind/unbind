@@ -934,7 +934,6 @@
 <h2 id="12-escopo">1.2 Escopo</h2>
 <p>Este documento apresenta as características arquiteturais do projeto <strong>UNBIND</strong>, descrevendo em detalhes a soluções arquiteturais determinadas para o projeto, de forma a servir como base para o desenvolvimento do projeto pelos desenvolvedores de software alocados para o projeto.</p>
 <h2 id="13-definicoes-acronimos-e-abreviacoes">1.3 Definições, Acrônimos, e Abreviações</h2>
-<p><img alt="" src="../img/mvc.png" /></p>
 <p><strong>MVC</strong> - Model View Controller</p>
 <p><strong>MTV</strong> - Model Template View</p>
 <p><strong>UNBIND</strong> - Aplicação web, desenvolvida em Django, que tem como objetivo ajudar pessoas com rotinas desgastantes, estimulando-as a realizar atividades que tragam felicidade.</p>
@@ -943,6 +942,7 @@
 <p>O sistema faz uso do Framework Django (versão 2.2.2), que faz uso do padrão MVC. No entanto, tal plataforma possui uma interpretação singular em relação à organização de camadas. O indicado é considerar que a própria plataforma faz o papel da camada de controle, enquanto a camada de Modelo e de Visão devem ser adaptadas e reinterpretadas conforme o necessário. Por este motivo, ainda que o Django implemente o MVC, considera-se que o padrão de camadas externalizado pela plataforma é o MTV (Model-Template-View).</p>
 <p>A utilização de uma arquitetura em camadas é interessante por proporcionar uma clara separação de responsabilidades no código, proporcionando reusabilidade, e reduzindo o esforço de manutenção. Os conceitos de MVC e MTV serão apresentados nas seções seguintes.</p>
 <h3 id="21-model-view-controller-mvc">2.1 Model View Controller (MVC)</h3>
+<p><img alt="" src="../img/mvc.png" /></p>
 <p>Figura 1. Padrão arquitetural MVC.</p>
 <ul>
 <li>
