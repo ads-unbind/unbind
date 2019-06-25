@@ -18,7 +18,7 @@ from faker import Faker
 
 fakegen = Faker()
 
-#image = f"{os.getcwd()}{static/profile_image/godfather.jpg}"
+#image = f"{os.getcwd()}{static/images/profile/godfather.jpg}"
 
 categories = ['categorie1','categorie2','categorie3','categorie4','categorie5']
 
@@ -35,7 +35,7 @@ def populate(N=5):
         #atributo de Artigo
         fake_titulo = fakegen.text(max_nb_chars=15)
         fake_text =  fakegen.text()
-        fake_imagem = sys.path.append('/static/profile_image/godfather.jpg')
+        fake_imagem = sys.path.append('/static/images/profile/godfather.jpg')
         fake_autor = fakegen.name()
         fake_curtidas = 3
         #atributo Pergunta
