@@ -275,6 +275,11 @@ a {
     color: var(--unbind-blue-2);
 }
 
+.nav-link.active {
+    color: #222;
+    background-color: transparent;
+}
+
 
 /* Footer */
 
