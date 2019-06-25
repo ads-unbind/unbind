@@ -132,17 +132,23 @@
 /* style.css */
 
 :root {
-    --unbind-blue-1: #6595bf;
-    --unbind-blue-2: #a0bdd9;
-    --unbind-green-1: #65bf73;
-    --unbind-green-2: #a0d9a9;
+    --unbind-blue: #6595B5;
+    --unbind-blue-dark: #3D7397;
+    --unbind-blue-light1: #8FB6D0;
+    --unbind-blue-light2: #BCD6E7;
+    --unbind-green: #65B58D;
+    --unbind-green-dark: #3D976A;
+    --unbind-green-light1: #8FD0AF;
+    --unbind-green-light2: #BCE7D1;
+    --unbind-red: #B56D65;
+    --unbind-red-dark: #97463D;
     --unbind-white: #fbfbfb;
     --unbind-black: #444444;
 }
 
 body {
     font-family: Inter;
-    color: #495057;
+    color: var(--unbind-black);
 }
 
 section {
@@ -190,20 +196,20 @@ a {
 .unbind-brand {
     font-weight: 700;
     letter-spacing: 0.4rem;
-    color: var(--unbind-blue-1) !important;
+    color: var(--unbind-blue) !important;
 }
 
 .unbind-brand:hover {
     text-decoration: none;
-    color: var(--unbind-blue-2) !important;
+    color: var(--unbind-blue-light1) !important;
 }
 
 .text-primary {
-    color: var(--unbind-blue-1) !important;
+    color: var(--unbind-blue) !important;
 }
 
 .text-secondary {
-    color: var(--unbind-green-1) !important;
+    color: var(--unbind-green) !important;
 }
 
 .text-light {
@@ -234,11 +240,11 @@ div.rounded {
 /* Bg */
 
 .bg-primary {
-    background-color: var(--unbind-blue-1)!important;
+    background-color: var(--unbind-blue)!important;
 }
 
 .bg-secondary {
-    background-color: var(--unbind-green-1)!important;
+    background-color: var(--unbind-green)!important;
 }
 
 .bg-white {
@@ -255,7 +261,7 @@ div.rounded {
     justify-content: space-between;
     padding: .25rem 3rem;
     border-bottom: 2px solid #22222222;
-    background-color: var(--unbind-blue-1);
+    background-color: var(--unbind-blue);
 }
 
 .navbar-brand {
@@ -263,7 +269,7 @@ div.rounded {
 }
 
 .navbar-brand:hover {
-    color: var(--unbind-blue-2);
+    color: var(--unbind-red) !important;
     letter-spacing: 0.5rem;
     transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
 }
@@ -276,11 +282,11 @@ div.rounded {
 }
 
 .nav-link:hover {
-    color: var(--unbind-blue-2);
+    color: var(--unbind-blue-light2);
 }
 
 .nav-link.active {
-    color: #222;
+    color: var(--unbind-blue-light1);
     background-color: transparent;
 }
 
@@ -292,7 +298,7 @@ div.rounded {
 }
 
 .footer-brand:hover {
-    color: var(--unbind-green-2);
+    color: var(--unbind-green);
     letter-spacing: 0.5rem;
     transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
 }
@@ -317,8 +323,8 @@ div.rounded {
 
 .btn-primary {
     color: var(--unbind-white);
-    background-color: var(--unbind-blue-1);
-    border-color: var(--unbind-blue-1);
+    background-color: var(--unbind-blue);
+    border-color: var(--unbind-blue);
 }
 
 .btn-outline-white {
@@ -329,7 +335,7 @@ div.rounded {
 
 .btn-outline-white:hover {
     background: var(--unbind-white);
-    color: var(--unbind-blue-1);
+    color: var(--unbind-blue);
     transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
 }
 
