@@ -22,7 +22,6 @@ from django.urls import include, path,re_path
 from usuario.views import register
 from principal.views import index
 from artigo.views import usuario_artigo
-
 from unbind import settings
 
 urlpatterns = [
