@@ -142,7 +142,6 @@
 
 body {
     font-family: Inter;
-    /*font-size: 1.25rem; passar pros elementos da navbar*/
     color: #495057;
 }
 
@@ -224,6 +223,11 @@ a {
 
 .after-nav {
     padding-top: 62px !important;
+}
+
+img.rounded,
+div.rounded {
+    border-radius: 0.625rem !important;
 }
 
 
@@ -339,4 +343,33 @@ a {
 
 .login-container {
     padding-top: 4.5rem !important;
+}
+
+
+/* Artigo */
+
+.artigo-title {
+    padding: 3rem 0 !important;
+}
+
+
+/* Breadcrumb */
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0.3125rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '';
+    background-image: url("../icons/play-button.svg");
+    width: 0.625rem;
+    height: 0.625rem;
+    padding: 0;
+    opacity: .2;
 }
