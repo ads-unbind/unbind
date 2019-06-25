@@ -5,6 +5,7 @@ from django.urls import reverse
 from categoria.models import Categoria
 # Create your views here.
 
+
 def atividade(request):
     user = request.user
     if user.is_authenticated:
