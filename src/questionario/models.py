@@ -20,7 +20,7 @@ class Pergunta(models.Model):
     enunciado = models.CharField(max_length=50)
     pontos = models.IntegerField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    questionario = models.ForeignKey(Questionario, on_delete=models.CASCADE)
+    questionario = models.ForeignKey(Questionario, on_delete=models.CASCADE, related_name='perguntas')
 
     def __str__(self):
         return self.enunciado
