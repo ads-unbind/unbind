@@ -30,7 +30,6 @@ urlpatterns = [
     path('', include('usuario.urls')),
     path('artigo/', include('artigo.urls', namespace='artigo')),
     path('questionario/', include('questionario.urls')),
-    path('categoria/', include('categoria.urls', namespace='categoria')),
     path('atividade/',include('atividade.urls')),
 
 ]

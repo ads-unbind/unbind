@@ -48,7 +48,8 @@ def listar_artigos(request):
     :return: Lista de artigos
     """
 
-    artigos = Artigo.objects.all()
-    context = {"artigos": artigos}
+    artigos = Artigo.objects.order_by('-dataPublicacao')
+    categorias = Categoria.objects.all()
+    context = {"artigos": artigos, "categorias": categorias}
 
     return render(request, 'artigos.html', context)

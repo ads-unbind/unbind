@@ -37,9 +37,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'categoria:listar_categorias' %}">Categorias</a>
-                </li>
                 {% if user.is_superuser %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'admin:index' %}">Painel do Admin</a>
