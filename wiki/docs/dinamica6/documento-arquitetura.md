@@ -153,7 +153,7 @@ O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os p
 
 ![](./img/visao_implementacao.png)
 
-### 7 Visão de Implementação
+### 7\. Visão de Implementação
 
 #### 7.1 Finalidade
 
@@ -271,7 +271,45 @@ O software oferece suporte aos dispositivos apresentados abaixo.
 
 - Computadores Desktop.
 
-## 10\. Referências
+## 10\. Requisitos Mínimos dos Sistemas
+
+### 10.1 Sistema executar o projeto UnBind
+
+- Processador: Intel Atom ou Intel Core i3 (ou similar)
+- Espaço em disco: 1GB
+- Sistema Operacional: Windows 7 ou superior, macOS e Linux
+- Python versões: 2.7.x ou superior
+- Django: 2.2.2 (padrão)
+
+### 10.2 Servidor de Banco de Dados e Servidor Web
+
+Os requisitos apresentados a seguir foram estudados para o sistema suportar cerca de 10 mil
+de usuários, caso o sistema tenha que operar com mais usuários será necessário um estudo mais aprofundado.
+
+#### 10.2.1 Servidor de Banco de Dados
+
+- Processador: Xeon E5 server family
+- CPU: 2 x 4 cores
+- CPU (expansabilidade futura): entre 1 a 4 sockets
+- Memória RAM: mínimo 16GB
+- Espeço de Disco: entre 16GB e 1.5TB
+- Backup: HDD ou Fita Máguinetica
+
+##### 10.2.1.1 SQLite
+
+Para servidores Linux, as seguintes configurações podem ser aplicadas para rodar o banco de dados SQLite:
+
+- Java Runtime Environment (JRE) 1.5 ou superior
+- Memória RAM: 500MB
+
+#### 10.2.1 Servidor Web
+
+- Processador: Intel i7 - 3770 (similar ou superior)
+- Memoria RAM: 32GB
+- CPU: 4 núcleos ou mais
+- HDD: 146GB com cache 128MB
+
+## 11\. Referências
 
 - Arquitetura de microserviços ou monolítica?, Caelum. Disponível em: <<https://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica/>>.
 
@@ -286,3 +324,9 @@ O software oferece suporte aos dispositivos apresentados abaixo.
 - Django documentation. Disponível em: <<https://docs.djangoproject.com/en/2.2/>>.
 
 - Diretriz: Realizações de Casos de Uso. Disponível em: <<http://www.hectordufau.com.br/openup/openup/guidances/guidelines/uc_realizations_448DDA77.html>>.
+
+- Requisitos de Sistemas. Disponível em: <<http://www.stansoftware.com/hardware-requirements/>>
+
+- Intel Distribution for Python. Disponível em: <<https://software.intel.com/en-us/distribution-for-python/system-requirements>>
+
+- System Requirements - SQLite Data Provider 2015. Disponível em: <<http://cdn.cdata.com/help/DEA/rsb/pg_startrequirementsrsb.htm>>
