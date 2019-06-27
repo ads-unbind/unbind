@@ -1,34 +1,77 @@
 from django.shortcuts import render
 from questionario import models
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
-from questionario.models import Pergunta
-#from forms import QuestionarioForm
+from questionario.models import Pergunta,Questionario, Registro
+from questionario.forms import QuestionarioForm
+from usuario.indica import suggest_articles
 
 # Create your views here.
 def questionario(request):
     user = request.user
     if user.is_authenticated:
+        print("autenticado ", user.username)
         perguntas = []
-        for pergunta in Pergunta.objects.all():
-            perguntas.append(pergunta)
+        #imprimindo as perguntas
+        questionario = Questionario.objects.filter(id=1)
 
-        return render(request, 'questionario_user.html', {'perguntas': perguntas})
+        if questionario:
+            print("questionario existente")
+            for pergunta in questionario[0].perguntas.all():
+                perguntas.append(pergunta)
+
+            if request.method == 'POST':
+                print("entrei no post")
+                questionario_form = QuestionarioForm(data=request.POST)
+
+                if questionario_form.is_valid():
+                    print("questionario valido")
+                    questionario = questionario_form.save()
+                    #questionario.save()
+
+                    return HttpResponseRedirect(reverse('index'))
+                else:
+                    print(QuestionarioForm.errors)
+            questionario_form = QuestionarioForm()
+
+            return render(request, 'questionario_user.html', {'perguntas': perguntas,'questionario_form':questionario_form})
+        else:
+            return HttpResponse("questionario nao existe")
     else:
         return HttpResponseRedirect(reverse('index'))
-'''
-def chama_form(request):
-    if request.method == 'POST':
-        questionario_form = QuestionarioForm(data=request.POST)
 
-        if questionario_form.is_valid():
-            pontos = questionario_form.save()
 
-        else:
-            print(questionario_form.errors)
+def responde_pergunta(request):
+    questionario = Questionario.objects.filter(id=1)[0]
 
-    else:
-        questionario_form = QuestionarioForm()
+    # Receber formulario que possui uma lista de pontuações e suas respectivas perguntas.
+    # iterar sobre todas as respostas presentes no formulário, dessa forma:
 
-    return render(request, 'questionario_user.html', {'questionario_form': questionario_form})
-'''
+    #questionario_forms é uma lista de respostas
+    # for pergunta in questionario_forms:
+    for pergunta in questionario.perguntas.all():
+        # resposta = pergunta.resposta
+        resposta = str(input('Digite sua resposta da pergunta {}'.format(pergunta.id)))
+        registro = Registro()
+        registro.save(pergunta, request.user, resposta)
+
+
+def respostas_lista(request):
+    user = request.user
+
+    respostas = Registro.objects.filter(usuario=user)
+
+    for resposta in respostas:
+        print(resposta.pergunta.enunciado, ": ", resposta.pontos)
+    print('INDICANDO ARTIGOS:')
+
+    artigos = suggest_articles(user)
+
+    for artigo in artigos:
+        print(artigo)
+
+
+
+def listar_perguntas_com_maior_pontuacao(request):
+    respostas = Registro.objects.all()
+    #ordenar lista de respostas com base no atributo 'pontos'

@@ -5,17 +5,17 @@
 <div class="jumbotron">
 
 <h1>Obrigado por se cadastrar</h1>
-
-{% for item in perguntas %}
-{{ item.enunciado }}<br>
-<!--
-{% csrf_token %}
 <form method="POST">
-    {% csrf_token %}
-    {{questionario_form.as_p}}
+{% for item in perguntas %}{% csrf_token %}
+{{ item.enunciado }}<br>
 
-</form>
--->
+{{questionario_form.as_p}}
+
+<div class="form-group">
+    <button class="btn btn-primary btn-block" href="index" %}">Submit</button>
+</div>
+
 {% endfor %}
+</form>
 </div>
 {% endblock %}
