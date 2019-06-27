@@ -37,9 +37,48 @@
     </div>
 </section>
 {% else %}
-<section class="bg-white min-vh-100 o-hidden d-flex flex-column after-nav">
-    <div class="container">
-        <h1>User page</h1>
+<div class="bg-white min-vh-100 o-hidden d-flex flex-column after-nav">
+    <div class="container container-dash my-5" style="flex: 1;display: flex;">
+        <div class="row" style="flex: 1">
+            <div class="col-md-12 d-flex flex-column mt-3">
+                <div class="row" style="flex: 2">
+                    <div class="col-md-4 px-2 d-flex flex-column">
+                        <h6 class="text-above-card">PERFIL</h6>
+                        <div class="card mb-4 shadow-sm" style="flex: 1"></div>
+                    </div>
+                    <div class="col-md-4 px-2 d-flex flex-column">
+                        <h6 class="text-above-card">QUESTIONÁRIO</h6>
+                        <div class="card mb-4 shadow-sm" style="flex: 1"></div>
+                    </div>
+                    <div class="col-md-4 px-2 d-flex flex-column">
+                        <h6 class="text-above-card">COMPARTILHE</h6>
+                        <div class="card mb-4 shadow-sm" style="flex: 1"></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="flex: 3;">
+                    <div class="col-md-9 px-2 d-flex flex-column">
+                        <h6 class="text-above-card">ATIVIDADES</h6>
+                        <div class="card mb-4 shadow-sm" style="flex: 1">
+                            <div class="row px-4 justify-content-center" style="flex: 2">
+                                <div class="col-md-4 px-2 d-flex flex-column">
+                                    <div class="card my-4" style="flex: 1"></div>
+                                </div>
+                                <div class="col-md-4 px-2 d-flex flex-column">
+                                    <div class="card my-4" style="flex: 1"></div>
+                                </div>
+                                <div class="col-md-4 px-2 d-flex flex-column">
+                                    <div class="card my-4" style="flex: 1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 px-2 d-flex flex-column">
+                        <h6 class="text-above-card">ARTIGOS</h6>
+                        <div class="card shadow-sm" style="flex: 1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 {% endif %} {% endif %} {% endblock %}

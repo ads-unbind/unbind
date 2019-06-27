@@ -241,6 +241,13 @@ small,
     max-height: 6em;
 }
 
+.text-above-card {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    color: var(--unbind-blue);
+}
+
 
 /* Hover */
 
@@ -267,6 +274,7 @@ a:hover {
 
 img.rounded,
 div.rounded {
+    max-width: 100%;
     border-radius: 0.625rem !important;
 }
 
@@ -387,7 +395,7 @@ section.has-divider .container {
 }
 
 .footer-brand:hover {
-    color: var(--unbind-green);
+    color: var(--unbind-green-dark);
     letter-spacing: 0.5rem;
     transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
 }
@@ -477,4 +485,11 @@ section.has-divider .container {
 .artigos-list {
     position: relative;
     height: 1218.75px;
+}
+
+
+/* Dashboard */
+
+.container-dash {
+    max-width: 1320px;
 }
