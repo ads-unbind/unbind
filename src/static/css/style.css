@@ -446,6 +446,7 @@ section.has-divider .container {
     height: 250px;
     border-top-left-radius: calc(0.625rem - 1px);
     border-top-right-radius: calc(0.625rem - 1px);
+    object-fit: cover;
 }
 
 
@@ -531,6 +532,7 @@ section.has-divider .container {
     height: 250px;
     border-top-left-radius: calc(0.625rem - 1px);
     border-top-right-radius: calc(0.625rem - 1px);
+    object-fit: cover;
 }
 
 .activity-add-card {
@@ -563,6 +565,7 @@ section.has-divider .container {
 }
 
 .list-articles .col-3 img {
-    min-height: 4rem;
+    height: 4rem;
+    width: 100%;
     object-fit: cover;
 }
