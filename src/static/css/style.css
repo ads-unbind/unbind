@@ -241,13 +241,6 @@ small,
     max-height: 6em;
 }
 
-.text-above-card {
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 0.125rem;
-    color: var(--unbind-blue);
-}
-
 
 /* Hover */
 
@@ -451,9 +444,9 @@ section.has-divider .container {
     border-top-right-radius: calc(0.625rem - 1px);
 }
 
-.card-body {
+/* .card-body {
     padding: 2rem;
-}
+} */
 
 .card-flex {
     display: -ms-flexbox;
@@ -492,4 +485,36 @@ section.has-divider .container {
 
 .container-dash {
     max-width: 1320px;
+}
+
+.title-above-card {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    color: var(--unbind-blue);
+}
+
+.title-inside-card {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: var(--unbind-blue);
+}
+
+.link-inside-card {
+    /* margin-bottom: 0.5rem; */
+    font-weight: 600;
+    /* letter-spacing: 0.1rem; */
+    color: var(--unbind-blue);
+}
+
+.profile-name-card {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.profile-level-card {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--unbind-blue);
 }
