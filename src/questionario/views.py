@@ -26,8 +26,20 @@ def questionario(request):
 
                 if questionario_form.is_valid():
                     print("questionario valido")
-                    questionario = questionario_form.save()
+                    resposta = str(questionario_form.cleaned_data['pontos'])
+                    print(resposta)
+                    #
+
+                    pergunta = respostas.id
+                    print("pergunta id".format(pergunta))
+
+                    #resposta = str(input('Digite sua resposta da pergunta {}'.format(pergunta.id)))
+                    questionario = questionario_form.save(pergunta, request.user, resposta)
                     #questionario.save()
+
+                    #resposta = str(input('Digite sua resposta da pergunta {}'.format(pergunta.id)))
+                    #registro = Registro()
+                    #registro.save(pergunta, request.user, resposta)
 
                     return HttpResponseRedirect(reverse('index'))
                 else:

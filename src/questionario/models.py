@@ -28,9 +28,8 @@ class Pergunta(models.Model):
         return self.enunciado
 
 
-# esta model servirá de classe intermediária ()
+# esta model servirá de classe intermediária()
 class Registro(models.Model):
-    # como que faço para selecionar um atributo de uma classe
     pontos = models.IntegerField()
     usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name="respostas")
     pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE, related_name="respostas")

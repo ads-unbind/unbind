@@ -19,6 +19,15 @@ class QuestionarioForm(forms.ModelForm):
         if pontos <= 0 or pontos > 5:
             raise forms.ValidationError("O número tem que estar no interval de 1 e 5!")
 
+    def save(self, id_pergunta, id_user, pontos):
+        self.usuario = id_user
+        self.pergunta = id_pergunta
+        self.pontos = pontos
+        super().save()
+
+
+
+'''
     def save(self):
         all_clean_data = super().clean()
         pontos = all_clean_data['pontos']
@@ -27,3 +36,4 @@ class QuestionarioForm(forms.ModelForm):
 
         print("save modificado")
         print(pontos)
+'''
