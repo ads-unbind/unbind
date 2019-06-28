@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from artigo.models import Artigo
 
 
 def index(request):
-    return render(request, 'index.html')
+    artigos = Artigo.objects.order_by('-dataPublicacao')[:2]
+    context = {"artigos": artigos}
+    return render(request, 'index.html', context)
