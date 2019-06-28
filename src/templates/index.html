@@ -38,10 +38,10 @@
 </section>
 {% else %}
 <div class="bg-white min-vh-100 o-hidden d-flex flex-column after-nav">
-    <div class="container container-dash my-5" style="flex: 1;display: flex;">
-        <div class="row" style="flex: 1">
-            <div class="col-md-12 d-flex flex-column mt-3">
-                <div class="row" style="flex: 2">
+    <div class="container container-dash d-flex" style="flex: 1;">
+        <div class="row my-4 mx-0" style="flex: 1">
+            <div class="col-md-12 d-flex flex-column">
+                <div class="row" style="flex: 4">
                     <div class="col-md-4 px-2 d-flex flex-column">
                         <h6 class="title-above-card">PERFIL</h6>
                         <div class="card mb-4 shadow-sm" style="flex: 1">
@@ -55,30 +55,30 @@
                                         <h5 class="profile-level-card">LEVEL 5</h5>
                                     </div>
                                 </div>
-                                <div class="d-flex flex-column pt-2">
+                                <div class="d-flex flex-column pt-3">
                                     <h6 class="title-inside-card">CONQUISTAS</h6>
                                     <div class="d-flex" style="flex: 2">
                                         <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
+                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
                                         </div>
                                         <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
+                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
                                         </div>
                                         <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
+                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
                                         </div>
                                         <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
+                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
                                         </div>
                                         <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
+                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
                                         </div>
                                         <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
+                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-block text-right pt-2" style="text-align: right;">
+                                <div class="d-block text-right pt-3">
                                     <h5 class="link-inside-card mb-0">Ver perfil -></h5>
                                 </div>
                             </div>
@@ -86,26 +86,71 @@
                     </div>
                     <div class="col-md-4 px-2 d-flex flex-column">
                         <h6 class="title-above-card">QUESTIONÁRIO</h6>
-                        <div class="card mb-4 shadow-sm" style="flex: 1"></div>
+                        <div class="card questionary-card mb-4 shadow-sm" style="flex: 1">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div class="d-block">
+                                    <h3 class="font-weight-semibold text-light mb-0">Questionário disponível!</h3>
+                                </div>
+                                <div class="d-block text-right pt-3">
+                                    <h5 class="link-inside-card text-light mb-0">Responder questionário -></h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 px-2 d-flex flex-column">
                         <h6 class="title-above-card">COMPARTILHE</h6>
-                        <div class="card mb-4 shadow-sm" style="flex: 1"></div>
+                        <div class="card share-card mb-4 shadow-sm" style="flex: 1"></div>
                     </div>
                 </div>
-                <div class="row justify-content-center" style="flex: 3;">
+                <div class="row justify-content-center" style="flex: 7;">
                     <div class="col-md-9 px-2 d-flex flex-column">
                         <h6 class="title-above-card">ATIVIDADES</h6>
                         <div class="card mb-4 shadow-sm" style="flex: 1">
                             <div class="row px-4 justify-content-center" style="flex: 2">
                                 <div class="col-md-4 px-2 d-flex flex-column">
-                                    <div class="card my-4" style="flex: 1"></div>
+                                    <div class="card my-4" style="flex: 1">
+                                        <a href="#">
+                                            <img src="{% static 'images/profile/godfather.jpg' %}" alt="image" class="activity-img-card">
+                                        </a>
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="d-flex justify-content-between mb-4">
+                                                <div class="text-small d-flex">
+                                                    <a href="#">Categoria</a>
+                                                </div>
+                                            </div>
+                                            <a href="#">
+                                                <h4>Nova atividade</h4>
+                                            </a>
+                                            <p class="flex-grow-1 text-concat">Tá aí a descrição mto loka da atividade</p>
+                                            <div class="d-block text-right pt-3">
+                                                <h6 class="link-inside-card mb-0">Ver atividade -></h6>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 px-2 d-flex flex-column">
-                                    <div class="card my-4" style="flex: 1"></div>
+                                    <div class="card activity-add-card my-4" style="flex: 1">
+                                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                            <div class="d-block" style="width: 15%">
+                                                <img class="svg activity-add-icon" src="{% static 'icons/plus.svg' %}"></img>
+                                            </div>
+                                            <div class="d-block text-center pt-2">
+                                                <h4 class="link-inside-card text-light mb-0">Adicionar atividade</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 px-2 d-flex flex-column">
-                                    <div class="card my-4" style="flex: 1"></div>
+                                    <div class="card activity-add-card my-4" style="flex: 1">
+                                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                            <div class="d-block" style="width: 15%">
+                                                <img class="svg activity-add-icon" src="{% static 'icons/plus.svg' %}"></img>
+                                            </div>
+                                            <div class="d-block text-center pt-2">
+                                                <h4 class="link-inside-card text-light mb-0">Adicionar atividade</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

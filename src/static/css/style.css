@@ -241,6 +241,10 @@ small,
     max-height: 6em;
 }
 
+.font-weight-semibold {
+    font-weight: 600;
+}
+
 
 /* Hover */
 
@@ -444,6 +448,7 @@ section.has-divider .container {
     border-top-right-radius: calc(0.625rem - 1px);
 }
 
+
 /* .card-body {
     padding: 2rem;
 } */
@@ -517,4 +522,27 @@ section.has-divider .container {
     margin-bottom: 0;
     font-weight: 600;
     color: var(--unbind-blue);
+}
+
+.questionary-card {
+    background-color: var(--unbind-green);
+}
+
+.share-card {
+    background-color: var(--unbind-blue);
+}
+
+.activity-img-card {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: calc(0.625rem - 1px);
+    border-top-right-radius: calc(0.625rem - 1px);
+}
+
+.activity-add-card {
+    background-color: var(--unbind-green);
+}
+
+.activity-add-icon {
+    fill: var(--unbind-white);
 }
