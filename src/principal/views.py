@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from artigo.models import Artigo
+from usuario import models
 
 
 def index(request):

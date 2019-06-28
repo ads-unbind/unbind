@@ -31,38 +31,36 @@
             </ul>
         </div>
         {% else %}
-
-        <div class="mx-auto">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+            <div class="mx-auto">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
                     <a class="nav-link" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
                 </li>
                 {% if user.is_superuser %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'admin:index' %}">Painel do Admin</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'admin:index' %}">Painel do Admin</a>
+                    </li>
                 {% endif %}
-            </ul>
-        </div>
-
-        <div class="col-2">
-            <ul class="navbar-nav mr-auto justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">Sair</a>
-                </li>
-            </ul>
-        </div>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul class="navbar-nav mr-auto justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+                    </li>
+                </ul>
+            </div>
         {% endif %}
     </nav>
     {% endblock %} 
     
     {% block body %}{% endblock %}
 
-    <!--<div>Icons made by 
-        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> 
-        from 
-        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> 
-        is licensed by 
+    <!--<div>Icons made by
+        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        is licensed by
         <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
     </div>
     -->
