@@ -5,6 +5,7 @@ from usuario.models import User
 from artigo.models import Artigo
 from atividade.models import Atividade
 
+
 def index(request):
     user = request.user
 
@@ -16,6 +17,3 @@ def index(request):
 
     else:
         return render(request, 'index.html')
-
-    
-    

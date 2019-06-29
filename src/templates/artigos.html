@@ -45,7 +45,7 @@
             </div>
     
         </div>
-        <div class="container">
+        <div class="container" id="filtered">
             <div class="row mb-4">
                 {% for artigo in artigos %}
                 <div class="col-md-6 col-lg-4 card-flex" id="cardItem">
@@ -57,7 +57,7 @@
                             <div class="d-flex justify-content-between mb-4">
                                 <div class="text-small d-flex">
                                     <div class="mr-3">
-                                        <a href="{% url 'artigo:listar_por_categoria' artigo.categoria.id %}">{{ artigo.categoria.nome }}</a>
+                                        <a class="text-category" href="{% url 'artigo:listar_por_categoria' artigo.categoria.id %}">{{ artigo.categoria.nome }}</a>
                                     </div>
                                     <span class="text-muted">{{ artigo.dataPublicacao }}</span>
                                 </div>

@@ -56,8 +56,8 @@ $(function() {
 $(document).ready(function() {
     $("#cardFilter").on("keyup", function() {
         var value = $(this).val().toLowerCase();
-        $(".container .card").hide().closest('#cardItem').hide(); // hide all cards and its closest rows
-        $(".container .card").filter(function() {
+        $("#filtered .card").hide().closest('#cardItem').hide(); // hide all cards and its closest rows
+        $("#filtered .card").filter(function() {
             return $(this).text().toLowerCase().indexOf(value) > -1; // return true or false from filter
         }).show().closest('#cardItem').show(); // then show the card and its closest row after filter
     });

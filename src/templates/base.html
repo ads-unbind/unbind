@@ -32,8 +32,8 @@
         <div class="mx-auto">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/atividade/atividades">Atividades</a>
-                    <!-- # TODO: Dynamiic href-->
+                    <a class="nav-link" href="{% url 'atividade:atividades' %}">Atividades</a>
+                    <!-- # TODO: Dynamic href-->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
