@@ -35,13 +35,6 @@
     </div>
 </footer>
 {% else %} 
-{% if user.is_superuser %}
-<section class="bg-white min-vh-100 o-hidden d-flex flex-column after-nav">
-    <div class="container">
-        <h1>Admin page</h1>
-    </div>
-</section>
-{% else %}
 <div class="bg-white min-vh-100 o-hidden d-flex flex-column after-nav">
     <div class="container d-flex" style="flex: 1;">
         <div class="row my-4 mx-0" style="flex: 1">
@@ -184,6 +177,5 @@
         </div>
     </div>
 </div>
-{% endif %}
 {% endif %}
 {% endblock %}
