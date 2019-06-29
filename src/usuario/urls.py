@@ -1,7 +1,6 @@
 from django.urls import path, re_path
 from usuario import views
 
-# templates tagging
 # app_name = 'principal_app'
 
 urlpatterns = [
@@ -11,4 +10,5 @@ urlpatterns = [
     path('update_user/', views.update_user, name='update_user'),
     path('delete_user/', views.delete_user, name='delete_user'),
     path('change_password/', views.change_password, name='change_password'),
+    path('profile/', views.profile, name='profile'),
 ]

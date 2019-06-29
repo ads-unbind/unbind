@@ -38,11 +38,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
                 </li>
-                {% if user.is_superuser %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'admin:index' %}">Painel do Admin</a>
-                </li>
-                {% endif %}
             </ul>
         </div>
         <div class="col-2">
@@ -51,7 +46,10 @@
                     <div class="btn-group">
                         <a href class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{ usuario }}</a>
                         <div class="dropdown-menu dropdown-menu-right text-capitalize">
-                            <a class="dropdown-item" href="{% url 'update_user' %}">Atualizar conta</a>
+                            {% if user.is_superuser %}
+                            <a class="dropdown-item" href="{% url 'admin:index' %}">Painel do Admin</a>
+                            {% endif %}
+                            <a class="dropdown-item" href="{% url 'profile' %}">Ver perfil</a>
                             <a class="dropdown-item" href="{% url 'logout' %}">Sair</a>
                         </div>
                     </div>

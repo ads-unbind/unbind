@@ -603,3 +603,14 @@ section.has-divider .container {
     border-bottom-right-radius: calc(0.625rem - 1px);
     object-fit: cover;
 }
+
+.dropdown-item {
+    text-transform: none;
+}
+
+
+/* Profile */
+
+.profile-header {
+    padding: 3rem 0;
+}

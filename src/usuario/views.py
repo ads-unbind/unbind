@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from usuario.forms import UsuarioForm, UsuarioUpdateForm
 from . import forms
 from usuario import models
@@ -11,7 +11,6 @@ from usuario.models import User
 
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
-
 
 
 def register(request):
@@ -53,9 +52,10 @@ def logout(request):
         django_logout(request)
     return HttpResponseRedirect(reverse('index'))
 
+
 def questionario(request):
     context = {'error': ''}
-    return render(request,'questionario_user.html',context)
+    return render(request, 'questionario_user.html', context)
 
 
 def update_user(request):
@@ -71,7 +71,7 @@ def update_user(request):
             update_form.save()
             return HttpResponseRedirect(reverse('index'))
 
-        return render(request,'update_user.html',{'update_form':update_form,'usuario':usuario})
+        return render(request, 'update_user.html', {'update_form': update_form, 'usuario': usuario})
     else:
         return HttpResponseRedirect(reverse('index'))
 
@@ -89,6 +89,7 @@ def delete_user(request):
         return render(request, 'delete_user.html', {'usuario': usuario})
     else:
         return HttpResponseRedirect(reverse('index'))
+
 
 def change_password(request):
     user_atual = request.user
@@ -110,3 +111,16 @@ def change_password(request):
 
         args = {'form': form}
         return render(request, 'change_password.html', args)
+
+def profile(request):
+    user = request.user
+
+    if user.is_authenticated:
+        usuario = User.objects.get(id=user.id)
+
+        context = {'usuario': usuario}
+
+        return render(request, 'profile.html', context)
+
+    else:
+        return HttpResponseRedirect(reverse('index'))
