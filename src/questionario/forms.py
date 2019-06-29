@@ -12,6 +12,14 @@ class QuestionarioForm(forms.ModelForm):
         model = Registro
         fields = ('pontos',)
 
+    def __init__(self, n,  *args, **kwargs):
+        super(QuestionarioForm, self).__init__(*args, **kwargs)
+        for i in range(0, n):
+            self.fields["pontos%d" % i] = forms.IntegerField()
+            self.fields["pontos%d" % i].label = ""
+
+        self.fields["pontos"].label = ""
+
     def clean(self):
         all_clean_data = super().clean()
         pontos = all_clean_data['pontos']
@@ -20,6 +28,8 @@ class QuestionarioForm(forms.ModelForm):
             raise forms.ValidationError("O número tem que estar no interval de 1 e 5!")
 
     def save(self, id_pergunta, id_user, pontos):
+        print(id_pergunta)
+        print(pontos)
         self.usuario = id_user
         self.pergunta = id_pergunta
         self.pontos = pontos
