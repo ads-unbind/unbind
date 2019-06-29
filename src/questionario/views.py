@@ -16,35 +16,31 @@ def questionario(request):
         questionario = Questionario.objects.filter(id=1)
 
         if questionario:
-            print("questionario existente")
+
             for pergunta in questionario[0].perguntas.all():
                 perguntas.append(pergunta)
 
             if request.method == 'POST':
-                print("entrei no post")
-                questionario_form = QuestionarioForm(data=request.POST)
+
+                questionario_form = QuestionarioForm(len(perguntas)-1, data=request.POST)
 
                 if questionario_form.is_valid():
-                    print("questionario valido")
-                    resposta = str(questionario_form.cleaned_data['pontos'])
-                    print(resposta)
-                    #
+                    i = 0
+                    registros = []
+                    respostas = []
+                    for form in questionario_form:
+                        respostas.append(form.data)
+                    for pergunta in perguntas:
+                        pontos = respostas[i]
 
-                    pergunta = respostas.id
-                    print("pergunta id".format(pergunta))
-
-                    #resposta = str(input('Digite sua resposta da pergunta {}'.format(pergunta.id)))
-                    questionario = questionario_form.save(pergunta, request.user, resposta)
-                    #questionario.save()
-
-                    #resposta = str(input('Digite sua resposta da pergunta {}'.format(pergunta.id)))
-                    #registro = Registro()
-                    #registro.save(pergunta, request.user, resposta)
+                        registros.append(Registro())
+                        registros[i].save(pergunta, request.user, pontos)
+                        i = i + 1
 
                     return HttpResponseRedirect(reverse('index'))
                 else:
                     print(QuestionarioForm.errors)
-            questionario_form = QuestionarioForm()
+            questionario_form = QuestionarioForm(len(perguntas)-1)
 
             return render(request, 'questionario_user.html', {'perguntas': perguntas,'questionario_form':questionario_form})
         else:
