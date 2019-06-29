@@ -1,7 +1,11 @@
 from django.shortcuts import render
-# from django.http import HttpResponseRedirect
-# from django.urls import reverse
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from usuario.models import Usuario
+
+from usuario import models
+from usuario.models import User
+
 from artigo.models import Artigo
 from categoria.models import Categoria
 
@@ -47,9 +51,16 @@ def listar_artigos(request):
     :param request: Requisição do usuário
     :return: Lista de artigos
     """
+    user = request.user
 
-    artigos = Artigo.objects.order_by('-dataPublicacao')
-    categorias = Categoria.objects.all()
-    context = {"artigos": artigos, "categorias": categorias}
+    if user.is_authenticated:
+        usuario = User.objects.get(id=user.id)
 
-    return render(request, 'artigos.html', context)
+        artigos = Artigo.objects.order_by('-dataPublicacao')
+        categorias = Categoria.objects.all()
+        context = {"artigos": artigos, "categorias": categorias}
+
+        return render(request, 'artigos.html', context)
+
+    else:
+        return HttpResponseRedirect(reverse('index'))

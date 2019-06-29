@@ -297,10 +297,6 @@ div.rounded {
 
 /* Dividers */
 
-.divider:not(:first-child) {
-    top: 1px;
-}
-
 .divider {
     position: relative;
 }
