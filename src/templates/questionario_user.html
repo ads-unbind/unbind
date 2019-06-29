@@ -6,16 +6,22 @@
 
 <h1>Obrigado por se cadastrar</h1>
 <form method="POST">
+{% with total=perguntas.count %}
 {% for item in perguntas %}{% csrf_token %}
+
+
+
+
+
 {{ item.enunciado }}<br>
-
-{{questionario_form.as_p}}
-
-<div class="form-group">
-    <button class="btn btn-primary btn-block" href="index" %}">Submit</button>
-</div>
-
+{% for q in questionario_form%}
+{% if forloop.revcounter == forloop.parentloop.revcounter %}
+{{q}}<br>
+{% endif %}
 {% endfor %}
+{% endfor %}
+{% endwith %}
+<button class="btn btn-primary btn-block" href="index">Submit</button>
 </form>
 </div>
 {% endblock %}
