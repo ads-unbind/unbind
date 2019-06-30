@@ -16,6 +16,7 @@ from django.contrib.auth import update_session_auth_hash
 def register(request):
     user = request.user
     if not user.is_authenticated:
+
         if request.method == 'POST':
             register_form = UsuarioForm(data=request.POST)
 
@@ -30,11 +31,11 @@ def register(request):
                 return HttpResponseRedirect(reverse('index'))
             else:
                 print(register_form.errors)
-
         else:
             register_form = UsuarioForm()
 
-        return render(request, 'register.html', {'register_form': register_form})
+        context = {'register_form': register_form}
+        return render(request, 'register.html', context)
 
     else:
         return HttpResponseRedirect(reverse('index'))
@@ -43,6 +44,8 @@ def register(request):
 def login(request):
     user = request.user
     if not user.is_authenticated:
+
+        context = {}
         if request.method == 'POST':
             user = authenticate(
                 username=request.POST['username'],
@@ -65,31 +68,26 @@ def logout(request):
     return HttpResponseRedirect(reverse('index'))
 
 
-# TODO: Remover?
-def questionario(request):
-    context = {'error': ''}
-    return render(request, 'questionario_user.html', context)
+def account(request):
+    user = request.user
+    if user.is_authenticated:
+        usuario = User.objects.get(id=user.id)
 
-
-def update_user(request):
-
-    user_atual = request.user
-
-    if user_atual.is_authenticated:
-
-        usuario = User.objects.get(id=user_atual.id)
         update_form = UsuarioUpdateForm(request.POST or None, instance=usuario)
 
         if update_form.is_valid():
             update_form.save()
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('conta'))
 
-        return render(request, 'update_user.html', {'update_form': update_form, 'usuario': usuario})
+        context = {'update_form': update_form, 'usuario': usuario}
+
+        return render(request, 'conta.html', context)
+
     else:
         return HttpResponseRedirect(reverse('index'))
 
 
-def delete_user(request):
+def delete(request):
     user_atual = request.user
 
     if user_atual.is_authenticated:
@@ -99,7 +97,9 @@ def delete_user(request):
             usuario.delete()
             return HttpResponseRedirect(reverse('index'))
 
-        return render(request, 'delete_user.html', {'usuario': usuario})
+        context = {'usuario': usuario}
+
+        return render(request, 'delete.html', context)
     else:
         return HttpResponseRedirect(reverse('index'))
 
@@ -117,7 +117,7 @@ def change_password(request):
 
             return HttpResponseRedirect(reverse('index'))
         else:
-            return HttpResponseRedirect(reverse('change_password'))
+            return HttpResponseRedirect(reverse('senha'))
 
     else:
         form = PasswordChangeForm(user=request.user)
@@ -126,15 +126,14 @@ def change_password(request):
         return render(request, 'change_password.html', args)
 
 
-def profile(request):
-    user = request.user
-
-    if user.is_authenticated:
-        usuario = User.objects.get(id=user.id)
-
-        context = {'usuario': usuario}
-
-        return render(request, 'profile.html', context)
-
+def perfil(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('conta'))
     else:
         return HttpResponseRedirect(reverse('index'))
+
+
+# TODO: Remover?
+def questionario(request):
+    context = {'error': ''}
+    return render(request, 'questionario_user.html', context)

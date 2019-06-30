@@ -1,18 +1,25 @@
 {% extends "base.html" %} {% block title %}Perfil | UNBIND{% endblock %} {% block body %} {% load staticfiles %}
 
-<div class="min-vh-100">
+<div class="d-flex flex-column min-vh-100">
     <section class="bg-primary-dark after-nav pb-0">
-        <div class="d-flex container profile-header">
-            <div class="col-md-3 px-5 d-flex flex-column justify-content-center" style="fill: white">
+        <div class="col-8 mb-4 d-flex container profile-header">
+            <div class="col-3 px-5 d-flex flex-column justify-content-center" style="fill: white">
                 <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
             </div>
-            <div class="col-md-9 d-flex flex-column justify-content-center">
-                <h1 class="profile-name-card text-light">Nome Sobrenome</h1>
-                <h3 class="profile-name-card text-light">{{ usuario }}</h3>
-                <h5 class="profile-level-card text-secondary">LEVEL 5</h5>
+            <div class="col-9 d-flex flex-column justify-content-center">
+                <h1 class="profile-name-card text-light">{{ usuario.first_name }} {{ usuario.last_name }}</h1>
+                <h4 class="profile-name-card text-light mb-4">{{ usuario }}</h4>
+                <h5 class="profile-level-card text-light">{{ usuario.email }}</h5>
             </div>
         </div>
     </section>
+    <div class="nav-scroller bg-white shadow-sm">
+        <nav class="nav nav-underline justify-content-center">
+            <a class="nav-link text-primary" href="{% url 'conta' %}">Dados da conta</a>
+            <a class="nav-link text-primary" href="{% url 'senha' %}">Alterar senha</a>
+        </nav>
+    </div>
+    {% block profile %}{% endblock %}
 </div>
 <footer class="py-4 bg-secondary">
     <div class="container">

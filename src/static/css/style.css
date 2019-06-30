@@ -140,8 +140,8 @@
     --unbind-green-dark: #3D976A;
     --unbind-green-light1: #8FD0AF;
     --unbind-green-light2: #BCE7D1;
-    --unbind-red: #B56D65;
-    --unbind-red-dark: #97463D;
+    --unbind-red: #FF6961;
+    --unbind-red-dark: #C23B22;
     --unbind-white: #fbfbfb;
     --unbind-black: #444444;
 }
@@ -212,6 +212,10 @@ a {
 
 .text-secondary {
     color: var(--unbind-green) !important;
+}
+
+.text-warn {
+    color: var(--unbind-red) !important;
 }
 
 .text-light {
