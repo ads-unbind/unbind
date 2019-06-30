@@ -1,31 +1,49 @@
 from django import forms
-from questionario.models import Questionario, Pergunta
-
-respostas = [(1,1), (2,2), (3,3), (4,4), (5,5)]
-#respostas = [1, 2, 3, 4, 5]
+from questionario.models import Questionario, Pergunta, Registro
 
 
-class QuestionarioForm(forms.Form):
-    pontos = forms.ChoiceField(
+class QuestionarioForm(forms.ModelForm):
+    pontos = forms.IntegerField(
         error_messages={
-            'required': 'este campo é obrigatório'},
-        widget=forms.Select(
-            attrs={
-                'class': 'form-control',
-            }
-        ),
-        choices=respostas,
-        label='Em uma escala de 1 a 5 o quanto se identifica com esta afirmação:'
+            'required': 'Este campo é obrigatório!'},
     )
 
-    '''class Meta():
-        model = Pergunta
-        fields = ('pontos')
+    class Meta:
+        model = Registro
+        fields = ('pontos',)
+
+    def __init__(self, n,  *args, **kwargs):
+        super(QuestionarioForm, self).__init__(*args, **kwargs)
+        for i in range(0, n):
+            self.fields["pontos%d" % i] = forms.IntegerField()
+            self.fields["pontos%d" % i].label = ""
+
+        self.fields["pontos"].label = ""
 
     def clean(self):
         all_clean_data = super().clean()
         pontos = all_clean_data['pontos']
 
-        if pontos <= 0 and pontos > 5:
-            raise forms.ValidationError(
-                "o número tem que estar no interval de 1 e 5")'''
+        if pontos <= 0 or pontos > 5:
+            raise forms.ValidationError("O número tem que estar no interval de 1 e 5!")
+
+    def save(self, id_pergunta, id_user, pontos):
+        print(id_pergunta)
+        print(pontos)
+        self.usuario = id_user
+        self.pergunta = id_pergunta
+        self.pontos = pontos
+        super().save()
+
+
+
+'''
+    def save(self):
+        all_clean_data = super().clean()
+        pontos = all_clean_data['pontos']
+
+        pergunta_id = Pergunta.objects.get(id=self.pergunta)
+
+        print("save modificado")
+        print(pontos)
+'''
