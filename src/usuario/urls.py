@@ -4,7 +4,7 @@ from usuario import views
 # app_name = 'principal_app'
 
 urlpatterns = [
-    path('register/', views.register, name='register'),
+    path('registro/', views.register, name='registro'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('update_user/', views.update_user, name='update_user'),

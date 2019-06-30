@@ -14,37 +14,49 @@ from django.contrib.auth import update_session_auth_hash
 
 
 def register(request):
-    if request.method == 'POST':
-        register_form = UsuarioForm(data=request.POST)
+    user = request.user
+    if not user.is_authenticated:
+        if request.method == 'POST':
+            register_form = UsuarioForm(data=request.POST)
 
-        if register_form.is_valid():
-            user = register_form.save()
-            user.set_password(user.password)
-            user.save()
+            if register_form.is_valid():
+                user = register_form.save()
+                user.set_password(user.password)
+                user.save()
 
-            return HttpResponseRedirect(reverse('questionario'))
+                django_login(request, user)
+
+                # TODO: Ir para questionario inicial
+                return HttpResponseRedirect(reverse('index'))
+            else:
+                print(register_form.errors)
+
         else:
-            print(register_form.errors)
+            register_form = UsuarioForm()
+
+        return render(request, 'register.html', {'register_form': register_form})
 
     else:
-        register_form = UsuarioForm()
-
-    return render(request, 'register.html', {'register_form': register_form})
+        return HttpResponseRedirect(reverse('index'))
 
 
 def login(request):
-    context = {'error': ''}
-    if request.method == 'POST':
-        user = authenticate(
-            username=request.POST['username'],
-            password=request.POST['password'])
-        if (user is not None and user.is_active):
-            django_login(request, user)
-            return HttpResponseRedirect(reverse('index'))
-        else:
-            error = 'Login inválido!'
-            context = {'error': error}
-    return render(request, 'login.html', context)
+    user = request.user
+    if not user.is_authenticated:
+        if request.method == 'POST':
+            user = authenticate(
+                username=request.POST['username'],
+                password=request.POST['password'])
+            if (user is not None and user.is_active):
+                django_login(request, user)
+                return HttpResponseRedirect(reverse('index'))
+            else:
+                error = 'Login inválido!'
+                context = {'error': error}
+        return render(request, 'login.html', context)
+
+    else:
+        return HttpResponseRedirect(reverse('index'))
 
 
 def logout(request):
@@ -53,6 +65,7 @@ def logout(request):
     return HttpResponseRedirect(reverse('index'))
 
 
+# TODO: Remover?
 def questionario(request):
     context = {'error': ''}
     return render(request, 'questionario_user.html', context)
@@ -111,6 +124,7 @@ def change_password(request):
 
         args = {'form': form}
         return render(request, 'change_password.html', args)
+
 
 def profile(request):
     user = request.user
