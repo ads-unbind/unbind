@@ -1,10 +1,12 @@
-{% extends "perfil.html" %} {% block title %}Conta | UNBIND{% endblock %} {% block profile %}
+{% extends "perfil.html" %} 
+{% block title %}Dados da conta | UNBIND{% endblock %} 
+{% block profile %}
 
 <div class="d-flex flex-grow-1 justify-content-center align-items-center">
     <div class="col-xl-4 col-lg-5 col-md-6 mb-4">
         <h2 class="mb-4 text-center">Dados da conta</h2>
         <form method="POST">
-            {% csrf_token %}{{update_form.as_p }}
+            {% csrf_token %}{{ update_form.as_p }}
             <div class="form-group">
                 <button class="btn btn-primary btn-block">Salvar</button>
             </div>

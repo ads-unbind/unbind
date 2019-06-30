@@ -9,7 +9,7 @@ from django.contrib.auth import logout as django_logout
 
 from usuario.models import User
 
-from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 
 
@@ -88,10 +88,9 @@ def account(request):
 
 
 def delete(request):
-    user_atual = request.user
-
-    if user_atual.is_authenticated:
-        usuario = User.objects.get(id=user_atual.id)
+    user = request.user
+    if user.is_authenticated:
+        usuario = User.objects.get(id=user.id)
 
         if request.method == 'POST':
             usuario.delete()
@@ -105,25 +104,28 @@ def delete(request):
 
 
 def change_password(request):
-    user_atual = request.user
+    user = request.user
+    if user.is_authenticated:
+        usuario = User.objects.get(id=user.id)
 
-    if request.method == 'POST':
-        form = PasswordChangeForm(data=request.POST, user=user_atual)
+        if request.method == 'POST':
+            form = PasswordChangeForm(data=request.POST, user=user)
 
-        if form.is_valid():
+            if form.is_valid():
+                form.save()
+                update_session_auth_hash(request, form.user)
 
-            form.save()
-            update_session_auth_hash(request, form.user)
+                return HttpResponseRedirect(reverse('index'))
+            else:
+                return HttpResponseRedirect(reverse('senha'))
 
-            return HttpResponseRedirect(reverse('index'))
         else:
-            return HttpResponseRedirect(reverse('senha'))
+            form = PasswordChangeForm(user=request.user)
 
+            context = {'usuario': usuario, 'form': form}
+            return render(request, 'change_password.html', context)
     else:
-        form = PasswordChangeForm(user=request.user)
-
-        args = {'form': form}
-        return render(request, 'change_password.html', args)
+        return HttpResponseRedirect(reverse('index'))
 
 
 def perfil(request):
