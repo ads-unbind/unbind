@@ -5,17 +5,20 @@
 <div class="jumbotron">
 
 <h1>Obrigado por se cadastrar</h1>
-
-{% for item in perguntas %}
-{{ item.enunciado }}<br>
-<!--
-{% csrf_token %}
 <form method="POST">
-    {% csrf_token %}
-    {{questionario_form.as_p}}
 
-</form>
--->
+{% for item in perguntas %}{% csrf_token %}
+
+{{ item.enunciado }}<br>
+  {% for q in questionario_form%}
+    {% if forloop.revcounter == forloop.parentloop.revcounter %}
+      {{q}}<br>
+    {% endif %}
+  {% endfor %}
+
 {% endfor %}
+
+<button class="btn btn-primary btn-block" href="index">Submit</button>
+</form>
 </div>
 {% endblock %}

@@ -10,7 +10,7 @@ from conquista.models import Conquista
 from categoria.models import Categoria
 
 class Usuario(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="usuario")
 
     # Adicionais
     nome = models.CharField(max_length=50, blank=True, null=True)
@@ -18,8 +18,11 @@ class Usuario(models.Model):
     scoreTotal = models.IntegerField(blank=True, null=True)
     atividade = models.ManyToManyField(Atividade, blank = True)
     artigo = models.ManyToManyField(Artigo, blank = True)
-    questionario = models.ManyToManyField(Questionario)
     conquista = models.ManyToManyField(Conquista, blank = True)
+    #colocando questionário e pergunta na model de usuário
+    questionario = models.ManyToManyField(Questionario)
+    pergunta = models.ManyToManyField(Pergunta)
+
 
     def __str__(self):
         return self.user.username
