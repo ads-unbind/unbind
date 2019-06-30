@@ -8,6 +8,7 @@ Data | Versão | Descrição | Autor |
 18/05/2019 | 0.4 | Correção da Modelagem (ME-R, DE-R e DL) | Igor Aragão, Igor Veludo e João Pedro Mota |
 01/06/2019 | 0.5 | Refatoração do documento | William Almeida |
 30/06/2019 | 0.6 | Corrige DE-R para versão 1.0 | Igor Aragão, Igor Veludo, Geovanne Saraiva, Vinícius Cantuária e William Almeida |
+30/06/2019 | 0.7 | Corrige DL para versão 1.0 | Igor Aragão, Igor Veludo, Geovanne Saraiva, Vinícius Cantuária e William Almeida |
 
 ## 1. Introdução
 
@@ -74,4 +75,6 @@ Cardinalidade: 1:n
 #### 2.3.1 Versão 0.1
 ![](img/modelagem-sistema_dl_v0.1.png)
 #### 2.3.2 Versão 0.2
-![](img/modelagem-sistema_dl_v0.3.png)
+![](img/modelagem-sistema_dl_v0.2.png)
+#### 2.3.3 Versão 1
+![](img/modelagem-sistema_dl_v1.png)
