@@ -7,6 +7,7 @@ Data | Versão | Descrição | Autor |
 12/05/2019 | 0.3 | Correção do DE-R e adição do Diagrama Lógico | Geovanne Saraiva, Igor Aragão, Vinícius Cantuária e William Almeida |
 18/05/2019 | 0.4 | Correção da Modelagem (ME-R, DE-R e DL) | Igor Aragão, Igor Veludo e João Pedro Mota |
 01/06/2019 | 0.5 | Refatoração do documento | William Almeida |
+30/06/2019 | 0.6 | Corrige DE-R para versão 1.0 | Igor Aragão, Igor Veludo, Geovanne Saraiva, Vinícius Cantuária e William Almeida |
 
 ## 1. Introdução
 
@@ -66,6 +67,8 @@ Cardinalidade: 1:n
 ![](img/modelagem-sistema_der_v0.2.png)
 #### 2.2.3 Versão 0.3
 ![](img/modelagem-sistema_der_v0.3.png)
+#### 2.2.4 Versão 1.0
+![](img/modelagem-sistema_der_v1.png)
 
 ### 2.3 Diagrama Lógico (DL)
 #### 2.3.1 Versão 0.1
