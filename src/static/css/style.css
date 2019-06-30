@@ -421,6 +421,12 @@ section.has-divider .container {
     border-color: var(--unbind-blue);
 }
 
+.btn-secondary {
+    color: var(--unbind-white);
+    background-color: var(--unbind-green);
+    border-color: var(--unbind-green);
+}
+
 .btn-outline-white {
     border: 2px solid var(--unbind-white);
     background: transparent;
@@ -550,6 +556,41 @@ section.has-divider .container {
 
 .share-card {
     background-color: var(--unbind-blue);
+}
+
+.bg-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+img.bg-image {
+    object-fit: cover;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 0.625rem;
+}
+
+/* img.overlay {
+    object-fit: cover;
+} */
+
+.bg-image:not([class*='absolute']) {
+    position: absolute;
+}
+
+.position-relative {
+    z-index: 1;
 }
 
 .activity-img-card {

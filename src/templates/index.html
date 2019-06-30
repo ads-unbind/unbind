@@ -37,42 +37,6 @@
             <div class="col-md-12 d-flex flex-column">
                 <div class="row" style="flex: 3">
                     <div class="col-md-4 px-2 d-flex flex-column">
-                        <h6 class="title-above-card">PERFIL</h6>
-                        <div class="card mb-4 shadow-sm" style="flex: 1">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div class="d-flex">
-                                    <div class="col-md-3 p-0 d-flex flex-column justify-content-center">
-                                        <img class="svg" src="{% static 'icons/profile-image.svg' %}"></img>
-                                    </div>
-                                    <div class="col-md-9 d-flex flex-column justify-content-center">
-                                        <h4 class="profile-name-card">{{ usuario }}</h4>
-                                        <h5 class="profile-level-card">LEVEL 5</h5>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-column pt-2">
-                                    <p class="title-inside-card">CONQUISTAS</p>
-                                    <div class="d-flex" style="min-height: 37px">
-                                        <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
-                                        </div>
-                                        <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
-                                        </div>
-                                        <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
-                                        </div>
-                                        <div class="col-md-2 pl-0">
-                                            <img class="svg" src="{% static 'icons/star.svg' %}"></img>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-block text-right pt-2">
-                                    <h5 class="link-inside-card mb-0">Ver perfil -></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 px-2 d-flex flex-column">
                         <h6 class="title-above-card">QUESTIONÁRIO</h6>
                         <div class="card questionary-card mb-4 shadow-sm" style="flex: 1">
                             <div class="card-body d-flex flex-column justify-content-between">
@@ -86,7 +50,22 @@
                         </div>
                     </div>
                     <div class="col-md-4 px-2 d-flex flex-column">
-                        <h6 class="title-above-card">ARTIGOS</h6>
+                        <h6 class="title-above-card">ARTIGO RECOMENDADO</h6>
+                        <div class="card shadow-sm" style="flex: 1">
+                            <a href="{% url 'artigo:visualizar_artigo' artigo_recomendado.id %}" class="card card-body border-0 text-light mb-md-0 justify-content-end">
+                                <div class="position-relative">
+                                    <span class="badge badge-primary text-uppercase">{{ artigo_recomendado.categoria.nome }}</span>
+                                    <div class="mt-2">
+                                        <h5 class="mb-0 text-light">{{ artigo_recomendado.titulo }}</h5>
+                                    </div>
+                                </div>
+                                <img src="{{ artigo_recomendado.imagem.url }}" alt="Image" class="rounded bg-image">
+                                <div class="img-overlay"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-2 d-flex flex-column">
+                        <h6 class="title-above-card">OUTROS ARTIGOS</h6>
                         <div class="card shadow-sm" style="flex: 1">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <ul class="list-unstyled list-articles">
@@ -194,7 +173,7 @@
                 </div>
                 <div class="d-flex justify-content-around mt-4">
                     <a class="btn btn-outline-blue col-5" href="#">Cancelar atividade</a>
-                    <a class="btn btn-outline-green col-5" href="#">Concluir atividade</a>
+                    <a class="btn btn-secondary col-5" href="#">Concluir atividade</a>
                 </div>
             </div>
             <a href="#" class="col-md-5">
