@@ -14,6 +14,8 @@
 | 24/06/2019 | 0.6    | Adicionando o diagrama de implantação na seção 7                    | Igor Aragão e William Almeida                                                                                                |
 | 24/06/2019 | 0.7    | Adicionando DE-R e modelo lógico                                    | José Aquiles                                                                                                                 |
 | 24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius                                                                                                   |
+| 30/06/2019 | 0.8.1    | Alterando diagrama de classes                                              | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                                                 |
+
 
 # 1\. Introdução
 
@@ -102,8 +104,7 @@ Foram feitos modelos seguindo o padrão UML relacionados aos aspectos arquitetur
 
 O diagrama de classes tem como principal propósito relacionar os tipos modelados no sistema. Geralmente, inclui classe, interface, tipo de dado, restrição de acesso e dependências. Dessa forma, consiste em um importante artefato da UML (Unified Modeling Language) para documentação das classes codificadas ou que serão codificadas em uma aplicação.
 
-![](./img/diagrama_classes.png)
-
+![](../dinamica3/img/diagrama-classes_v0.4.png)
 As principais classes da aplicação são:
 
 - Usuário: herda da classe User adicionando atributos.
@@ -174,6 +175,8 @@ Podemos então agregar as funções básicas das views dentro de classes, como m
 ![](./img/diagrama_componente_v2.jpg)
 
 ### 8\. Visão de Dados
+
+![](./img/diagrama_classes.png)
 
 #### 8.1 Diagrama Entidade Relacionamento
 
