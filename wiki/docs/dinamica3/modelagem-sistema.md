@@ -7,9 +7,9 @@ Data | Versão | Descrição | Autor |
 12/05/2019 | 0.3 | Correção do DE-R e adição do Diagrama Lógico | Geovanne Saraiva, Igor Aragão, Vinícius Cantuária e William Almeida |
 18/05/2019 | 0.4 | Correção da Modelagem (ME-R, DE-R e DL) | Igor Aragão, Igor Veludo e João Pedro Mota |
 01/06/2019 | 0.5 | Refatoração do documento | William Almeida |
-30/06/2019 | 0.6 | Corrige DE-R para versão 1.0 | Igor Aragão, Igor Veludo, Geovanne Saraiva, Vinícius Cantuária e William Almeida |
-30/06/2019 | 0.7 | Corrige DL para versão 1.0 | Igor Aragão, Igor Veludo, Geovanne Saraiva, Vinícius Cantuária e William Almeida |
-30/06/2019 | 1.0 | Corrige ME-R para versão 1.0 | Igor Aragão, Igor Veludo, Geovanne Saraiva, Vinícius Cantuária e William Almeida |
+30/06/2019 | 0.6 | Corrige DE-R para versão 1.0 | Vinícius Cantuária, Igor Aragão, Igor Veludo, Geovanne Saraiva e William Almeida |
+30/06/2019 | 0.7 | Corrige DL para versão 1.0 | Vinícius Cantuária, Igor Aragão, Igor Veludo, Geovanne Saraiva e William Almeida |
+30/06/2019 | 1.0 | Corrige ME-R para versão 1.0 | Vinícius Cantuária, Igor Aragão, Igor Veludo, Geovanne Saraiva e William Almeida |
 
 ## 1. Introdução
 

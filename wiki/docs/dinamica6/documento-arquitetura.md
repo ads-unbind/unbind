@@ -14,8 +14,8 @@
 | 24/06/2019 | 0.6    | Adicionando o diagrama de implantação na seção 7                    | Igor Aragão e William Almeida                                                                                                |
 | 24/06/2019 | 0.7    | Adicionando DE-R e modelo lógico                                    | José Aquiles                                                                                                                 |
 | 24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius                                                                                                   |
-| 30/06/2019 | 0.8.1    | Alterando diagrama de classes                                              | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                                                 |
-
+| 30/06/2019 | 0.9    | Alterando diagrama de classes                                       | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                            |
+| 30/06/2019 | 0.10   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
 
 # 1\. Introdução
 
@@ -166,27 +166,23 @@ Podemos então agregar as funções básicas das views dentro de classes, como m
 
 #### 7.2.1 Diagrama de Componentes
 
-##### Versão 1
-
-![](./img/diagrama_componente_v1.jpg)
-
-##### Versão 2
-
 ![](./img/diagrama_componente_v2.jpg)
 
 ### 8\. Visão de Dados
 
-![](./img/diagrama_classes.png)
+#### 8.1 Diagrama Entidade-Relacionamento
 
-#### 8.1 Diagrama Entidade Relacionamento
+![](../dinamica3/img/modelagem-sistema_der_v1.png)
 
-![](./img/der.png)
+#### 8.2 Diagrama Lógico
 
-#### 8.2 Modelo Lógico de dados
+##### 8.2.1 Diagrama Lógico Modelado
 
-![](./img/dl.png)
+![](../dinamica3/img/modelagem-sistema_dl_v1.png)
 
-![](./img/logico_unbind.png)
+##### 8.2.2 Diagrama Lógico Gerado pelo Django
+ 
+![](./img/django_diagrama_logico.png)
 
 ## 9\. Qualidade
 
