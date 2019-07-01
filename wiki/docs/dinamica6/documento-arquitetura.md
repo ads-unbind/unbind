@@ -20,17 +20,17 @@
 | 30/06/2019 | 0.11   | Adiciona diagrama de atividade e de sequência                       | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 | 30/06/2019 | 0.12   | Complementa Usabilidade                                             | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 
-# 1\. Introdução
+## 1\. Introdução
 
-## 1.1 Finalidade
+### 1.1 Finalidade
 
 Este documento tem como finalidade apresentar a arquitetura do projeto **UNBIND** através de visões diversas para registrar as decisões arquiteturais relacionadas ao projeto. O documento é dividido da seguinte maneira: inicialmente é apresentada a representação da arquitetura da solução, em seguida as metas e restrições desta arquitetura e por fim são apresentadas visões sobre elementos da arquitetura.
 
-## 1.2 Escopo
+### 1.2 Escopo
 
 Este documento apresenta as características arquiteturais do projeto **UNBIND**, descrevendo em detalhes a soluções arquiteturais determinadas para o projeto, de forma a servir como base para o desenvolvimento do projeto pelos desenvolvedores de software alocados para o projeto.
 
-## 1.3 Definições, Acrônimos, e Abreviações
+### 1.3 Definições, Acrônimos, e Abreviações
 
 **MVC** - Model View Controller
 
