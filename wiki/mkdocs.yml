@@ -54,5 +54,7 @@ nav:
       - 20/04: extras/atas/ata-reuniao-20-04-19.md
   - Iniciativas Extras:
       - Ambiente: extras/ambiente.md
+      - Políticas:
+          - Folha de Estilo: extras/politicas/folha-de-estilo.md
 #    - Identidade Visual: extras/identidade-visual/identidade-visual.md
 
