@@ -17,6 +17,7 @@
 | 30/06/2019 | 0.9    | Alterando diagrama de classes                                       | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                            |
 | 30/06/2019 | 0.10   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
 | 30/06/2019 | 0.11   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
+| 30/06/2019 | 0.11   | Adiciona diagrama de atividade e de sequência  | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
 
 # 1\. Introdução
 
@@ -91,7 +92,7 @@ Segue abaixo a lista com os principais casos de uso do projeto UNBIND:
 - Visualizar tarefa específica
 - Pontuar usuário
 
-![](./img/visoes_casos_uso.jpg)
+![](https://github.com/ads-unbind/unbind/blob/docs/wiki/docs/dinamica3/img/diagrama_casos_de_uso_3.jpg?raw=true)
 
 Figura 3\. Diagrama de Casos de Uso.
 
@@ -155,45 +156,59 @@ O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os p
 
 ![](./img/visao_implementacao.png)
 
-### 7\. Visão de Implementação
 
-#### 7.1 Finalidade
+### 7\. Diagrama de Sequência
+
+#### 7.1 Diagrama de Sequência Geral
+![diagrama sequencia geral](https://github.com/ads-unbind/unbind/raw/docs/wiki/docs/dinamica4/img/diagrama-sequencia_geral.png)
+
+#### 7.2 Diagrama de Sequência de usuário
+![diagrama-sequencia_usuario](https://github.com/ads-unbind/unbind/raw/docs/wiki/docs/dinamica4/img/diagrama-sequencia_usuario.jpg)
+
+### 8\. Diagrama de Atividade
+
+![diagrama sequencia geral](https://github.com/ads-unbind/unbind/raw/docs/wiki/docs/dinamica4/img/diagrama-atividades_atividades_v0.2.png)
+
+
+### 9\. Visão de Implementação
+
+#### 9.1 Finalidade
 
 Proporcionam um método alternativo para implementar views como objetos ao invés de funções. As Class-Based Views (CBV) são classes que implementam métodos e atributos que são comumente utilizados na programação das views. Dessa maneira, o programador pode utilizar métodos já implementados ou sobrescrevê-los e implementá-los da sua maneira. Para atender os mais variados casos de uso das views, as CBV oferecem diversos temas para implementação.
 
 Podemos então agregar as funções básicas das views dentro de classes, como métodos. Os recursos das Class Based Views estão em algumas classes "pré-prontas", as quais outras classes podem herdar. A partir daí as alterações que precisam ser feitas são mínimas.
 
-### 7.2 Diagramas Significativos
+### 9.2 Diagramas Significativos
 
-#### 7.2.1 Diagrama de Componentes
+#### 9.2.1 Diagrama de Componentes
 
 ![](./img/diagrama_componente_v2.jpg)
 
-### 8\. [Visão de Dados](../dinamica3/modelagem-sistema.md)
+### 10\. [Visão de Dados](../dinamica3/modelagem-sistema.md)
 
-#### 8.1 [Diagrama Entidade-Relacionamento](../dinamica3/modelagem-sistema.md#22-diagrama-entidade-relacionamento-de-r)
+#### 10.1 [Diagrama Entidade-Relacionamento](../dinamica3/modelagem-sistema.md#22-diagrama-entidade-relacionamento-de-r)
 
 ![](../dinamica3/img/modelagem-sistema_der_v1.png)
 
-#### 8.2 [Diagrama Lógico](../dinamica3/modelagem-sistema.md#23-diagrama-logico-dl)
+#### 10.2 [Diagrama Lógico](../dinamica3/modelagem-sistema.md#23-diagrama-logico-dl)
 
-##### 8.2.1 Diagrama Lógico Modelado
+##### 10.2.1 Diagrama Lógico Modelado
 
 ![](../dinamica3/img/modelagem-sistema_dl_v1.png)
 
-##### 8.2.2 Diagrama Lógico Gerado pelo Django
- 
+##### 10.2.2 Diagrama Lógico Gerado pelo Django
+
 ![](./img/django_diagrama_logico.png)
 
-## 9\. Qualidade
+## 11\. Qualidade
 
 Os seguintes itens conferem ao sistema aspectos de qualidade, bem como a descrição da abordagem realizada para satisfazer esses aspectos. São estes aspectos, legais e reguladores, como as normas estabelecidas para bom funcionamento do sistema, atributos de qualidade, como padrões de usabilidade, confiabilidade, desempenho e suportabilidade.
 
-### 9.1 Requisitos funcionais
+### 11.1 Requisitos funcionais
 
 Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/dinamica1/moscow.md)
 
-### 9.2 Requisitos não funcionais
+### 11.2 Requisitos não funcionais
 
 | Identificador | Descrição                                               |
 | ------------- | ------------------------------------------------------- |
@@ -201,7 +216,7 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 | RNF 02        | Serviço de busca (Base de Dados)                        |
 | RNF 03        | Interface simples e interativa ao usuário (Usabilidade) |
 
-### 9.3 Requisitos para plataformas específicas
+### 11.3 Requisitos para plataformas específicas
 
 | Identificador | Navegador Web     | Modelo               | Versão                                        |
 | ------------- | ----------------- | -------------------- | --------------------------------------------- |
@@ -211,7 +226,7 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 | RNF 04        | Opera             | Qualquer dispositivo | 12 ou superior.                               |
 | RNF 05        | Safari            | Qualquer dispositivo | Versão 6 ou superior.                         |
 
-### 9.4 Usabilidade
+### 11.4 Usabilidade
 
 - Facilidade de uso: Os recursos e funcionalidades do serviço devem apresentar-se de forma intuitiva para que o usuário possa facilmente navegar por eles, não sendo necessário a realização de qualquer tipo de treinamento prévio por parte do usuário.
 
@@ -223,7 +238,7 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 
 - Design Simples: O sistema deve ter ícones intuitivos. Para cada tipo de usuário haverá um certo nível de funcionalidades disponíveis.
 
-### 9.5 Confiabilidade
+### 11.5 Confiabilidade
 
 - Disponibilidade: O sistema estará disponível no modo 24/7 (24 horas por dia, 7 dias por semana). O servidor será terceirizado para ter uma capacidade operacional confiável.
 
@@ -233,7 +248,7 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 
 - Segurança e Privacidade: O sistema deve assegurar a segurança e privacidade dos dados gerados, armazenando senhas e dados sensíveis de forma segura. O sistema deve ser transparente quanto às informações coletadas referentes a dados pessoais do usuário e preferências de conteúdo e fornecer ao usuário a possibilidade de ajustar a visibilidade de tais informações.
 
-### 9.6 Desempenho
+### 11.6 Desempenho
 
 - Tempo de Resposta: O aplicativo tem de responder às ações do usuário de imediato.
 
@@ -243,11 +258,11 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 
 - Utilização de Recursos: OS X 10.9 ou superior, Windows 7 ou superior, Versão 6 ou superior.
 
-### 9.7 Suportabilidade
+### 11.7 Suportabilidade
 
 - Software do usuário: O usuário será capaz de utilizar o sistema através de um navegador de internet. Não será necessário que nenhum software personalizado resida no computador pessoal. Estes são os requisitos de sistema para usar o UNBIND e acessar seu conteúdo por meio do site.
 
-### 9.8 Restrições de Design
+### 11.8 Restrições de Design
 
 - Restrição de Design Um: O sistema deverá ser disponibilizado em diversas línguas, quando o usuário mudar o idioma nas opções de configuração o site se modificará.
 
@@ -255,7 +270,7 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 
 - Restrição de Design Sete: O nome da página sempre estará no topo do layout.
 
-### 9.9 Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line
+### 11.9 Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line
 
 - Área de busca para encontrar soluções para as questões mais frequentes
 
