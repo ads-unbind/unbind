@@ -9,20 +9,16 @@ from questionario.models import Questionario, Pergunta
 from conquista.models import Conquista
 from categoria.models import Categoria
 
+
 class Usuario(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="usuario")
+    # foto = models.ImageField(upload_to='foto_usuario', blank=True, null=True)
+    # scoreTotal = models.IntegerField(blank=True, null=True)
 
-    # Adicionais
-    nome = models.CharField(max_length=50, blank=True, null=True)
-    foto = models.ImageField(upload_to='foto_usuario', blank=True, null=True)
-    scoreTotal = models.IntegerField(blank=True, null=True)
-    atividade = models.ManyToManyField(Atividade, blank = True)
-    artigo = models.ManyToManyField(Artigo, blank = True)
-    conquista = models.ManyToManyField(Conquista, blank = True)
-    #colocando questionário e pergunta na model de usuário
-    questionario = models.ManyToManyField(Questionario)
-    pergunta = models.ManyToManyField(Pergunta)
-
+    atividade = models.ManyToManyField(Atividade, blank=True)
+    conquista = models.ManyToManyField(Conquista, blank=True) # TODO: Remover
+    questionario = models.ManyToManyField(Questionario) # TODO: Remover
+    pergunta = models.ManyToManyField(Pergunta) # TODO: Remover
 
     def __str__(self):
         return self.user.username
@@ -38,7 +34,8 @@ class Usuario(models.Model):
 
     def get_user_points_last_form_by_category(self, categoriaId):
         ultimoQuestionario = self.questionario.last().id
-        perguntasDaCategoria = Pergunta.objects.filter(categoria_id = categoriaId, questionario_id = ultimoQuestionario)
+        perguntasDaCategoria = Pergunta.objects.filter(
+            categoria_id=categoriaId, questionario_id=ultimoQuestionario)
         pontosDaCategoria = 0
         for pergunta in perguntasDaCategoria:
             pontosDaCategoria += pergunta.pontos
@@ -46,7 +43,7 @@ class Usuario(models.Model):
         return pontosDaCategoria
 
     def get_user_xp(self):
-        atividades = self.atividade.filter(estado = "C")
+        atividades = self.atividade.filter(estado="C")
         xp = 0
         for atividade in atividades:
             xp += atividade.pontos
@@ -54,12 +51,12 @@ class Usuario(models.Model):
         return xp
 
     def get_user_activities(self):
-        atividades = self.atividade.filter(estado = "DI")
+        atividades = self.atividade.filter(estado="DI")
 
         return atividades
 
     def get_user_rewards(self):
-        conquistas = self.conquista.filter(disponivel = True)
+        conquistas = self.conquista.filter(disponivel=True)
 
         return conquistas
 
@@ -74,14 +71,15 @@ class Usuario(models.Model):
                 categoriaRecomendada = categoria
 
             #categoriasDict[categoria] = pontos
-        atividadesRecomendadas = self.atividade.filter(estado = "DI", categoria = categoriaRecomendada)
+        atividadesRecomendadas = self.atividade.filter(
+            estado="DI", categoria=categoriaRecomendada)
         #categoriaRecomendada = min(categoriasDict.items(), key=itemgetter(1))
         #sorted_dict = sorted(categoriasDict.items(), key=lambda kv: kv[1])
         #atividades = self.atividade.filter(categoria_id = sorted_dict.value())
         return atividadesRecomendadas
 
     def get_user_activities_by_category(self, category):
-        atividades = self.atividade.filter(estado = "DI", categoria_id = category)
+        atividades = self.atividade.filter(estado="DI", categoria_id=category)
 
         return atividades
 
@@ -101,13 +99,17 @@ class Usuario(models.Model):
         # Itera sobre todos os questionários, sobre todas as perguntas, somando a pontuação de cada uma na categoria correta
         for questionario in self.questionario.all():
             for pergunta in questionario.perguntas.all():
-                pontuacao_categorias[pergunta.categoria.nome] += pergunta.pontos  # Somando na categoria correta
+                # Somando na categoria correta
+                pontuacao_categorias[pergunta.categoria.nome] += pergunta.pontos
 
-        pontuacao_max_categoria = max(pontuacao_categorias, key=pontuacao_categorias.get)
-        print(pontuacao_max_categoria)  # categoria com a maior pontuação deste usuário
+        pontuacao_max_categoria = max(
+            pontuacao_categorias, key=pontuacao_categorias.get)
+        # categoria com a maior pontuação deste usuário
+        print(pontuacao_max_categoria)
 
-        categoria_ideal = Categoria.objects.get(nome=pontuacao_max_categoria)  # Busca a categoria ideal a partir do nome
-        artigos = Artigo.objects.filter(categoria=categoria_ideal).all()  # Busca todos os artigos relacionados a categoria ideal
+        # Busca a categoria ideal a partir do nome
+        categoria_ideal = Categoria.objects.get(nome=pontuacao_max_categoria)
+        # Busca todos os artigos relacionados a categoria ideal
+        artigos = Artigo.objects.filter(categoria=categoria_ideal).all()
 
         return artigos
-

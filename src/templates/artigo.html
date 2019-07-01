@@ -12,7 +12,7 @@
                                     <a href="{% url 'artigo:listar_artigos' %}">Artigos</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="#">{{artigo.categoria.nome}}</a>
+                                    <a href="{% url 'artigo:listar_por_categoria' artigo.categoria.id %}">{{artigo.categoria.nome}}</a>
                                 </li>
                             </ol>
                         </nav>

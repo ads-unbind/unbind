@@ -2,10 +2,33 @@ from django import forms
 from django.contrib.auth.models import User
 from usuario.models import Usuario
 
+
 class UsuarioForm(forms.ModelForm):
+    first_name = forms.CharField(
+        error_messages={
+            'required': 'Este campo é obrigatório!'},
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Nome',
+            }
+        ),
+        label=''
+    )
+    last_name = forms.CharField(
+        error_messages={
+            'required': 'Este campo é obrigatório!'},
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Sobrenome',
+            }
+        ),
+        label=''
+    )
     username = forms.CharField(
         error_messages={
-            'required': 'este campo é obrigatório'},
+            'required': 'Este campo é obrigatório!'},
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control',
@@ -34,26 +57,24 @@ class UsuarioForm(forms.ModelForm):
                 'placeholder': 'Senha',
             }
         ),
-        label='digite sua senha'
+        label=''
     )
-
     verify_password = forms.CharField(
         error_messages={
             'required': 'Este campo é obrigatório!'},
         widget=forms.PasswordInput(
             attrs={
                 'class': 'form-control',
-                'placeholder': 'Senha',
+                'placeholder': 'Confirme sua senha',
             }
         ),
-        label='digite sua senha novamente'
+        label=''
     )
-
-    foto = forms.ImageField(required=False)
 
     class Meta():
         model = User
-        fields = ('username', 'email', 'password', 'verify_password', 'foto')
+        fields = ('first_name', 'last_name', 'username',
+                  'email', 'password', 'verify_password')
 
     def clean(self):
         all_clean_data = super().clean()
@@ -61,15 +82,40 @@ class UsuarioForm(forms.ModelForm):
         vpasw = all_clean_data['verify_password']
 
         if password != vpasw:
-            raise forms.ValidationError("verifique se as senhas são iguais")
+            raise forms.ValidationError(
+                "Sua senha deve ser igual à confirmação!")
 
-        if len(password) < 6:
-            raise forms.ValidationError("a senha tem que ter mais de 6 caracteres ")
+        if len(password) < 8:
+            raise forms.ValidationError(
+                "Sua senha deve ser maior do que 8 caracteres")
+
 
 class UsuarioUpdateForm(forms.ModelForm):
+    first_name = forms.CharField(
+        error_messages={
+            'required': 'Este campo é obrigatório!'},
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Nome',
+            }
+        ),
+        label=''
+    )
+    last_name = forms.CharField(
+        error_messages={
+            'required': 'Este campo é obrigatório!'},
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Sobrenome',
+            }
+        ),
+        label=''
+    )
     username = forms.CharField(
         error_messages={
-            'required': 'este campo é obrigatório'},
+            'required': 'Este campo é obrigatório!'},
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control',
@@ -89,46 +135,7 @@ class UsuarioUpdateForm(forms.ModelForm):
         ),
         label=''
     )
-    '''
-    password = forms.CharField(
-        error_messages={
-            'required': 'Este campo é obrigatório!'},
-        widget=forms.PasswordInput(
-            attrs={
-                'class': 'form-control',
-                'placeholder': 'Senha',
-            }
-        ),
-        label='entre com a nova senha'
-    )
-
-    verify_password = forms.CharField(
-        error_messages={
-            'required': 'Este campo é obrigatório!'},
-        widget=forms.PasswordInput(
-            attrs={
-                'class': 'form-control',
-                'placeholder': 'Senha',
-            }
-        ),
-        label='confirme sua nova senha'
-    )
-    '''
-    foto = forms.ImageField(required=False)
 
     class Meta():
         model = User
-        fields = ('username', 'email', 'foto')
-
-    '''
-    def clean(self):
-        all_clean_data = super().clean()
-        password = all_clean_data['password']
-        vpasw = all_clean_data['verify_password']
-
-        if password != vpasw:
-            raise forms.ValidationError("verifique se as senhas são iguais")
-
-        if len(password) < 6:
-            raise forms.ValidationError("a senha tem que ter mais de 6 caracteres ")
-    '''
+        fields = ('first_name', 'last_name', 'username', 'email')
