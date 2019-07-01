@@ -19,22 +19,7 @@
 | 30/06/2019 | 0.11   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 | 30/06/2019 | 0.12   | Adiciona diagrama de atividade e de sequência                       | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 | 30/06/2019 | 0.13   | Complementa Usabilidade                                             | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-| 30/06/2019 | 0.14   | Adiciona navegabilidade                                            | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-
-# Sumário
-1. [Introdução](#1-introdução)
-2. [Representação da arquitetura](##2-representação-da-arquitetura)
-3. [Metas e Restrições de arquitetura](#3-metas-e-restrições-de-arquitetura)
-4. [Visão de Casos de Uso](#4-visão-de-casos-de-uso)
-5. [Visão Lógica](#5-visão-lógica)
-6. [Visão de implantação](#6-visão-de-implantação)
-7. [Diagrama de sequência](#7-diagrama-de-sequência)
-8. [Diagrama de atividade](#8-diagrama-de-atividade)
-9. [Visão de implementação](#9-visão-de-implementação)
-10. [Visão de dados](#10-visão-de-dados)
-11. [Qualidade](#11-qualidade)
-12. [Requisitos mínimos dos sistemas](#12-requisitos-mínimos-dos-sistemas)
-13. [Referências](#13-referências)
+| 30/06/2019 | 0.14   | Correção de imagens                                          | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 
 
 
@@ -190,47 +175,55 @@ O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os p
 ![diagrama de atividades - atividade](../dinamica4/img/diagrama-atividades_atividades_v0.2.png)
 
 #### 8.2 Diagrama de Atividades (Artigo)
-![diagrama de atividades - atividade](../dinamica4/img/diagrama-atividades_artigos_v0.1.png)
+![diagrama de atividades - artigo](../dinamica4/img/diagrama-atividades_artigos_v0.1.png)
 
-### 9\. Visão de Implementação
+### 9\. Diagrama de Estados
 
-#### 9.1 Finalidade
+#### 9.1 Diagrama de Estados (Atividade)
+![diagrama de estados - atividade](../dinamica4/img/diagrama-estados_atividades_v0.1.png)
+
+#### 9.2 Diagrama de Estados (Artigo)
+![diagrama de estados - artigo](../dinamica4/img/diagrama-estados_artigos_v0.1.png)
+
+### 10\. Visão de Implementação
+
+#### 10.1 Finalidade
 
 Proporcionam um método alternativo para implementar views como objetos ao invés de funções. As Class-Based Views (CBV) são classes que implementam métodos e atributos que são comumente utilizados na programação das views. Dessa maneira, o programador pode utilizar métodos já implementados ou sobrescrevê-los e implementá-los da sua maneira. Para atender os mais variados casos de uso das views, as CBV oferecem diversos temas para implementação.
 
 Podemos então agregar as funções básicas das views dentro de classes, como métodos. Os recursos das Class Based Views estão em algumas classes "pré-prontas", as quais outras classes podem herdar. A partir daí as alterações que precisam ser feitas são mínimas.
 
-### 9.2 Diagramas Significativos
+### 10.2 Diagramas Significativos
 
-#### 9.2.1 Diagrama de Componentes
+#### 10.2.1 Diagrama de Componentes
 
 ![](./img/diagrama_componente_v2.jpg)
 
-### 10\. [Visão de Dados](../dinamica3/modelagem-sistema.md)
+### 11\. [Visão de Dados](../dinamica3/modelagem-sistema.md)
 
-#### 10.1 [Diagrama Entidade-Relacionamento](../dinamica3/modelagem-sistema.md#22-diagrama-entidade-relacionamento-de-r)
+#### 11.1 [Diagrama Entidade-Relacionamento](../dinamica3/modelagem-sistema.md#22-diagrama-entidade-relacionamento-de-r)
 
 ![](../dinamica3/img/modelagem-sistema_der_v1.png)
 
-#### 10.2 [Diagrama Lógico](../dinamica3/modelagem-sistema.md#23-diagrama-logico-dl)
+#### 11.2 [Diagrama Lógico](../dinamica3/modelagem-sistema.md#23-diagrama-logico-dl)
 
-##### 10.2.1 Diagrama Lógico Modelado
+##### 11.2.1 Diagrama Lógico Modelado
 
 ![](../dinamica3/img/modelagem-sistema_dl_v1.png)
 
-##### 10.2.2 Diagrama Lógico Gerado pelo Django
+##### 11.2.2 Diagrama Lógico Gerado pelo Django
 
 ![](./img/django_diagrama_logico.png)
 
-## 11\. Qualidade
+## 12\. Qualidade
 
 Os seguintes itens conferem ao sistema aspectos de qualidade, bem como a descrição da abordagem realizada para satisfazer esses aspectos. São estes aspectos, legais e reguladores, como as normas estabelecidas para bom funcionamento do sistema, atributos de qualidade, como padrões de usabilidade, confiabilidade, desempenho e suportabilidade.
 
-### 11.1 Requisitos funcionais
+### 12.1 Requisitos funcionais
 
 Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https://github.com/ads-unbind/unbind/blob/master/wiki/docs/dinamica1/moscow.md)
 
-### 11.2 Requisitos não funcionais
+### 12.2 Requisitos não funcionais
 
 | Identificador | Descrição                                               |
 | ------------- | ------------------------------------------------------- |
@@ -238,7 +231,7 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 | RNF 02        | Serviço de busca (Base de Dados)                        |
 | RNF 03        | Interface simples e interativa ao usuário (Usabilidade) |
 
-### 11.3 Requisitos para plataformas específicas
+### 12.3 Requisitos para plataformas específicas
 
 | Identificador | Navegador Web     | Modelo               | Versão                                        |
 | ------------- | ----------------- | -------------------- | --------------------------------------------- |
@@ -248,7 +241,7 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 | RNF 04        | Opera             | Qualquer dispositivo | 12 ou superior.                               |
 | RNF 05        | Safari            | Qualquer dispositivo | Versão 6 ou superior.                         |
 
-### 11.4 Usabilidade
+### 12.4 Usabilidade
 
 Será usado técnicas aprendidas na matéria Interação Humano Computador, ministrado na Universidade de Brasília, Faculdade UnB Gama.
 
@@ -262,7 +255,7 @@ Será usado técnicas aprendidas na matéria Interação Humano Computador, mini
 
 - Design Simples: O sistema deve ter ícones intuitivos. Para cada tipo de usuário haverá um certo nível de funcionalidades disponíveis.
 
-### 11.5 Confiabilidade
+### 12.5 Confiabilidade
 
 - Disponibilidade: O sistema estará disponível no modo 24/7 (24 horas por dia, 7 dias por semana). O servidor será terceirizado para ter uma capacidade operacional confiável.
 
@@ -272,7 +265,7 @@ Será usado técnicas aprendidas na matéria Interação Humano Computador, mini
 
 - Segurança e Privacidade: O sistema deve assegurar a segurança e privacidade dos dados gerados, armazenando senhas e dados sensíveis de forma segura. O sistema deve ser transparente quanto às informações coletadas referentes a dados pessoais do usuário e preferências de conteúdo e fornecer ao usuário a possibilidade de ajustar a visibilidade de tais informações.
 
-### 11.6 Desempenho
+### 12.6 Desempenho
 
 - Tempo de Resposta: O aplicativo tem de responder às ações do usuário de imediato.
 
@@ -282,11 +275,11 @@ Será usado técnicas aprendidas na matéria Interação Humano Computador, mini
 
 - Utilização de Recursos: OS X 10.9 ou superior, Windows 7 ou superior, Versão 6 ou superior.
 
-### 11.7 Suportabilidade
+### 12.7 Suportabilidade
 
 - Software do usuário: O usuário será capaz de utilizar o sistema através de um navegador de internet. Não será necessário que nenhum software personalizado resida no computador pessoal. Estes são os requisitos de sistema para usar o UNBIND e acessar seu conteúdo por meio do site.
 
-### 11.8 Restrições de Design
+### 12.8 Restrições de Design
 
 - Restrição de Design Um: O sistema deverá ser disponibilizado em diversas línguas, quando o usuário mudar o idioma nas opções de configuração o site se modificará.
 
@@ -294,13 +287,13 @@ Será usado técnicas aprendidas na matéria Interação Humano Computador, mini
 
 - Restrição de Design Sete: O nome da página sempre estará no topo do layout.
 
-### 11.9 Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line
+### 12.9 Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line
 
 - Área de busca para encontrar soluções para as questões mais frequentes
 
 - Tutoriais claros e objetivos de como o usuário pode utilizar os recursos do serviço
 
-### 11.10 Interfaces de Hardware
+### 12.10 Interfaces de Hardware
 
 O software oferece suporte aos dispositivos apresentados abaixo.
 
@@ -310,9 +303,9 @@ O software oferece suporte aos dispositivos apresentados abaixo.
 
 - Computadores Desktop.
 
-## 12\. Requisitos Mínimos dos Sistemas
+## 13\. Requisitos Mínimos dos Sistemas
 
-### 12.1 Sistema executar o projeto UnBind
+### 13.1 Sistema executar o projeto UnBind
 
 - Processador: Intel Atom ou Intel Core i3 (ou similar)
 - Espaço em disco: 1GB
@@ -320,12 +313,12 @@ O software oferece suporte aos dispositivos apresentados abaixo.
 - Python versões: 2.7.x ou superior
 - Django: 2.2.2 (padrão)
 
-### 12.2 Servidor de Banco de Dados e Servidor Web
+### 13.2 Servidor de Banco de Dados e Servidor Web
 
 Os requisitos apresentados a seguir foram estudados para o sistema suportar cerca de 10 mil
 de usuários, caso o sistema tenha que operar com mais usuários será necessário um estudo mais aprofundado.
 
-#### 12.2.1 Servidor de Banco de Dados
+#### 13.2.1 Servidor de Banco de Dados
 
 - Processador: Xeon E5 server family
 - CPU: 2 x 4 cores
@@ -334,21 +327,21 @@ de usuários, caso o sistema tenha que operar com mais usuários será necessár
 - Espeço de Disco: entre 16GB e 1.5TB
 - Backup: HDD ou Fita Máguinetica
 
-##### 12.2.1.1 SQLite
+##### 13.2.1.1 SQLite
 
 Para servidores Linux, as seguintes configurações podem ser aplicadas para rodar o banco de dados SQLite:
 
 - Java Runtime Environment (JRE) 1.5 ou superior
 - Memória RAM: 500MB
 
-#### 12.2.1 Servidor Web
+#### 13.2.1 Servidor Web
 
 - Processador: Intel i7 - 3770 (similar ou superior)
 - Memoria RAM: 32GB
 - CPU: 4 núcleos ou mais
 - HDD: 146GB com cache 128MB
 
-## 13\. Referências
+## 14\. Referências
 
 - Arquitetura de microserviços ou monolítica?, Caelum. Disponível em: <<https://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica/>>.
 
