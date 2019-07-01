@@ -179,15 +179,18 @@ O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os p
 ### 7\. Diagrama de Sequência
 
 #### 7.1 Diagrama de Sequência Geral
-![diagrama sequencia geral](https://github.com/ads-unbind/unbind/raw/docs/wiki/docs/dinamica4/img/diagrama-sequencia_geral.png)
+![diagrama sequencia geral](../dinamica4/img/diagrama-sequencia_geral.png)
 
 #### 7.2 Diagrama de Sequência de usuário
-![diagrama-sequencia_usuario](https://github.com/ads-unbind/unbind/raw/docs/wiki/docs/dinamica4/img/diagrama-sequencia_usuario.jpg)
+![diagrama-sequencia_usuario](../dinamica4/img/diagrama-sequencia_usuario.jpg)
 
 ### 8\. Diagrama de Atividade
 
-![diagrama sequencia geral](https://github.com/ads-unbind/unbind/raw/docs/wiki/docs/dinamica4/img/diagrama-atividades_atividades_v0.2.png)
+#### 8.1 Diagrama de Atividades (Atividade)
+![diagrama de atividades - atividade](../dinamica4/img/diagrama-atividades_atividades_v0.2.png)
 
+#### 8.2 Diagrama de Atividades (Artigo)
+![diagrama de atividades - atividade](../dinamica4/img/diagrama-atividades_artigos_v0.1.png)
 
 ### 9\. Visão de Implementação
 
