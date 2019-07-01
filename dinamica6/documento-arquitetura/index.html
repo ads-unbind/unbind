@@ -1,0 +1,1390 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Documento de Arquitetura - UNBIND</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#03a9f4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#documento-de-arquitetura" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="UNBIND" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">spa</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              UNBIND
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Documento de Arquitetura
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/ads-unbind/unbind/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    ads-unbind/unbind
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="UNBIND" class="md-nav__button md-logo">
+      
+        <i class="md-icon">spa</i>
+      
+    </a>
+    UNBIND
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/ads-unbind/unbind/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    ads-unbind/unbind
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Dinamica 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Dinamica 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/proposta/" title="Proposta do projeto" class="md-nav__link">
+      Proposta do projeto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/mapa-mental/" title="Mapa Mental" class="md-nav__link">
+      Mapa Mental
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/rich-picture/" title="Rich Picture" class="md-nav__link">
+      Rich Picture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/5w2h/" title="5W2H" class="md-nav__link">
+      5W2H
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/diagrama-causa-efeito/" title="Diagrama de Causa-Efeito" class="md-nav__link">
+      Diagrama de Causa-Efeito
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/storytelling/" title="Storytelling" class="md-nav__link">
+      Storytelling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/introspeccao/" title="Introspecção" class="md-nav__link">
+      Introspecção
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/prototipo/" title="Protótipo" class="md-nav__link">
+      Protótipo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/questionario/" title="Questionário" class="md-nav__link">
+      Questionário
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/documento-de-visao/" title="Documento de Visão" class="md-nav__link">
+      Documento de Visão
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/moscow/" title="MoSCoW" class="md-nav__link">
+      MoSCoW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/product-backlog/" title="Product Backlog" class="md-nav__link">
+      Product Backlog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/especificacao-suplementar/" title="Especificação Suplementar" class="md-nav__link">
+      Especificação Suplementar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica1/lexicos/" title="Léxicos" class="md-nav__link">
+      Léxicos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Dinamica 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Dinamica 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica2/modelagem-processo/" title="Modelagem do Processo" class="md-nav__link">
+      Modelagem do Processo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Dinamica 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Dinamica 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica3/diagrama-classes/" title="Diagrama de Classes" class="md-nav__link">
+      Diagrama de Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica3/modelagem-sistema/" title="Modelagem do Sistema" class="md-nav__link">
+      Modelagem do Sistema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica3/diagrama-caso-de-uso/" title="Diagrama de Caso de Uso" class="md-nav__link">
+      Diagrama de Caso de Uso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica3/diagrama-pacotes/" title="Diagrama de Pacotes" class="md-nav__link">
+      Diagrama de Pacotes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Dinamica 4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Dinamica 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica4/diagrama-atividades/" title="Diagrama de Atividades" class="md-nav__link">
+      Diagrama de Atividades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica4/diagrama-estados/" title="Diagrama de Estados" class="md-nav__link">
+      Diagrama de Estados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica4/diagrama-colaboracao/" title="Diagrama de Colaboração" class="md-nav__link">
+      Diagrama de Colaboração
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica4/diagrama-sequencia/" title="Diagrama de Sequência" class="md-nav__link">
+      Diagrama de Sequência
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Dinamica 5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Dinamica 5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica5/nfr/" title="NFR" class="md-nav__link">
+      NFR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dinamica5/padroes/" title="Design Patterns" class="md-nav__link">
+      Design Patterns
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Dinamica 6
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Dinamica 6
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Documento de Arquitetura
+      </label>
+    
+    <a href="./" title="Documento de Arquitetura" class="md-nav__link md-nav__link--active">
+      Documento de Arquitetura
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" title="Histórico de versão" class="md-nav__link">
+    Histórico de versão
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../sprints/sprints/" title="Sprints" class="md-nav__link">
+      Sprints
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Atas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Atas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/atas/ata-reuniao-20-04-19/" title="20/04" class="md-nav__link">
+      20/04
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Iniciativas Extras
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Iniciativas Extras
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/ambiente/" title="Ambiente" class="md-nav__link">
+      Ambiente
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" title="Histórico de versão" class="md-nav__link">
+    Histórico de versão
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ads-unbind/unbind/edit/master/docs/dinamica6/documento-arquitetura.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="documento-de-arquitetura">Documento de Arquitetura</h1>
+<h2 id="historico-de-versao">Histórico de versão</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Responsáveis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15/06/2019</td>
+<td>0.1</td>
+<td>Criação do documento</td>
+<td>Byron Kamal, Geovanne Saraiva, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles, Vinícius Cantuária e William Almeida</td>
+</tr>
+<tr>
+<td>16/06/2019</td>
+<td>0.1.2</td>
+<td>Reestruturando documento</td>
+<td>Igor Aragão</td>
+</tr>
+<tr>
+<td>21/06/2019</td>
+<td>0.2</td>
+<td>Adicionando versões 1.0 e 2.0 do diagrama de componentes - Tópico 7</td>
+<td>Byron Kamal e Igor Veludo</td>
+</tr>
+<tr>
+<td>21/06/2019</td>
+<td>0.3</td>
+<td>Modificando o tópico 2 e o 4 do documento</td>
+<td>William Almeida</td>
+</tr>
+<tr>
+<td>23/06/2019</td>
+<td>0.4</td>
+<td>Adicionando tópico 3</td>
+<td>Byron Kamal, Igor Veludo e João Pedro Mota</td>
+</tr>
+<tr>
+<td>23/06/2019</td>
+<td>0.5</td>
+<td>Adicionando a seção 5.2.1 e refatorando a seção 5.2.3</td>
+<td>William Almeida</td>
+</tr>
+<tr>
+<td>24/06/2019</td>
+<td>0.5.1</td>
+<td>Adicionando a seção 5.2.2</td>
+<td>Byron Kamal e Igor Veludo</td>
+</tr>
+<tr>
+<td>24/06/2019</td>
+<td>0.6</td>
+<td>Adicionando o diagrama de implantação na seção 7</td>
+<td>Igor Aragão e William Almeida</td>
+</tr>
+<tr>
+<td>24/06/2019</td>
+<td>0.7</td>
+<td>Adicionando DE-R e modelo lógico</td>
+<td>José Aquiles</td>
+</tr>
+<tr>
+<td>24/06/2019</td>
+<td>0.8</td>
+<td>Adicionando tópico 9</td>
+<td>Geovanne Santos e Vinícius</td>
+</tr>
+<tr>
+<td>30/06/2019</td>
+<td>0.8.1</td>
+<td>Alterando diagrama de classes</td>
+<td>William Almeida, Geovanne, Vinícius e Igor Aragão</td>
+</tr>
+</tbody>
+</table>
+<h1 id="146-introducao">1. Introdução</h1>
+<h2 id="11-finalidade">1.1 Finalidade</h2>
+<p>Este documento tem como finalidade apresentar a arquitetura do projeto <strong>UNBIND</strong> através de visões diversas para registrar as decisões arquiteturais relacionadas ao projeto. O documento é dividido da seguinte maneira: inicialmente é apresentada a representação da arquitetura da solução, em seguida as metas e restrições desta arquitetura e por fim são apresentadas visões sobre elementos da arquitetura.</p>
+<h2 id="12-escopo">1.2 Escopo</h2>
+<p>Este documento apresenta as características arquiteturais do projeto <strong>UNBIND</strong>, descrevendo em detalhes a soluções arquiteturais determinadas para o projeto, de forma a servir como base para o desenvolvimento do projeto pelos desenvolvedores de software alocados para o projeto.</p>
+<h2 id="13-definicoes-acronimos-e-abreviacoes">1.3 Definições, Acrônimos, e Abreviações</h2>
+<p><strong>MVC</strong> - Model View Controller</p>
+<p><strong>MTV</strong> - Model Template View</p>
+<p><strong>UNBIND</strong> - Aplicação web, desenvolvida em Django, que tem como objetivo ajudar pessoas com rotinas desgastantes, estimulando-as a realizar atividades que tragam felicidade.</p>
+<p><strong>Django</strong> - Framework da linguagem python para a construção rápida de aplicativos web, fornecendo componentes prontos e com fácil uso.</p>
+<h2 id="246-representacao-da-arquitetura">2. Representação da Arquitetura</h2>
+<p>O sistema faz uso do Framework Django (versão 2.2.2), que faz uso do padrão MVC. No entanto, tal plataforma possui uma interpretação singular em relação à organização de camadas. O indicado é considerar que a própria plataforma faz o papel da camada de controle, enquanto a camada de Modelo e de Visão devem ser adaptadas e reinterpretadas conforme o necessário. Por este motivo, ainda que o Django implemente o MVC, considera-se que o padrão de camadas externalizado pela plataforma é o MTV (Model-Template-View).</p>
+<p>A utilização de uma arquitetura em camadas é interessante por proporcionar uma clara separação de responsabilidades no código, proporcionando reusabilidade, e reduzindo o esforço de manutenção. Os conceitos de MVC e MTV serão apresentados nas seções seguintes.</p>
+<h3 id="21-model-view-controller-mvc">2.1 Model View Controller (MVC)</h3>
+<p><img alt="" src="../img/mvc.png" /></p>
+<p>Figura 1. Padrão arquitetural MVC.</p>
+<ul>
+<li>
+<p><strong>Model</strong>: camada de acesso a base de dados, é responsável pela leitura, manipulação e validação dados;</p>
+</li>
+<li>
+<p><strong>Controller</strong>: é responsável por manipular e validar as requisições do usuário, traduzindo em comandos enviados para enviados para a Model e/ou View .</p>
+</li>
+<li>
+<p><strong>View</strong>: camada de interface com o usuário, responsável pela representação dos dados;</p>
+</li>
+</ul>
+<h3 id="22-model-template-view-mtv">2.2 Model Template View (MTV)</h3>
+<p><img alt="" src="../img/mvt.png" /></p>
+<p>Figura 2. Padrão arquitetural MTV.</p>
+<ul>
+<li>
+<p><strong>Model</strong>: segue a mesma definição da model no MVC;</p>
+</li>
+<li>
+<p><strong>Template</strong>: segue a mesma definição da view no MVC;</p>
+</li>
+<li>
+<p><strong>View</strong>: segue a mesma definição da controller no MVC.</p>
+</li>
+</ul>
+<h2 id="346-metas-e-restricoes-de-arquitetura">3. Metas e Restrições de Arquitetura</h2>
+<table>
+<thead>
+<tr>
+<th>Restrição</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linguagem</td>
+<td>O sistema será inteiramente desenvolvido utilizando a linguagem Python.</td>
+</tr>
+<tr>
+<td>Plataforma</td>
+<td>Será utilizado o framework Django tanto para o front quanto para o back-end.</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td>Para a segurança do usuário, todas as senhas de login são criptografadas.</td>
+</tr>
+<tr>
+<td>Persistência</td>
+<td>Para a persistência dos dados será utilizado o banco de dados relacional SQLite3.</td>
+</tr>
+<tr>
+<td>Arquitetura</td>
+<td>Será feita uma arquitetura monolítica, nela o deploy torna-se mais fácil, já que é necessário subir somente um projeto e o banco de dados facilmente evolui junto para todas as funcionalidades juntamente com a aplicação. Também não há duplicidade de código e classes necessárias entre os diferentes módulos, já que todas elas fazem parte da mesma unidade.</td>
+</tr>
+<tr>
+<td>Portabilidade</td>
+<td>Por se tratar de uma aplicação web, possui grande portabilidade entre sistemas, sendo acessada através do navegador, porém não possui portabilidade para mobile.</td>
+</tr>
+<tr>
+<td>Distribuição</td>
+<td>Por se tratar de uma aplicação web, a distribuição ocorre assim que a nova versão do software é enviada para produção. O usuário sempre acesa a última versão disponível.</td>
+</tr>
+<tr>
+<td>Reuso</td>
+<td>A utilização do framework Django demonstra um grau de reuso devido a padronização da criação de componentes do código.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="446-visao-de-casos-de-uso">4. Visão de Casos de Uso</h2>
+<p>Segue abaixo a lista com os principais casos de uso do projeto UNBIND:</p>
+<ul>
+<li>Responder questionário</li>
+<li>Visualizar artigos personalizados</li>
+<li>Gerar avaliação de desempenho</li>
+<li>Visualizar tarefa específica</li>
+<li>Pontuar usuário</li>
+</ul>
+<p><img alt="" src="../img/visoes_casos_uso.jpg" /></p>
+<p>Figura 3. Diagrama de Casos de Uso.</p>
+<h2 id="546-visao-logica">5. Visão Lógica</h2>
+<p>Foram feitos modelos seguindo o padrão UML relacionados aos aspectos arquiteturais do sistema, como as classes e pacotes utilizados no projeto.</p>
+<h3 id="51-diagramas-significativos">5.1 Diagramas Significativos</h3>
+<h4 id="511-diagrama-de-classes">5.1.1 Diagrama de Classes</h4>
+<p>O diagrama de classes tem como principal propósito relacionar os tipos modelados no sistema. Geralmente, inclui classe, interface, tipo de dado, restrição de acesso e dependências. Dessa forma, consiste em um importante artefato da UML (Unified Modeling Language) para documentação das classes codificadas ou que serão codificadas em uma aplicação.</p>
+<p><img alt="" src="../../dinamica3/img/diagrama-classes_v0.4.png" />
+As principais classes da aplicação são:</p>
+<ul>
+<li>Usuário: herda da classe User adicionando atributos.</li>
+<li>Atividade: responsável pelas atividades realizadas pelos usuários, que geram pontos.</li>
+<li>Artigo: responsável pelos artigos que serão apresentados aos usuários.</li>
+<li>Conquista: responsável pelas conquistas adquiridas pelos usuários, relacionadas aos pontos.</li>
+<li>Categoria: responsável pela categorização das atividades, artigos e perguntas.</li>
+<li>Questionário: é composta de objetos da classe Pergunta e é utilizada para fazer a avaliação dos usuários.</li>
+<li>Pergunta: utilizada para definir a pontuação do usuário em cada categoria.</li>
+</ul>
+<h4 id="512-diagrama-de-colaboracao">5.1.2 Diagrama de Colaboração</h4>
+<p>O diagrama de colaboração permite a identificação de aspectos importantes na cooperação entre uma série de instâncias, identificando as funções que serão executadas pelas instâncias.</p>
+<p><img alt="" src="../img/diagrama_colaboracao.jpg" /></p>
+<h4 id="513-diagrama-de-pacotes">5.1.3 Diagrama de Pacotes</h4>
+<p>O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os pacotes ou pedaços do sistema divididos em agrupamentos lógicos mostrando as dependências entre eles. Este diagrama é muito utilizado para ilustrar a arquitetura de um sistema mostrando o agrupamento de suas classes. O Django organiza seus componentes em apps que possuem arquivos referentes a cada aplicação.</p>
+<h5 id="apps-cada-app-possui-arquivos-de-models-views-tests-forms-e-urls">Apps: cada app possui arquivos de models, views, tests, forms e urls.</h5>
+<ul>
+<li>models: arquivos com as models.</li>
+<li>views: arquivos com as views.</li>
+<li>tests: arquivos com testes unitários.</li>
+<li>forms: arquivos contendo os formulários.</li>
+<li>urls: arquivo responsável pelo roteamento.</li>
+</ul>
+<h5 id="static-pasta-para-os-arquivos-estaticos-do-projeto-em-geral">Static: pasta para os arquivos estáticos do projeto em geral.</h5>
+<ul>
+<li>css: pasta com os arquivos CSS.</li>
+<li>fonts: pasta com os arquivos de fontes de textos.</li>
+<li>js: pasta com os arquivos JS.</li>
+<li>profile_image: pasta com as imagens de perfil dos usuários.</li>
+</ul>
+<h5 id="templates-pasta-com-todos-arquivos-de-template-do-projeto-html">Templates: pasta com todos arquivos de template do projeto (HTML).</h5>
+<h5 id="docs-pasta-com-todos-arquivos-referentes-a-documentacao-do-projeto">Docs: pasta com todos arquivos referentes à documentação do projeto.</h5>
+<h5 id="src-pasta-com-todos-arquivos-referentes-ao-desenvolvimento-da-aplicacao">Src: pasta com todos arquivos referentes ao desenvolvimento da aplicação.</h5>
+<p><img alt="" src="../img/diagrama_pacotes.png" /></p>
+<h3 id="646-visao-de-implantacao">6. Visão de Implantação</h3>
+<h4 id="61-diagrama-de-implantacao">6.1 Diagrama de Implantação</h4>
+<p><img alt="" src="../img/visao_implementacao.png" /></p>
+<h3 id="746-visao-de-implementacao">7. Visão de Implementação</h3>
+<h4 id="71-finalidade">7.1 Finalidade</h4>
+<p>Proporcionam um método alternativo para implementar views como objetos ao invés de funções. As Class-Based Views (CBV) são classes que implementam métodos e atributos que são comumente utilizados na programação das views. Dessa maneira, o programador pode utilizar métodos já implementados ou sobrescrevê-los e implementá-los da sua maneira. Para atender os mais variados casos de uso das views, as CBV oferecem diversos temas para implementação.</p>
+<p>Podemos então agregar as funções básicas das views dentro de classes, como métodos. Os recursos das Class Based Views estão em algumas classes "pré-prontas", as quais outras classes podem herdar. A partir daí as alterações que precisam ser feitas são mínimas.</p>
+<h3 id="72-diagramas-significativos">7.2 Diagramas Significativos</h3>
+<h4 id="721-diagrama-de-componentes">7.2.1 Diagrama de Componentes</h4>
+<h5 id="versao-1">Versão 1</h5>
+<p><img alt="" src="../img/diagrama_componente_v1.jpg" /></p>
+<h5 id="versao-2">Versão 2</h5>
+<p><img alt="" src="../img/diagrama_componente_v2.jpg" /></p>
+<h3 id="846-visao-de-dados">8. Visão de Dados</h3>
+<p><img alt="" src="../img/diagrama_classes.png" /></p>
+<h4 id="81-diagrama-entidade-relacionamento">8.1 Diagrama Entidade Relacionamento</h4>
+<p><img alt="" src="../img/der.png" /></p>
+<h4 id="82-modelo-logico-de-dados">8.2 Modelo Lógico de dados</h4>
+<p><img alt="" src="../img/dl.png" /></p>
+<p><img alt="" src="../img/logico_unbind.png" /></p>
+<h2 id="946-qualidade">9. Qualidade</h2>
+<p>Os seguintes itens conferem ao sistema aspectos de qualidade, bem como a descrição da abordagem realizada para satisfazer esses aspectos. São estes aspectos, legais e reguladores, como as normas estabelecidas para bom funcionamento do sistema, atributos de qualidade, como padrões de usabilidade, confiabilidade, desempenho e suportabilidade.</p>
+<h3 id="91-requisitos-funcionais">9.1 Requisitos funcionais</h3>
+<p>Os requisitos funcionais, e suas prioridades, podem ser encontrados <a href="https://github.com/ads-unbind/unbind/blob/master/wiki/docs/dinamica1/moscow.md">aqui</a></p>
+<h3 id="92-requisitos-nao-funcionais">9.2 Requisitos não funcionais</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RNF 01</td>
+<td>Sistema de autenticação de usuário (Segurança)</td>
+</tr>
+<tr>
+<td>RNF 02</td>
+<td>Serviço de busca (Base de Dados)</td>
+</tr>
+<tr>
+<td>RNF 03</td>
+<td>Interface simples e interativa ao usuário (Usabilidade)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-requisitos-para-plataformas-especificas">9.3 Requisitos para plataformas específicas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador</th>
+<th>Navegador Web</th>
+<th>Modelo</th>
+<th>Versão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RNF 01</td>
+<td>Internet Explorer</td>
+<td>Qualquer dispositivo</td>
+<td>Versão 10 ou superior.</td>
+</tr>
+<tr>
+<td>RNF 02</td>
+<td>Google Chrome</td>
+<td>Qualquer dispositivo</td>
+<td>Última versão</td>
+</tr>
+<tr>
+<td>RNF 03</td>
+<td>Mozilla Firefox</td>
+<td>Qualquer dispositivo</td>
+<td>versão mais recente ou imediatamente anterior</td>
+</tr>
+<tr>
+<td>RNF 04</td>
+<td>Opera</td>
+<td>Qualquer dispositivo</td>
+<td>12 ou superior.</td>
+</tr>
+<tr>
+<td>RNF 05</td>
+<td>Safari</td>
+<td>Qualquer dispositivo</td>
+<td>Versão 6 ou superior.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-usabilidade">9.4 Usabilidade</h3>
+<ul>
+<li>
+<p>Facilidade de uso: Os recursos e funcionalidades do serviço devem apresentar-se de forma intuitiva para que o usuário possa facilmente navegar por eles, não sendo necessário a realização de qualquer tipo de treinamento prévio por parte do usuário.</p>
+</li>
+<li>
+<p>Mensagem de erro: O serviço deve apresentar mensagens de erro de forma clara e objetiva, localizadas próximas ao conteúdo ou ação que motivou o erro.</p>
+</li>
+<li>
+<p>Eficiência: O sistema deve fornecer rápido acesso a qualquer funcionalidade.</p>
+</li>
+<li>
+<p>Consistência e Padronização: O sistema deve manter a maior parte da interface a mesma para cada tipo de usuário, apenas adicionando alguns detalhes sobre a mesma de acordo com o nível de cada tipo de usuário.</p>
+</li>
+<li>
+<p>Design Simples: O sistema deve ter ícones intuitivos. Para cada tipo de usuário haverá um certo nível de funcionalidades disponíveis.</p>
+</li>
+</ul>
+<h3 id="95-confiabilidade">9.5 Confiabilidade</h3>
+<ul>
+<li>
+<p>Disponibilidade: O sistema estará disponível no modo 24/7 (24 horas por dia, 7 dias por semana). O servidor será terceirizado para ter uma capacidade operacional confiável.</p>
+</li>
+<li>
+<p>Suportabilidade: O sistema deverá suportar 100.000 usuários ativos simultaneamente. O servidor será terceirizado para aguentar uma grande demanda.</p>
+</li>
+<li>
+<p>Direitos autorais: O sistema deverá garantir que os direitos autorais dos autores dos artigos sejam preservados. Oferecerá um suporte para que todos os usuários possam realizar denúncias ao se deparar com conteúdos que violem direitos de propriedade intelectual ou conteúdos que sejam ofensivos.</p>
+</li>
+<li>
+<p>Segurança e Privacidade: O sistema deve assegurar a segurança e privacidade dos dados gerados, armazenando senhas e dados sensíveis de forma segura. O sistema deve ser transparente quanto às informações coletadas referentes a dados pessoais do usuário e preferências de conteúdo e fornecer ao usuário a possibilidade de ajustar a visibilidade de tais informações.</p>
+</li>
+</ul>
+<h3 id="96-desempenho">9.6 Desempenho</h3>
+<ul>
+<li>
+<p>Tempo de Resposta: O aplicativo tem de responder às ações do usuário de imediato.</p>
+</li>
+<li>
+<p>Volume de assinantes: O sistema será capaz de suportar 100.000 de usuários ativos simultaneamente.</p>
+</li>
+<li>
+<p>Modo de degradação: Se o sistema estiver sofrendo com algo que degrade o site, como a internet com sinal fraco, terá páginas que não serão carregadas.</p>
+</li>
+<li>
+<p>Utilização de Recursos: OS X 10.9 ou superior, Windows 7 ou superior, Versão 6 ou superior.</p>
+</li>
+</ul>
+<h3 id="97-suportabilidade">9.7 Suportabilidade</h3>
+<ul>
+<li>Software do usuário: O usuário será capaz de utilizar o sistema através de um navegador de internet. Não será necessário que nenhum software personalizado resida no computador pessoal. Estes são os requisitos de sistema para usar o UNBIND e acessar seu conteúdo por meio do site.</li>
+</ul>
+<h3 id="98-restricoes-de-design">9.8 Restrições de Design</h3>
+<ul>
+<li>
+<p>Restrição de Design Um: O sistema deverá ser disponibilizado em diversas línguas, quando o usuário mudar o idioma nas opções de configuração o site se modificará.</p>
+</li>
+<li>
+<p>Restrição de Design Cinco: Antes do usuário poder ver as funcionalidades do site, terá que ter uma tela inicial com a opção de login e cadastro.</p>
+</li>
+<li>
+<p>Restrição de Design Sete: O nome da página sempre estará no topo do layout.</p>
+</li>
+</ul>
+<h3 id="99-requisitos-de-sistema-de-ajuda-e-de-documentacao-de-usuario-on-line">9.9 Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line</h3>
+<ul>
+<li>
+<p>Área de busca para encontrar soluções para as questões mais frequentes</p>
+</li>
+<li>
+<p>Tutoriais claros e objetivos de como o usuário pode utilizar os recursos do serviço</p>
+</li>
+</ul>
+<h3 id="910-interfaces-de-hardware">9.10 Interfaces de Hardware</h3>
+<p>O software oferece suporte aos dispositivos apresentados abaixo.</p>
+<ul>
+<li>
+<p>Smartphones.</p>
+</li>
+<li>
+<p>Computadores Notebooks.</p>
+</li>
+<li>
+<p>Computadores Desktop.</p>
+</li>
+</ul>
+<h2 id="1046-requisitos-minimos-dos-sistemas">10. Requisitos Mínimos dos Sistemas</h2>
+<h3 id="101-sistema-executar-o-projeto-unbind">10.1 Sistema executar o projeto UnBind</h3>
+<ul>
+<li>Processador: Intel Atom ou Intel Core i3 (ou similar)</li>
+<li>Espaço em disco: 1GB</li>
+<li>Sistema Operacional: Windows 7 ou superior, macOS e Linux</li>
+<li>Python versões: 2.7.x ou superior</li>
+<li>Django: 2.2.2 (padrão)</li>
+</ul>
+<h3 id="102-servidor-de-banco-de-dados-e-servidor-web">10.2 Servidor de Banco de Dados e Servidor Web</h3>
+<p>Os requisitos apresentados a seguir foram estudados para o sistema suportar cerca de 10 mil
+de usuários, caso o sistema tenha que operar com mais usuários será necessário um estudo mais aprofundado.</p>
+<h4 id="1021-servidor-de-banco-de-dados">10.2.1 Servidor de Banco de Dados</h4>
+<ul>
+<li>Processador: Xeon E5 server family</li>
+<li>CPU: 2 x 4 cores</li>
+<li>CPU (expansabilidade futura): entre 1 a 4 sockets</li>
+<li>Memória RAM: mínimo 16GB</li>
+<li>Espeço de Disco: entre 16GB e 1.5TB</li>
+<li>Backup: HDD ou Fita Máguinetica</li>
+</ul>
+<h5 id="10211-sqlite">10.2.1.1 SQLite</h5>
+<p>Para servidores Linux, as seguintes configurações podem ser aplicadas para rodar o banco de dados SQLite:</p>
+<ul>
+<li>Java Runtime Environment (JRE) 1.5 ou superior</li>
+<li>Memória RAM: 500MB</li>
+</ul>
+<h4 id="1021-servidor-web">10.2.1 Servidor Web</h4>
+<ul>
+<li>Processador: Intel i7 - 3770 (similar ou superior)</li>
+<li>Memoria RAM: 32GB</li>
+<li>CPU: 4 núcleos ou mais</li>
+<li>HDD: 146GB com cache 128MB</li>
+</ul>
+<h2 id="1146-referencias">11. Referências</h2>
+<ul>
+<li>
+<p>Arquitetura de microserviços ou monolítica?, Caelum. Disponível em: &lt;<a href="https://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica/">https://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica/</a>&gt;.</p>
+</li>
+<li>
+<p>UML 2.5 Diagrams Overview. Disponível em: &lt;<a href="https://www.uml-diagrams.org/uml-25-diagrams.html">https://www.uml-diagrams.org/uml-25-diagrams.html</a>&gt;.</p>
+</li>
+<li>
+<p>Software Architecture: MVC Design Pattern, Medium. Disponível em: <a href="mailto://medium.com/@dennisvera.z/software-architecture-mvc-design-pattern-ceae5d5083d7">//medium.com/@dennisvera.z/software-architecture-mvc-design-pattern-ceae5d5083d7)</a>).</p>
+</li>
+<li>
+<p>Django's Structure – A Heretic's Eye View, The django book. Disponível em: &lt;<a href="https://djangobook.com/mdj2-django-structure/">https://djangobook.com/mdj2-django-structure/</a>&gt;.</p>
+</li>
+<li>
+<p>Working Structure of Django MTV Architecture, Towards Data Science. Disponível em: &lt;<a href="https://towardsdatascience.com/working-structure-of-django-mtv-architecture-a741c8c64082">https://towardsdatascience.com/working-structure-of-django-mtv-architecture-a741c8c64082</a>&gt;.</p>
+</li>
+<li>
+<p>Django documentation. Disponível em: &lt;<a href="https://docs.djangoproject.com/en/2.2/">https://docs.djangoproject.com/en/2.2/</a>&gt;.</p>
+</li>
+<li>
+<p>Diretriz: Realizações de Casos de Uso. Disponível em: &lt;<a href="http://www.hectordufau.com.br/openup/openup/guidances/guidelines/uc_realizations_448DDA77.html">http://www.hectordufau.com.br/openup/openup/guidances/guidelines/uc_realizations_448DDA77.html</a>&gt;.</p>
+</li>
+<li>
+<p>Requisitos de Sistemas. Disponível em: &lt;<a href="http://www.stansoftware.com/hardware-requirements/">http://www.stansoftware.com/hardware-requirements/</a>&gt;</p>
+</li>
+<li>
+<p>Intel Distribution for Python. Disponível em: &lt;<a href="https://software.intel.com/en-us/distribution-for-python/system-requirements">https://software.intel.com/en-us/distribution-for-python/system-requirements</a>&gt;</p>
+</li>
+<li>
+<p>System Requirements - SQLite Data Provider 2015. Disponível em: &lt;<a href="http://cdn.cdata.com/help/DEA/rsb/pg_startrequirementsrsb.htm">http://cdn.cdata.com/help/DEA/rsb/pg_startrequirementsrsb.htm</a>&gt;</p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../dinamica5/padroes/" title="Design Patterns" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Design Patterns
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../sprints/sprints/" title="Sprints" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Sprints
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
