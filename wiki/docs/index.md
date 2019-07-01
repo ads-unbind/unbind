@@ -4,9 +4,14 @@
 <img src="extras/identidade-visual/unbind-logo/logo.png" width="512px">
 </p>
 
-Repositório no [GitHub](https://github.com/ads-unbind/unbind/tree/master)
+### Sobre
+UnBind tem como propósito ajudar as pessoas a terem uma melhor qualidade de vida.  
+
+### Ambiente de Desenvolvimento
+Para executar o ambiente de desenvolvimento, acesse o [guia](https://ads-unbind.github.io/unbind/extras/ambiente/).
 
 ### Colaboradores
+Informações dos colaboradores:
 
 | Nome | Matrícula | GitHub |
 | --- | --- | --- |
@@ -20,3 +25,7 @@ Repositório no [GitHub](https://github.com/ads-unbind/unbind/tree/master)
 | Ramon Sales | 14/0160205 | [ramonsales](https://github.com/ramonsales) |
 | Vinícius Cantuária | 14/0165169 | [cantuariavc](https://github.com/cantuariavc) |
 | William Almeida | 16/0020280 | [WillAllmeida](https://github.com/WillAllmeida) |
+
+### Contribuir
+Para contribuir com a gente, o colaborador deve ler o [código de conduta](https://github.com/ads-unbind/unbind/blob/master/.github/CODE_OF_CONDUCT.md), dá um _fork_ e enviar um [pull request](https://github.com/ads-unbind/unbind/pulls) com sua contribuição.
+O código será analisado por um dos proprietários do projeto e, se aprovado, incluído no núcleo da aplicação.
