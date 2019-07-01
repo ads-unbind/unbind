@@ -15,9 +15,10 @@
 | 24/06/2019 | 0.7    | Adicionando DE-R e modelo lógico                                    | José Aquiles                                                                                                                 |
 | 24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius                                                                                                   |
 | 30/06/2019 | 0.9    | Alterando diagrama de classes                                       | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                            |
-| 30/06/2019 | 0.10   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
-| 30/06/2019 | 0.11   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
-| 30/06/2019 | 0.11   | Adiciona diagrama de atividade e de sequência  | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
+| 30/06/2019 | 0.10   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.11   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.11   | Adiciona diagrama de atividade e de sequência                       | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.12   | Complementa Usabilidade                                             | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 
 # 1\. Introdução
 
@@ -227,6 +228,8 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados [aqui](https
 | RNF 05        | Safari            | Qualquer dispositivo | Versão 6 ou superior.                         |
 
 ### 11.4 Usabilidade
+
+Será usado técnicas aprendidas na matéria Interação Humano Computador, ministrado na Universidade de Brasília, Faculdade UnB Gama.
 
 - Facilidade de uso: Os recursos e funcionalidades do serviço devem apresentar-se de forma intuitiva para que o usuário possa facilmente navegar por eles, não sendo necessário a realização de qualquer tipo de treinamento prévio por parte do usuário.
 
