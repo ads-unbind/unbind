@@ -56,5 +56,6 @@ nav:
       - Ambiente: extras/ambiente.md
       - Políticas:
           - Folha de Estilo: extras/politicas/folha-de-estilo.md
+          - Política de Commits: extras/politicas/politica-de-commit.md
 #    - Identidade Visual: extras/identidade-visual/identidade-visual.md
 
