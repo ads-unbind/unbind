@@ -4,7 +4,7 @@ from questionario import views
 app_name = 'questionario'
 
 urlpatterns = [    
-    path('', views.questionarios, name='lista_questionarios'),
+    path('', views.questionarios, name='questionarios'),
     path('questionario/<int:id>', views.questionario, name='questionario'),
     path('questionario/novo', views.cria_questionario, name='questionario_novo'),
 ]

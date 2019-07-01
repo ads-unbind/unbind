@@ -42,7 +42,6 @@ class Resposta(models.Model):
 
     def __str__(self):
         return 'Pergunta: {} Resposta: {} '.format(self.pergunta.id, self.resposta)
-        # return 'Pergunta: {} Resposta: {} '.format(self.pergunta.id, self.resposta.id)
 
     def save(self, questionario, pergunta, resposta):
         self.questionario = questionario
