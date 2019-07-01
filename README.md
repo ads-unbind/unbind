@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/ads-unbind/unbind/blob/master/wiki/docs/extras/identidade-visual/brand-logo/logo-unbind.jpg">
+  <img height="400" src="https://github.com/ads-unbind/unbind/blob/master/wiki/docs/extras/identidade-visual/unbind-logo/logo.png">
 </p>
 
 # Arquitetura e Desenho de Software
