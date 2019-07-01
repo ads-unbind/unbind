@@ -18,6 +18,7 @@ theme:
 nav:
   - Home: index.md
   - Dinamica 1:
+      - Proposta cancelada: dinamica1/proposta-cancelada/proposta-cancelada.md
       - Proposta do projeto: dinamica1/proposta.md
       - Mapa Mental: dinamica1/mapa-mental.md
       - Rich Picture: dinamica1/rich-picture.md
