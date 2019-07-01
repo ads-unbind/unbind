@@ -16,6 +16,7 @@
 | 24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius                                                                                                   |
 | 30/06/2019 | 0.9    | Alterando diagrama de classes                                       | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                            |
 | 30/06/2019 | 0.10   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
+| 30/06/2019 | 0.11   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão e William Almeida                                                                  |
 
 # 1\. Introdução
 
@@ -168,13 +169,13 @@ Podemos então agregar as funções básicas das views dentro de classes, como m
 
 ![](./img/diagrama_componente_v2.jpg)
 
-### 8\. Visão de Dados
+### 8\. [Visão de Dados](../dinamica3/modelagem-sistema.md)
 
-#### 8.1 Diagrama Entidade-Relacionamento
+#### 8.1 [Diagrama Entidade-Relacionamento](../dinamica3/modelagem-sistema.md#22-diagrama-entidade-relacionamento-de-r)
 
 ![](../dinamica3/img/modelagem-sistema_der_v1.png)
 
-#### 8.2 Diagrama Lógico
+#### 8.2 [Diagrama Lógico](../dinamica3/modelagem-sistema.md#23-diagrama-logico-dl)
 
 ##### 8.2.1 Diagrama Lógico Modelado
 
