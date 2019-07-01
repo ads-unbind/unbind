@@ -17,7 +17,7 @@ from faker import Faker
 
 fakegen = Faker()
 
-# image = f"{os.getcwd()}{static/images/profile/godfather.jpg}"
+# image = f"{os.getcwd()}{static/images/template/cinema.jpg}"
 
 categorias = [
     'Lazer',
@@ -29,28 +29,11 @@ categorias = [
     'Espiritualidade',
     'Amor',
 ]
-estado = [
-    'Disponível',
-    'Em Andamento',
-    'Desbloqueada',
-    'Indisponível',
-    'Concluída',
-    'Em Espera',
-    'Bloqueada'
-]
 
-
-def add_categoria():
-    c = Categoria.objects.get_or_create(nome=random.choice(categorias))[0]
-    c.save()
-    return c
-
-
-def add_estado():
-    est = Atividade.objects.get_or_create(nome=random.choice([estado]))[0]
-    est.save()
-    return est
-
+def popula_categoria():
+    print("Populating categoria...")
+    for i in range(8):
+        c = Categoria.objects.get_or_create(nome=categorias[i])
 
 def populate(N=5):
 
@@ -62,7 +45,7 @@ def populate(N=5):
         fake_titulo = fakegen.text(max_nb_chars=15)
         fake_text = fakegen.text()
         fake_imagem = sys.path.append(
-            '/home/igor/Documents/UnB/2019-1/DES/unbind/src/static/images/profile/godfather.jpg'
+            '/home/igor/Documents/UnB/2019-1/DES/unbind/src/static/images/template/cinema.jpg'
         )
         fake_autor = fakegen.name()
         fake_curtidas = 3
@@ -95,6 +78,7 @@ def populate(N=5):
 
 
 if __name__ == '__main__':
-    print("populating date")
-    populate(5)
+    print("Running script popula...")
+    popula_categoria()
+    # populate(5)
     print("complete")
