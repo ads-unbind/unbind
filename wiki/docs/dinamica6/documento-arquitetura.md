@@ -17,8 +17,26 @@
 | 30/06/2019 | 0.9    | Alterando diagrama de classes                                       | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                            |
 | 30/06/2019 | 0.10   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 | 30/06/2019 | 0.11   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-| 30/06/2019 | 0.11   | Adiciona diagrama de atividade e de sequência                       | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-| 30/06/2019 | 0.12   | Complementa Usabilidade                                             | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.12   | Adiciona diagrama de atividade e de sequência                       | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.13   | Complementa Usabilidade                                             | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.14   | Adiciona navegabilidade                                            | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+
+# Sumário
+1. [Introdução](#1-introdução)
+2. [Representação da arquitetura](##2-representação-da-arquitetura)
+3. [Metas e Restrições de arquitetura](#3-metas-e-restrições-de-arquitetura)
+4. [Visão de Casos de Uso](#4-visão-de-casos-de-uso)
+5. [Visão Lógica](#5-visão-lógica)
+6. [Visão de implantação](#6-visão-de-implantação)
+7. [Diagrama de sequência](#7-diagrama-de-sequência)
+8. [Diagrama de atividade](#8-diagrama-de-atividade)
+9. [Visão de implementação](#9-visão-de-implementação)
+10. [Visão de dados](#10-visão-de-dados)
+11. [Qualidade](#11-qualidade)
+12. [Requisitos mínimos dos sistemas](#12-requisitos-mínimos-dos-sistemas)
+13. [Referências](#13-referências)
+
+
 
 ## 1\. Introdução
 
@@ -30,7 +48,7 @@ Este documento tem como finalidade apresentar a arquitetura do projeto **UNBIND*
 
 Este documento apresenta as características arquiteturais do projeto **UNBIND**, descrevendo em detalhes a soluções arquiteturais determinadas para o projeto, de forma a servir como base para o desenvolvimento do projeto pelos desenvolvedores de software alocados para o projeto.
 
-### 1.3 Definições, Acrônimos, e Abreviações
+## 1.3 Definições, Acrônimos, e Abreviações
 
 **MVC** - Model View Controller
 
@@ -279,7 +297,7 @@ Será usado técnicas aprendidas na matéria Interação Humano Computador, mini
 
 - Tutoriais claros e objetivos de como o usuário pode utilizar os recursos do serviço
 
-### 9.10 Interfaces de Hardware
+### 11.10 Interfaces de Hardware
 
 O software oferece suporte aos dispositivos apresentados abaixo.
 
@@ -289,9 +307,9 @@ O software oferece suporte aos dispositivos apresentados abaixo.
 
 - Computadores Desktop.
 
-## 10\. Requisitos Mínimos dos Sistemas
+## 12\. Requisitos Mínimos dos Sistemas
 
-### 10.1 Sistema executar o projeto UnBind
+### 12.1 Sistema executar o projeto UnBind
 
 - Processador: Intel Atom ou Intel Core i3 (ou similar)
 - Espaço em disco: 1GB
@@ -299,12 +317,12 @@ O software oferece suporte aos dispositivos apresentados abaixo.
 - Python versões: 2.7.x ou superior
 - Django: 2.2.2 (padrão)
 
-### 10.2 Servidor de Banco de Dados e Servidor Web
+### 12.2 Servidor de Banco de Dados e Servidor Web
 
 Os requisitos apresentados a seguir foram estudados para o sistema suportar cerca de 10 mil
 de usuários, caso o sistema tenha que operar com mais usuários será necessário um estudo mais aprofundado.
 
-#### 10.2.1 Servidor de Banco de Dados
+#### 12.2.1 Servidor de Banco de Dados
 
 - Processador: Xeon E5 server family
 - CPU: 2 x 4 cores
@@ -313,21 +331,21 @@ de usuários, caso o sistema tenha que operar com mais usuários será necessár
 - Espeço de Disco: entre 16GB e 1.5TB
 - Backup: HDD ou Fita Máguinetica
 
-##### 10.2.1.1 SQLite
+##### 12.2.1.1 SQLite
 
 Para servidores Linux, as seguintes configurações podem ser aplicadas para rodar o banco de dados SQLite:
 
 - Java Runtime Environment (JRE) 1.5 ou superior
 - Memória RAM: 500MB
 
-#### 10.2.1 Servidor Web
+#### 12.2.1 Servidor Web
 
 - Processador: Intel i7 - 3770 (similar ou superior)
 - Memoria RAM: 32GB
 - CPU: 4 núcleos ou mais
 - HDD: 146GB com cache 128MB
 
-## 11\. Referências
+## 13\. Referências
 
 - Arquitetura de microserviços ou monolítica?, Caelum. Disponível em: <<https://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica/>>.
 
