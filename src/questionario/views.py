@@ -22,12 +22,13 @@ def questionarios(request):
 
 
 def questionario(request, id):
-    # TODO: validar se usuario é autor do questionario
     user = request.user
     if user.is_authenticated:
         usuario = User.objects.get(id=user.id)
+        questionario = Questionario.objects.get(id=id)
+        respostas = Resposta.objects.filter(questionario=questionario)
 
-        context = {'usuario': usuario}
+        context = {'usuario': usuario, 'questionario': questionario, 'respostas': respostas}
         return render(request, 'questionario.html', context)
 
     else:

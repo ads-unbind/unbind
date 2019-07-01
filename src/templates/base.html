@@ -33,7 +33,9 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'atividade:atividades' %}">Atividades</a>
-                    <!-- # TODO: Dynamic href-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'questionario:questionarios' %}">Questionários</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'artigo:listar_artigos' %}">Artigos</a>
@@ -47,8 +49,7 @@
                         <a href class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{ usuario }}</a>
                         <div class="dropdown-menu dropdown-menu-right text-capitalize">
                             {% if user.is_superuser %}
-                            <a class="dropdown-item" href="{% url 'admin:index' %}">Painel do Admin</a>
-                            {% endif %}
+                            <a class="dropdown-item" href="{% url 'admin:index' %}">Painel do Admin</a> {% endif %}
                             <a class="dropdown-item" href="{% url 'conta' %}">Ver perfil</a>
                             <a class="dropdown-item" href="{% url 'logout' %}">Sair</a>
                         </div>
