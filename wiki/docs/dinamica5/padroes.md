@@ -1,10 +1,11 @@
 # GOFs
-### Histórico de revisão
-Data | Versão | Descrição | Autor |
---------- | ------ | ------------ | --------- |
-| 26/05/2019 | 0.1 | Adição dos GOFs Facade, Factory method e Template method | Byron Kamal, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles e William Almeida |
-| 26/05/2019 | 0.2 | Adição do GOF State | Igor Aragão |
 
+### Histórico de revisão
+
+| Data       | Versão | Descrição                                                | Autor                                                                                  |
+| ---------- | ------ | -------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 26/05/2019 | 0.1    | Adição dos GOFs Facade, Factory method e Template method | Byron Kamal, Igor Aragão, Igor Veludo, João Pedro Mota, José Aquiles e William Almeida |
+| 26/05/2019 | 0.2    | Adição do GOF State                                      | Igor Aragão                                                                            |
 
 ## Introdução
 
@@ -24,13 +25,13 @@ Este documento detalha os padrões GOF utilizados no projeto UnBind.
 
 ### Utilização no projeto UNBIND
 
-O projeto é desenvolvido utilizando o <i>Framework</i> Django da linguagem Python, e o mesmo possui um módulo de Forms no qual é responsável por definir os campos necessários para que seja construido um objeto
+O projeto é desenvolvido utilizando o <i>Framework</i> Django da linguagem Python, e o mesmo possui um módulo de Forms no qual é responsável por definir os campos necessários para que seja construído um objeto
 
 #### Implementação
 
 O modulo <i>Forms</i> de Usuário é responsável por definir os campos de entrada de dado de um usuário, ou seja os atributo necessários para a instanciação de um determinado objeto
 
-A classe meta define qual a model que sera utilizada na construção do formulario, e os fields definem os campos necessários para a construção de um objeto deste tipo.
+A classe meta define qual a model que sera utilizada na construção do formulário, e os fields definem os campos necessários para a construção de um objeto deste tipo.
 
 > Utilização deste método pode ser visto no nosso repositório no GitHub, clicando [aqui](https://github.com/ads-unbind/unbind/commit/51841afbd71f0b0f10b134d73b99cba435334f6f).
 
