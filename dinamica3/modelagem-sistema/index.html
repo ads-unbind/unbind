@@ -238,11 +238,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Dinamica 1
+      Dinâmica 1
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Dinamica 1
+        Dinâmica 1
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -442,11 +442,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Dinamica 2
+      Dinâmica 2
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Dinamica 2
+        Dinâmica 2
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -480,11 +480,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Dinamica 3
+      Dinâmica 3
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Dinamica 3
+        Dinâmica 3
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -719,11 +719,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Dinamica 4
+      Dinâmica 4
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        Dinamica 4
+        Dinâmica 4
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -791,11 +791,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      Dinamica 5
+      Dinâmica 5
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        Dinamica 5
+        Dinâmica 5
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -839,11 +839,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      Dinamica 6
+      Dinâmica 6
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        Dinamica 6
+        Dinâmica 6
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1479,82 +1479,100 @@
 <h4 id="213-relacionamento">2.1.3 Relacionamento</h4>
 <ul>
 <li>
-<p>ARTIGO - tem - CATEGORIA  </p>
-<ul>
-<li>Um ARTIGO tem uma CATEGORIA, mas uma CATEGORIA pode ser de vários ARTIGO.</li>
-<li>Cardinalidade: n:1</li>
-</ul>
+<p>ARTIGO - tem - CATEGORIA</p>
+</li>
+<li>
+<p>Um ARTIGO tem uma CATEGORIA, mas uma CATEGORIA pode ser de vários ARTIGO.</p>
+</li>
+<li>
+<p>Cardinalidade: n:1</p>
 </li>
 <li>
 <p>ATIVIDADE - possui - CATEGORIA</p>
-<ul>
-<li>Uma ATIVIDADE possui uma CATEGORIA, mas uma CATEGORIA pode ser possuida por várias CATEGORIAS.</li>
-<li>Cardinalidade: n:1</li>
-</ul>
+</li>
+<li>
+<p>Uma ATIVIDADE possui uma CATEGORIA, mas uma CATEGORIA pode ser possuída por várias CATEGORIAS.</p>
+</li>
+<li>
+<p>Cardinalidade: n:1</p>
 </li>
 <li>
 <p>CATEGORIA - possui - PERGUNTA</p>
-<ul>
-<li>Uma CATEGORIA pode possui várias PERGUNTA, mas uma PERGUNTA só pode ser possuida por uma CATEGORIA.</li>
-<li>Cardinalidade: 1:n</li>
-</ul>
+</li>
+<li>
+<p>Uma CATEGORIA pode possui várias PERGUNTA, mas uma PERGUNTA só pode ser possuída por uma CATEGORIA.</p>
+</li>
+<li>
+<p>Cardinalidade: 1:n</p>
 </li>
 <li>
 <p>QUESTIONARIO - possui - PERGUNTA</p>
-<ul>
-<li>Um QUESTIONARIO pode possui várias PERGUNTAS, mas uma PERGUNTA só pode ser possuida por um QUESTIONARIO.</li>
-<li>Cardinalidade: 1:n</li>
-</ul>
+</li>
+<li>
+<p>Um QUESTIONARIO pode possui várias PERGUNTAS, mas uma PERGUNTA só pode ser possuída por um QUESTIONARIO.</p>
+</li>
+<li>
+<p>Cardinalidade: 1:n</p>
 </li>
 <li>
 <p>PERGUNTA - possui - REGISTRO</p>
-<ul>
-<li>Uma PERGUNTA pode possuir vários REGISTRO, mas um REGISTRO só pode ser possuido por uma PERGUNTA.</li>
-<li>Cardinalidade: 1:n </li>
-</ul>
 </li>
 <li>
-<p>USUARIO - desbloqueia - CONQUISTA  </p>
-<ul>
-<li>Um USUARIO pode desbloquear várias CONQUISTA e uma CONQUISTA pode ser desbloqueada por vários USUARIO.  </li>
-<li>Cardinalidade: n:m</li>
-</ul>
+<p>Uma PERGUNTA pode possuir vários REGISTRO, mas um REGISTRO só pode ser possuído por uma PERGUNTA.</p>
 </li>
 <li>
-<p>USUARIO - realiza - ATIVIDADE  </p>
-<ul>
-<li>Um USUARIO pode executar várias ATIVIDADE e uma ATIVIDADE pode ser executada por vários USUARIO.  </li>
-<li>Cardinalidade: n:m</li>
-</ul>
+<p>Cardinalidade: 1:n</p>
 </li>
 <li>
-<p>USUARIO - le - ARTIGO  </p>
-<ul>
-<li>Um USUARIO pode ler vários ARTIGO e um ARTIGO pode ser lido por vários USUARIO.  </li>
-<li>Cardinalidade: n:m</li>
-</ul>
+<p>USUARIO - desbloqueia - CONQUISTA</p>
+</li>
+<li>
+<p>Um USUARIO pode desbloquear várias CONQUISTA e uma CONQUISTA pode ser desbloqueada por vários USUARIO.</p>
+</li>
+<li>
+<p>Cardinalidade: n:m</p>
+</li>
+<li>
+<p>USUARIO - realiza - ATIVIDADE</p>
+</li>
+<li>
+<p>Um USUARIO pode executar várias ATIVIDADE e uma ATIVIDADE pode ser executada por vários USUARIO.</p>
+</li>
+<li>
+<p>Cardinalidade: n:m</p>
+</li>
+<li>
+<p>USUARIO - le - ARTIGO</p>
+</li>
+<li>
+<p>Um USUARIO pode ler vários ARTIGO e um ARTIGO pode ser lido por vários USUARIO.</p>
+</li>
+<li>
+<p>Cardinalidade: n:m</p>
 </li>
 <li>
 <p>USUARIO - faz - REGISTRO</p>
-<ul>
-<li>Um USUARIO pode fazer vários REGISTRO, mas um REGISTRO só pode ser feito por um USUARIO.</li>
-<li>Cardinalidade: 1:n</li>
-</ul>
 </li>
 <li>
-<p>USUARIO - responde - PERGUNTA  </p>
-<ul>
-<li>Um USUARIO pode responder várias PERGUNTA e uma PERGUNTA pode ser respondido por vários USUARIO.  </li>
-<li>Cardinalidade: n:m</li>
-</ul>
+<p>Um USUARIO pode fazer vários REGISTRO, mas um REGISTRO só pode ser feito por um USUARIO.</p>
+</li>
+<li>
+<p>Cardinalidade: 1:n</p>
+</li>
+<li>
+<p>USUARIO - responde - PERGUNTA</p>
+</li>
+<li>
+<p>Um USUARIO pode responder várias PERGUNTA e uma PERGUNTA pode ser respondido por vários USUARIO.</p>
+</li>
+<li>
+<p>Cardinalidade: n:m</p>
 </li>
 <li>
 <p>USUARIO - realiza - QUESTIONARIO</p>
-<ul>
+</li>
 <li>Um USUARIO pode realizar vários QUESTIONARIO e um QUESTIONARIO pode ser realizado por vários USUARIO.</li>
 <li>Cardinalidade: n:m</li>
-</ul>
-</li>
 </ul>
 <h3 id="22-diagrama-entidade-relacionamento-de-r">2.2 Diagrama Entidade-Relacionamento (DE-R)</h3>
 <h4 id="221-versao-01">2.2.1 Versão 0.1</h4>
