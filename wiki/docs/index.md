@@ -1,7 +1,7 @@
 ## Arquitetura e Desenho de Software 2019-1
 
 <p align="center">
-<img src="extras/identidade-visual/brand-logo/logo-unbind.jpg" width="500px">
+<img src="extras/identidade-visual/unbind-logo/logo.png" width="512px">
 </p>
 
 Repositório no [GitHub](https://github.com/ads-unbind/unbind/tree/master)

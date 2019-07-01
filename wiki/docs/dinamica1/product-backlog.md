@@ -4,6 +4,7 @@
 Data | Versão | Descrição | Autor |
 --------- | ------ | ------------ | --------- |
 27/03/2019 | 0.1 | Abertura do documento | Geovanne Saraiva |
+30/05/2019 | 0.2 | refatoração de documento | Geovanne Saraiva, Willian, Vinicius |
 
 ## 1. Introdução
 Esse documento tem a finalidade de mostrar o resultado do Product Backlog, relacionado ao software UNBIND.
@@ -31,10 +32,7 @@ RNF 02|Desenvolvedor|desenvolver telas de interação responsivas|o layout seja 
 |RF 16|usuário|Marcar tarefa como concluída|possa ganhar os pontos de conclusão de tarefa|Must|
 |RF 17|site|pontuar por tarefa concluída|o usuário possa trocar esses pontos por prêmios|Must|
 |RF 18|usuário|Acessar artigos gerais|o usuário possa ver todos os artigos e categorias que o site contêm|Should|
-|RF 19 |site|Listar prêmios|o usuário possa ver quais prêmios o site oferece e detalhes de cada um|Should|
-|RF 20| usuário| Selecionar prêmio | o usuário possa ver detalhes de cada prêmio e possa fazer a compra pelos pontos|Would|
-|RF 21|usuário|Trocar prêmios por pontos|o usuário possa usufruir e receber o prêmio|Would|
-|RF 23|usuário|Login de admin do site|novos adms possam ser adicionados e possam ver o desempenho do site no tratamento e no incentivo a saúde mental dos usuários|Must|
-|RF 22|usuário| Login de admin so site|possa haver a verificação de quem está acessando a parte de admin|Must|
-|RF 24|usuário| gerenciar atividades|o admin possa adicionar, atualizar ou excluir atividades que possam ser de interesse pro usuário|Should|
-|RF 25|usuário|Dividir artigos gerais por categoria|o usuário encontre com maior facilidade artigos em todas as categorias do site|Must|
+|RF 19|usuário|Login de admin do site|novos adms possam ser adicionados e possam ver o desempenho do site no tratamento e no incentivo a saúde mental dos usuários|Must|
+|RF 20|usuário| Login de admin so site|possa haver a verificação de quem está acessando a parte de admin|Must|
+|RF 21|usuário| gerenciar atividades|o admin possa adicionar, atualizar ou excluir atividades que possam ser de interesse pro usuário|Should|
+|RF 22|usuário|Dividir artigos gerais por categoria|o usuário encontre com maior facilidade artigos em todas as categorias do site|Must|

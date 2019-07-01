@@ -2,17 +2,17 @@
 site_name: UNBIND
 
 # Repository
-repo_name: "ads-unbind/unbind"
-repo_url: "https://github.com/ads-unbind/unbind"
+repo_name: 'ads-unbind/unbind'
+repo_url: 'https://github.com/ads-unbind/unbind'
 
 # Configuration
 theme:
-  name: "material"
+  name: 'material'
   palette:
-    primary: "light blue"
-    accent: "teal"
+    primary: 'light blue'
+    accent: 'teal'
   logo:
-    icon: "spa"
+    icon: 'spa'
 
 # Navigation
 nav:
@@ -47,6 +47,8 @@ nav:
   - Dinamica 5:
       - NFR: dinamica5/nfr.md
       - Design Patterns: dinamica5/padroes.md
+  - Dinamica 6:
+      - Documento de Arquitetura: dinamica6/documento-arquitetura.md
   - Sprints: sprints/sprints.md
   - Atas:
       - 20/04: extras/atas/ata-reuniao-20-04-19.md

@@ -3,6 +3,7 @@
 Data | Versão | Descrição | Autor |
 --------- | ------ | ------------ | --------- |
 14/04/2019 | 0.1 | Abertura do documento | Geovanne Saraiva |
+30/05/2019 | 0.2 | Refatoração de documento | Geovanne Saraiva, Willian, Vinicius |
 
 ## 1. Introdução
 ### 1.1 Finalidade
@@ -32,13 +33,11 @@ Os requisitos funcionais, e suas prioridades, podem ser encontrados no documento
 
 Identificador | Dispositivos | Modelo | Sistema operacional
 --- | --- | --- | ---
-RNF 01 | Mac | Qualquer dispositivo | OS X 10.9 ou superior
-RNF 02 | Windows |Qualquer dispositivo |Windows 7 ou superior
-RNF 03 | Safari | Qualquer dispositivo | Versão 6 ou superior.
-RNF 04 | Internet Explorer | Qualquer dispositivo | Versão 10 ou superior.
-RNF 05 | Google Chrome | Qualquer dispositivo | Última versão
-RNF 06 | Mozilla Firefox | Qualquer dispositivo | versão mais recente ou imediatamente anterior
-RNF 07 | Opera | Qualquer dispositivo| 12 ou superior.
+RNF 01 | Safari | Qualquer dispositivo | Versão 6 ou superior.
+RNF 02 | Internet Explorer | Qualquer dispositivo | Versão 10 ou superior.
+RNF 03 | Google Chrome | Qualquer dispositivo | Última versão
+RNF 04 | Mozilla Firefox | Qualquer dispositivo | versão mais recente ou imediatamente anterior
+RNF 05 | Opera | Qualquer dispositivo| 12 ou superior.
 
 ## 3. Usabilidade
 ### 3.1 Facilidade de uso
@@ -51,11 +50,10 @@ O serviço deve apresentar mensagens de erro de forma clara e objetiva, localiza
 O sistema deve fornecer rápido acesso a qualquer funcionalidade.
 
 ### 3.4 Consistência e padronização
-O sistema deve manter a maior parte da interface a mesma para cada tipo de usuário, apenas adicionando alguns detalhes sobre a mesma de acordo com o nível de cada tipo de usuário.
+O sistema deve manter a maior parte da interface a mesma para cada tipo de usuário, mantendo um padrão de cores e estrutura.
 
 ### 3.5 Design simples
-O sistema deve ter ícones intuitivos. 
-Para cada tipo de usuário haverá um certo nível de funcionalidades disponíveis
+O sistema deve ter ícones intuitivos.
 
 ## 4. Confiabilidade
 ### 4.1 Disponibilidade
@@ -87,6 +85,7 @@ Se o sistema estiver sofrendo com algo que degrade o site, como a internet com s
 + OS X 10.9 ou superior
 + Windows 7 ou superior
 + Versão 6 ou superior.
++ Smartphone
 
 ## 6. Suportabilidade
 ### 6.1 Software do usuário

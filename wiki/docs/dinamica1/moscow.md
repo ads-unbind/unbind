@@ -4,6 +4,7 @@ Data | Versão | Descrição | Autor |
 --------- | ------ | ------------ | --------- |
 27/03/2019 | 0.1 | Abertura do documento | Geovanne Saraiva |
 22/05/2019 | 0.2 | Formatação do documento | Igor Aragão |
+30/05/2019 | 0.3 | Atualização de requisitos | Geovanne Saraiva, Willian, Vinicius |
 
 ## 1. Introdução
 Este documento foi desenvolvido para a disciplina de Desenho e Arquitetura de Software, da Universidade de Brasília, no qual o grupo procura priorizar as funcionalidades elicitadas durante o projeto UNBIND.
@@ -32,7 +33,6 @@ Classificação de Perfil de Usuário | | x | | |
 Dividir Artigos por Categoria| x | | | |
 Listar tarefas concluídas e não concluídas | | x |  | |
 pontuar por tarefa concluída | x | |  | |
-Listar prêmios| |  | x | |
 Dividir artigos gerais por categoria| | x |  | |
 Atualizar categorias individuais| | x |  | |
 Mensagens de feedback por conclusão de tarefa| | x |  | |
@@ -53,8 +53,6 @@ Acessar tarefas | x | | | |
 Listar tarefas concluídas e não concluídas | | x | | |
 Selecionar tarefas individuais | | x | | |
 Marcar tarefa como concluída | | x | | |
-Selecionar prêmio | | x | | |
-Trocar prêmios por pontos | | x | | |
 Login de admin do site | x | | | |
 Cadastrar admin | x | | | |
 Gerenciar Atividades | | x | | |

@@ -1,68 +1,97 @@
 {% extends "base.html" %}
-{% block title %}UNBIND{% endblock %}
+{% block title %}Artigos | UNBIND{% endblock %}
 {% block body %}
 {% load staticfiles %}
-
-<div class="container ">
-    <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
-    	<div class="row">
-			<div class="col-md-12">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						{% if nome_categoria %}
-						<h1 style="text-align:center; color: #6595bf;" class="panel-title">Artigos dacategoria "{{nome_categoria}}"</h1>
-						{% else %}
-						<h1 style="text-align:center; color: #6595bf;" class="panel-title">Lista de Artigos</h1>
-						{% endif %}
-						<div class="pull-right">
-							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-								<i class="glyphicon glyphicon-filter"></i>
-							</span>
-						</div>
-					</div>
-					<div class="panel-body">
-						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Artigos" />
-					</div>
-					<table class="table table-hover" id="dev-table">
-						<thead>
-							<tr>
-								<th style="text-align: center;">#</th>
-								<th style="text-align: center;">Título</th>
-                                <th style="text-align: center;">Autor</th>
-                                <th style="text-align: center;">Curtidas</th>
-                                <th style="text-align: center;">Data de Publicação</th>
-								{% if not nome_categoria %}
-									<th style="text-align: center;">Categoria</th>
-								{% endif %}
-								<th style="text-align: center;">Ações</th>
-							</tr>
-						</thead>
-						<tbody>
-                        {% for artigo in artigos %}
-							<tr>
-								<td style="text-align: center;">{{ artigo.id }}</td>
-								<td style="text-align: center;">{{ artigo.titulo }}</td>
-                                <td style="text-align: center;">{{ artigo.autor }}</td>
-                                <td style="text-align: center;">{{ artigo.curtidas }}</td>
-                                <td style="text-align: center;">{{ artigo.dataPublicacao }}</td>
-								{% if not nome_categoria %}
-									<td style="text-align: center;">{{ artigo.categoria.nome }}</td>
-								{% endif %}
-                                <td style="text-align: center;"><a href="{% url 'artigo:visualizar_artigo' artigo.id %}" class="btn btn-primary m-l-20 hidden-xs hidden-sm waves-effect waves-light">Ler</a></td>
-							</tr>
+<div class="min-vh-100">
+    <section class="bg-primary-dark has-divider after-nav text-light">
+        <div class="container pt-6 pb-2">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-8 col-lg-9 col-md-10">
+                    <h1 class="display-3 mb-3 text-light">Artigos</h1>
+                    <p class="lead">Leia artigos que te faça bem.</p>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <img class="svg" src="{% static 'icons/divider.svg' %}"></img>
+        </div>
+    </section>
+    <section class="pt-5">
+        <div class="container">
+            <div class="row justify-content-center mb-1">
+                <div class="col-8">
+                    <div class="panel-body">
+                        <input type="text" class="form-control" id="cardFilter" placeholder="Pesquisar artigo..." />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center mb-4">
+                <div class="col col-md-auto">
+                    <ul class="nav mb-3">
+                        <li class="nav-item">
+                            <a href="{% url 'artigo:listar_artigos' %}" class="nav-link active">Todos</a>
+                        </li>
+    
+                        {% for categoria in categorias %}
+    
+                        <li class="nav-item">
+                            <a href="{% url 'artigo:listar_por_categoria' categoria.id %}" class="nav-link active">{{ categoria.nome }}</a>
+                        </li>
+    
                         {% endfor %}
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+        <div class="container" id="filtered">
+            <div class="row mb-4">
+                {% for artigo in artigos %}
+                <div class="col-md-6 col-lg-4 card-flex" id="cardItem">
+                    <div class="card">
+                        <a href="{% url 'artigo:visualizar_artigo' artigo.id %}">
+                            <img src="{{ artigo.imagem.url }}" alt="image" class="card-img-top">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="text-small d-flex">
+                                    <div class="mr-3">
+                                        <a class="text-category" href="{% url 'artigo:listar_por_categoria' artigo.categoria.id %}">{{ artigo.categoria.nome }}</a>
+                                    </div>
+                                    <span class="text-muted">{{ artigo.dataPublicacao }}</span>
+                                </div>
+                            </div>
+                            <a href="{% url 'artigo:visualizar_artigo' artigo.id %}">
+                                <h4>{{ artigo.titulo }}</h4>
+                            </a>
+                            <p class="flex-grow-1 text-concat">{{artigo.texto}}</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="ml-1">
+                                    <span class="text-small text-muted">Autor: </span>
+                                    <span class="text-small">{{ artigo.autor }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    </section>
+</div>
+<footer class="py-4 bg-secondary">
+    <div class="container">
+        <div class="row mb-2 justify-content-center">
+            <div class="col-auto">
+                <a class="footer-brand unbind-brand text-light" href="{% url 'index' %}">UNBIND</a>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-xl-10">
+                <small class="text-light">2019 - Grupo UNBIND. Site desenvolvido para a matéria de Arquitetura e Desenho de Software.</small>
+            </div>
+        </div>
+    </div>
+</footer>
 
-{% endblock %}
-
-{% block scripts %}
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="{% static 'js/table_filter.js' %}"></script>
 {% endblock %}
