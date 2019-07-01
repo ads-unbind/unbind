@@ -581,10 +581,6 @@ img.bg-image {
     border-radius: 0.625rem;
 }
 
-/* img.overlay {
-    object-fit: cover;
-} */
-
 .bg-image:not([class*='absolute']) {
     position: absolute;
 }
@@ -658,4 +654,8 @@ img.bg-image {
 
 .profile-header {
     padding: 3rem 0;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dcdcdc;
 }

@@ -80,7 +80,6 @@ def account(request):
             return HttpResponseRedirect(reverse('conta'))
 
         context = {'update_form': update_form, 'usuario': usuario}
-
         return render(request, 'conta.html', context)
 
     else:

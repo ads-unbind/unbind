@@ -8,9 +8,10 @@ class Artigo(models.Model):
     texto = models.TextField()
     imagem = models.ImageField(upload_to='imagem_artigo', blank=True)
     autor = models.CharField(max_length=50)
-    curtidas = models.IntegerField()
     dataPublicacao = models.DateTimeField(auto_now_add=True)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name='artigos')
+    categoria = models.ForeignKey(
+        Categoria, on_delete=models.CASCADE, related_name='artigos'
+    )
 
     def __str__(self):
         return self.titulo

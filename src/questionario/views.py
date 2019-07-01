@@ -5,8 +5,8 @@ from django.urls import reverse
 from usuario.models import User
 from questionario import models
 from questionario.models import Pergunta, Questionario, Resposta
-# from questionario.forms import QuestionarioForm
-# from usuario.indica import suggest_articles
+from questionario.forms import RespostaForm
+
 
 def questionarios(request):
     user = request.user
@@ -18,6 +18,7 @@ def questionarios(request):
 
     else:
         return HttpResponseRedirect(reverse('index'))
+
 
 def questionario(request, id):
     # usar id (questionario)
@@ -31,17 +32,45 @@ def questionario(request, id):
     else:
         return HttpResponseRedirect(reverse('index'))
 
+
 def cria_questionario(request):
     user = request.user
     if user.is_authenticated:
         usuario = User.objects.get(id=user.id)
+        questionario = Questionario()
 
-        perguntas = []
+        perguntas = Pergunta.objects.order_by('categoria', 'id')
 
-        # if request.method == 'POST':
+        if request.method == 'POST':
+            respostas_form = RespostaForm(
+                len(perguntas), data=request.POST
+            )
 
+            if respostas_form.is_valid():
+                questionario.save(user)
 
-        context = {'usuario': usuario, 'perguntas': perguntas}
+                registros = []
+                for registrado in respostas_form:
+                    registros.append(registrado.data)
+
+                i = 0
+                respostas = []
+                for pergunta in perguntas:
+                    resposta = registros[i]
+                    respostas.append(Resposta())
+                    respostas[i].save(questionario, pergunta, resposta)
+                    i += 1
+
+                return HttpResponseRedirect(reverse('index'))
+            else:
+                print(RespostaForm.errors)
+
+        respostas_form = RespostaForm(len(perguntas))
+        context = {
+            'usuario': usuario,
+            'perguntas': perguntas,
+            'respostas_form': respostas_form
+        }
         return render(request, 'questionario_novo.html', context)
 
     else:
