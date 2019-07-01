@@ -50,7 +50,25 @@ nav:
       - Design Patterns: dinamica5/padroes.md
   - Dinamica 6:
       - Documento de Arquitetura: dinamica6/documento-arquitetura.md
-  - Sprints: sprints/sprints.md
+  - Sprints:
+      - Planejamentos:
+          - Sprint 0: sprints/planejamentos/sprint0.md
+          - Sprint 1: sprints/planejamentos/sprint1.md
+          - Sprint 2: sprints/planejamentos/sprint2.md
+          - Sprint 3: sprints/planejamentos/sprint3.md
+          - Sprint 4: sprints/planejamentos/sprint4.md
+          - Sprint 5: sprints/planejamentos/sprint5.md
+          - Sprint 6: sprints/planejamentos/sprint6.md
+          - Sprint 7: sprints/planejamentos/sprint7.md
+      - Resultados:
+          - Sprint 0: sprints/resultados/sprint0.md
+          - Sprint 1: sprints/resultados/sprint1.md
+          - Sprint 2: sprints/resultados/sprint2.md
+          - Sprint 3: sprints/resultados/sprint3.md
+          - Sprint 4: sprints/resultados/sprint4.md
+          - Sprint 5: sprints/resultados/sprint5.md
+          - Sprint 6: sprints/resultados/sprint6.md
+          - Sprint 7: sprints/resultados/sprint7.md
   - Iniciativas Extras:
       - Ambiente: extras/ambiente.md
       - Políticas:
