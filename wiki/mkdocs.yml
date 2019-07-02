@@ -17,7 +17,7 @@ theme:
 # Navigation
 nav:
   - Home: index.md
-  - Dinamica 1:
+  - Dinâmica 1:
       - Proposta cancelada: dinamica1/proposta-cancelada/proposta-cancelada.md
       - Proposta do projeto: dinamica1/proposta.md
       - Mapa Mental: dinamica1/mapa-mental.md
@@ -33,22 +33,22 @@ nav:
       - Product Backlog: dinamica1/product-backlog.md
       - Especificação Suplementar: dinamica1/especificacao-suplementar.md
       - Léxicos: dinamica1/lexicos.md
-  - Dinamica 2:
+  - Dinâmica 2:
       - Modelagem do Processo: dinamica2/modelagem-processo.md
-  - Dinamica 3:
+  - Dinâmica 3:
       - Diagrama de Classes: dinamica3/diagrama-classes.md
       - Modelagem do Sistema: dinamica3/modelagem-sistema.md
       - Diagrama de Caso de Uso: dinamica3/diagrama-caso-de-uso.md
       - Diagrama de Pacotes: dinamica3/diagrama-pacotes.md
-  - Dinamica 4:
+  - Dinâmica 4:
       - Diagrama de Atividades: dinamica4/diagrama-atividades.md
       - Diagrama de Estados: dinamica4/diagrama-estados.md
       - Diagrama de Colaboração: dinamica4/diagrama-colaboracao.md
       - Diagrama de Sequência: dinamica4/diagrama-sequencia.md
-  - Dinamica 5:
+  - Dinâmica 5:
       - NFR: dinamica5/nfr.md
       - Design Patterns: dinamica5/padroes.md
-  - Dinamica 6:
+  - Dinâmica 6:
       - Documento de Arquitetura: dinamica6/documento-arquitetura.md
   - Sprints:
       - Planejamentos:

@@ -14,14 +14,13 @@
 | 24/06/2019 | 0.6    | Adicionando o diagrama de implantação na seção 7                    | Igor Aragão e William Almeida                                                                                                |
 | 24/06/2019 | 0.7    | Adicionando DE-R e modelo lógico                                    | José Aquiles                                                                                                                 |
 | 24/06/2019 | 0.8    | Adicionando tópico 9                                                | Geovanne Santos e Vinícius                                                                                                   |
-| 30/06/2019 | 0.9    | Alterando diagrama de classes                                       | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                            |
-| 30/06/2019 | 0.10   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-| 30/06/2019 | 0.11   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-| 30/06/2019 | 0.12   | Adiciona diagrama de atividade e de sequência                       | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-| 30/06/2019 | 0.13   | Complementa Usabilidade                                             | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-| 30/06/2019 | 0.14   | Correção de imagens                                          | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
-
-
+| 25/06/2019 | 0.9    | Adicionando tópico 13 - Requisitos Mínimos dos Sistemas             | Byron Kamal                                                                                                                  |
+| 30/06/2019 | 0.10   | Alterando diagrama de classes                                       | William Almeida, Geovanne, Vinícius e Igor Aragão                                                                            |
+| 30/06/2019 | 0.11   | Corrige modelagem do sistema                                        | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.12   | Adiciona linkagem de modelagem do sistema com modelagem do sistema  | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.13   | Adiciona diagrama de atividade e de sequência                       | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.14   | Complementa Usabilidade                                             | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
+| 30/06/2019 | 0.15   | Correção de imagens                                                 | Vinícius Cantuária, Geovanne, Igor Aragão, Igor Veludo, e William Almeida                                                    |
 
 ## 1\. Introdução
 
@@ -82,9 +81,9 @@ Figura 2\. Padrão arquitetural MTV.
 | Segurança     | Para a segurança do usuário, todas as senhas de login são criptografadas.                                                                                                                                                                                                                                                                                          |
 | Persistência  | Para a persistência dos dados será utilizado o banco de dados relacional SQLite3.                                                                                                                                                                                                                                                                                  |
 | Arquitetura   | Será feita uma arquitetura monolítica, nela o deploy torna-se mais fácil, já que é necessário subir somente um projeto e o banco de dados facilmente evolui junto para todas as funcionalidades juntamente com a aplicação. Também não há duplicidade de código e classes necessárias entre os diferentes módulos, já que todas elas fazem parte da mesma unidade. |
-| Portabilidade | Por se tratar de uma aplicação web, possui grande portabilidade entre sistemas, sendo acessada através do navegador, porém não possui portabilidade para mobile.                                                                                                                                                                                                   |
+| Portabilidade | Por se tratar de uma aplicação web, possui grande portabilidade entre sistemas, sendo acessada através do navegador, porém, não possui portabilidade para mobile.                                                                                                                                                                                                  |
 | Distribuição  | Por se tratar de uma aplicação web, a distribuição ocorre assim que a nova versão do software é enviada para produção. O usuário sempre acesa a última versão disponível.                                                                                                                                                                                          |
-| Reuso         | A utilização do framework Django demonstra um grau de reuso devido a padronização da criação de componentes do código.                                                                                                                                                                                                                                             |
+| Reuso         | A utilização do framework Django demonstra um grau de reuso devido à padronização da criação de componentes do código.                                                                                                                                                                                                                                             |
 
 ## 4\. Visão de Casos de Uso
 
@@ -160,29 +159,34 @@ O Diagrama de pacotes, ou diagrama de módulos, definido pela UML, descreve os p
 
 ![](./img/visao_implementacao.png)
 
-
 ### 7\. Diagrama de Sequência
 
 #### 7.1 Diagrama de Sequência Geral
+
 ![diagrama sequencia geral](../dinamica4/img/diagrama-sequencia_geral.png)
 
 #### 7.2 Diagrama de Sequência de usuário
+
 ![diagrama-sequencia_usuario](../dinamica4/img/diagrama-sequencia_usuario.jpg)
 
 ### 8\. Diagrama de Atividade
 
 #### 8.1 Diagrama de Atividades (Atividade)
+
 ![diagrama de atividades - atividade](../dinamica4/img/diagrama-atividades_atividades_v0.2.png)
 
 #### 8.2 Diagrama de Atividades (Artigo)
+
 ![diagrama de atividades - artigo](../dinamica4/img/diagrama-atividades_artigos_v0.1.png)
 
 ### 9\. Diagrama de Estados
 
 #### 9.1 Diagrama de Estados (Atividade)
+
 ![diagrama de estados - atividade](../dinamica4/img/diagrama-estados_atividades_v0.1.png)
 
 #### 9.2 Diagrama de Estados (Artigo)
+
 ![diagrama de estados - artigo](../dinamica4/img/diagrama-estados_artigos_v0.1.png)
 
 ### 10\. Visão de Implementação
@@ -322,10 +326,10 @@ de usuários, caso o sistema tenha que operar com mais usuários será necessár
 
 - Processador: Xeon E5 server family
 - CPU: 2 x 4 cores
-- CPU (expansabilidade futura): entre 1 a 4 sockets
+- CPU (expansibilidade futura): entre 1 a 4 sockets
 - Memória RAM: mínimo 16GB
 - Espeço de Disco: entre 16GB e 1.5TB
-- Backup: HDD ou Fita Máguinetica
+- Backup: HDD ou fita magnética
 
 ##### 13.2.1.1 SQLite
 
