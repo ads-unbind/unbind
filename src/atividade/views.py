@@ -24,8 +24,11 @@ def atividade(request):
 
         atividades = Atividade.objects.all()
         categorias = Categoria.objects.all()
-        context = {'usuario': usuario,
-                   'atividades': atividades, 'categorias': categorias}
+        context = {
+            'usuario': usuario,
+            'atividades': atividades,
+            'categorias': categorias
+        }
 
         return render(request, 'atividades.html', context)
 

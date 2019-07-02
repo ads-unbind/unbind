@@ -28,7 +28,7 @@ urlpatterns = [
     path('', include('principal.urls')),
     path('', include('usuario.urls')),
     path('artigo/', include('artigo.urls', namespace='artigo')),
-    path('questionario/', include('questionario.urls')),
+    path('questionarios/', include('questionario.urls', namespace='questionario')),
     path('atividade/', include('atividade.urls', namespace='atividade')),
 ]
 

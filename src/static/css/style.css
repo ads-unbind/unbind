@@ -242,7 +242,7 @@ small,
 
 .text-concat {
     overflow: hidden;
-    max-height: 6em;
+    max-height: 4.5em;
 }
 
 .font-weight-semibold {
@@ -275,6 +275,7 @@ a:hover {
 
 img.rounded,
 div.rounded {
+    width: 100%;
     max-width: 100%;
     border-radius: 0.625rem !important;
 }
@@ -581,10 +582,6 @@ img.bg-image {
     border-radius: 0.625rem;
 }
 
-/* img.overlay {
-    object-fit: cover;
-} */
-
 .bg-image:not([class*='absolute']) {
     position: absolute;
 }
@@ -658,4 +655,8 @@ img.bg-image {
 
 .profile-header {
     padding: 3rem 0;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dcdcdc;
 }

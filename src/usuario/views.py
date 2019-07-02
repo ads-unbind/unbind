@@ -27,8 +27,7 @@ def register(request):
 
                 django_login(request, user)
 
-                # TODO: Ir para questionario inicial
-                return HttpResponseRedirect(reverse('index'))
+                return HttpResponseRedirect(reverse('questionario:questionario_novo'))
             else:
                 print(register_form.errors)
         else:
@@ -80,7 +79,6 @@ def account(request):
             return HttpResponseRedirect(reverse('conta'))
 
         context = {'update_form': update_form, 'usuario': usuario}
-
         return render(request, 'conta.html', context)
 
     else:
@@ -133,9 +131,3 @@ def perfil(request):
         return HttpResponseRedirect(reverse('conta'))
     else:
         return HttpResponseRedirect(reverse('index'))
-
-
-# TODO: Remover?
-def questionario(request):
-    context = {'error': ''}
-    return render(request, 'questionario_user.html', context)

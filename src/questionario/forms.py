@@ -1,49 +1,60 @@
 from django import forms
-from questionario.models import Questionario, Pergunta, Registro
+from django.core.validators import MaxValueValidator, MinValueValidator
+
+from questionario.models import Questionario, Pergunta, Resposta
 
 
-class QuestionarioForm(forms.ModelForm):
-    pontos = forms.IntegerField(
+class RespostaForm(forms.ModelForm):
+    resposta = forms.IntegerField(
         error_messages={
             'required': 'Este campo é obrigatório!'},
+        widget=forms.NumberInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Nota de 0 a 10',
+            }
+        ),
+        validators=[
+            MaxValueValidator(10),
+            MinValueValidator(0)
+        ],
     )
 
-    class Meta:
-        model = Registro
-        fields = ('pontos',)
+    class Meta():
+        model = Resposta
+        fields = ('resposta',)
 
-    def __init__(self, n,  *args, **kwargs):
-        super(QuestionarioForm, self).__init__(*args, **kwargs)
-        for i in range(0, n):
-            self.fields["pontos%d" % i] = forms.IntegerField()
-            self.fields["pontos%d" % i].label = ""
-
-        self.fields["pontos"].label = ""
+    def __init__(self, n, *args, **kwargs):
+        super(RespostaForm, self).__init__(*args, **kwargs)
+        for i in range(1, n):
+            self.fields["resposta%d" % i] = forms.IntegerField(
+                error_messages={
+                    'required': 'Este campo é obrigatório!'},
+                widget=forms.NumberInput(
+                    attrs={
+                        'class': 'form-control',
+                        'placeholder': 'Nota de 0 a 10',
+                    }
+                ),
+                validators=[
+                    MaxValueValidator(10),
+                    MinValueValidator(0)
+                ],
+            )
 
     def clean(self):
         all_clean_data = super().clean()
-        pontos = all_clean_data['pontos']
+        resposta = all_clean_data['resposta']
 
-        if pontos <= 0 or pontos > 5:
-            raise forms.ValidationError("O número tem que estar no interval de 1 e 5!")
+        if resposta < 0 or resposta > 10:
+            raise forms.ValidationError(
+                "O número tem que estar no intervalo de 0 e 10!"
+            )
 
-    def save(self, id_pergunta, id_user, pontos):
-        print(id_pergunta)
-        print(pontos)
-        self.usuario = id_user
-        self.pergunta = id_pergunta
-        self.pontos = pontos
-        super().save()
-
-
-
-'''
-    def save(self):
-        all_clean_data = super().clean()
-        pontos = all_clean_data['pontos']
-
-        pergunta_id = Pergunta.objects.get(id=self.pergunta)
-
-        print("save modificado")
-        print(pontos)
-'''
+#     def save(self, id_pergunta, id_user, pontos):
+#         print(id_pergunta)
+#         print(pontos)
+#         self.usuario = id_user
+#         self.pergunta = id_pergunta
+#         self.pontos = pontos
+#         super().save()
