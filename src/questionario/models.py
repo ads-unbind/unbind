@@ -32,7 +32,6 @@ class Pergunta(models.Model):
         return self.enunciado
 
 
-# esta model servirá de classe intermediária()
 class Resposta(models.Model):
     resposta = models.IntegerField()
     questionario = models.ForeignKey(

@@ -11,7 +11,7 @@
                 <div class="col-md-4 px-2 d-flex flex-column">
                     <div class="card my-3" style="flex: 1">
                         <a href="#">
-                            <img src="/static/images/template/cinema.jpg" alt="image" class="activity-img-card">
+                            <img src="{% static 'images/category/7.jpg' %}" alt="image" class="activity-img-card">
                         </a>
                         <div class="card-body d-flex flex-column">
                             <div class="d-flex justify-content-between mb-4">
@@ -114,11 +114,10 @@
                             <h4>{{ atividade.titulo }}</h4>
                         </a>
                         <p class="flex-grow-1 text-concat">{{ atividade.descricao }}</p>
-                        <div class="d-flex align-items-center mt-3">
-                            <div class="ml-1">
-                                <span class="text-small text-muted">Estado: </span>
-                                <span class="text-small">{{ atividade.estado }}</span>
-                            </div>
+                        <div class="d-block text-right pt-3">
+                            <a href data-toggle="modal" data-target="#modalActivity">
+                                <h5 class="link-inside-card mb-0">Ver atividade -></h5>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +163,7 @@
                 </div>
             </div>
             <a href="#" class="col-md-5">
-                <img src="{% static 'images/template/cinema.jpg' %}" alt="Image" class="card-img-activity">
+                <img src="{% static 'images/category/7.jpg' %}" alt="Image" class="card-img-activity">
             </a>
         </div>
     </div>
