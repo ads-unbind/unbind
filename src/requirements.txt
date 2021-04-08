@@ -2,7 +2,7 @@ argon2==0.1.10
 argon2-cffi==19.1.0
 cffi==1.12.3
 Click==7.0
-Django==2.2.13
+Django==2.2.20
 django_extensions
 Jinja2==2.10.1
 livereload==2.6.1
